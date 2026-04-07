@@ -46,7 +46,7 @@ export default function Footer() {
         <div className="col-span-2 lg:col-span-1">
           <div className="relative mb-3" style={{ width: "160px", height: "52px" }}>
             <Image
-              src="/images/logo/main logo full two.webp"
+              src="/images/logo/taylors-tacos-chicago-logo-horizontal.webp"
               alt="Taylor's Tacos Chicago"
               fill
               className="object-contain"

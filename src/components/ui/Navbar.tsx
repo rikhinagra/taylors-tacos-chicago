@@ -57,7 +57,7 @@ export default function Navbar() {
           >
             <div className="relative" style={{ width: "170px", height: "64px" }}>
               <Image
-                src="/images/logo/main logo full two.webp"
+                src="/images/logo/taylors-tacos-chicago-logo-horizontal.webp"
                 alt="Taylor's Tacos Chicago"
                 fill
                 className="object-contain"
