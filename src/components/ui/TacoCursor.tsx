@@ -8,6 +8,18 @@ export default function TacoCursor() {
     const trail = document.getElementById("cursor-trail");
     if (!taco || !trail) return;
 
+    // Hide on touch devices (mobile & tablet) — no mouse cursor exists
+    const isTouch =
+      "ontouchstart" in window ||
+      window.matchMedia("(hover: none)").matches ||
+      window.matchMedia("(pointer: coarse)").matches;
+
+    if (isTouch) {
+      taco.style.display = "none";
+      trail.style.display = "none";
+      return;
+    }
+
     let mx = 0, my = 0, tx = 0, ty = 0, prevX = 0, curAngle = -15;
     let raf: number;
 

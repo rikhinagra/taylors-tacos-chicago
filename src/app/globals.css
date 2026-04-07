@@ -272,6 +272,14 @@ body {
     right: 30px !important;
   }
 
+  /* ── Taco cursor — hide on mobile & tablet (touch screens) */
+  @media (max-width: 1023px) {
+    #taco-cursor, #cursor-trail { display: none !important; }
+  }
+  @media (hover: none) {
+    #taco-cursor, #cursor-trail { display: none !important; }
+  }
+
   /* ── Hamburger — hide on desktop */
   .hamburger-btn {
     display: flex;
