@@ -147,7 +147,7 @@ export default function Hero() {
           style={{ width: "min(580px, 75vw)", height: "auto" }}
         >
           <Image
-            src="/images/logo/main logo full.webp"
+            src="/images/logo/taylors-tacos-chicago-logo-stacked.webp"
             alt="Taylor's Tacos"
             width={580}
             height={220}
