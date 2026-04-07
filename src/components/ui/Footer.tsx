@@ -256,7 +256,17 @@ export default function Footer() {
         }}
       >
         <p style={{ fontSize: "12px", color: "rgba(250,246,238,0.3)" }}>
-          © {new Date().getFullYear()} Taylor&apos;s Tacos Chicago · Powered by SACHHSOFT
+          © {new Date().getFullYear()} Taylor&apos;s Tacos Chicago · Powered by{" "}
+          <a
+            href="https://www.sachhsoft.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "rgba(250,246,238,0.5)", textDecoration: "none" }}
+            onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--yellow)")}
+            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(250,246,238,0.5)")}
+          >
+            SACHHSOFT
+          </a>
         </p>
       </div>
     </footer>
