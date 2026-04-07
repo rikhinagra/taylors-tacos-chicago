@@ -15,6 +15,9 @@ const photos = [
   { src: "/images/gallery/friendsgiving.webp",  label: "Friendsgiving" },
 ];
 
+// Duplicate array for seamless infinite loop
+const reelPhotos = [...photos, ...photos];
+
 export default function Gallery() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
@@ -27,7 +30,11 @@ export default function Gallery() {
       {/* Section header */}
       <div
         ref={ref}
-        style={{ padding: "80px 52px 48px", maxWidth: "1280px", margin: "0 auto" }}
+        style={{
+          padding: "clamp(40px, 6vw, 80px) clamp(20px, 4vw, 52px) clamp(24px, 4vw, 48px)",
+          maxWidth: "1280px",
+          margin: "0 auto",
+        }}
       >
         <motion.span
           initial={{ opacity: 0, y: 20 }}
@@ -47,12 +54,12 @@ export default function Gallery() {
         </motion.h2>
       </div>
 
-      {/* Photo Strip — flex expand on hover (exact match to approved design) */}
+      {/* ── DESKTOP (1024px+): Hover expand photo strip ── */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="flex overflow-hidden"
+        className="gallery-desktop"
         style={{ height: "280px" }}
       >
         {photos.map((photo, i) => (
@@ -67,6 +74,61 @@ export default function Gallery() {
             <span className="photo-strip-label">{photo.label}</span>
           </div>
         ))}
+      </motion.div>
+
+      {/* ── MOBILE & TABLET (< 1024px): Auto-scrolling image reel ── */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={inView ? { opacity: 1 } : {}}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="gallery-mobile"
+        style={{
+          overflow: "hidden",
+          paddingBottom: "clamp(40px, 6vw, 60px)",
+        }}
+      >
+        <div className="gallery-scroll-track">
+          {reelPhotos.map((photo, i) => (
+            <div
+              key={i}
+              style={{
+                flex: "0 0 auto",
+                width: "220px",
+                height: "280px",
+                marginRight: "12px",
+                borderRadius: "10px",
+                overflow: "hidden",
+                position: "relative",
+              }}
+            >
+              <Image
+                src={photo.src}
+                alt={photo.label}
+                fill
+                style={{ objectFit: "cover" }}
+              />
+              {/* Label gradient overlay */}
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  padding: "28px 12px 14px",
+                  background: "linear-gradient(to top, rgba(14,10,8,0.88), transparent)",
+                  color: "white",
+                  fontSize: "11px",
+                  fontWeight: 700,
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  fontFamily: "Hannik, sans-serif",
+                }}
+              >
+                {photo.label}
+              </div>
+            </div>
+          ))}
+        </div>
       </motion.div>
     </section>
   );

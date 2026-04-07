@@ -2,46 +2,44 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { Truck, Users, Package, Building2, Heart, UtensilsCrossed } from "lucide-react";
 
 const services = [
   {
-    icon: "📦",
-    title: "Delivery & Pick-Up",
-    desc: "Self-serve taco bars, pre-made taco trays & individual lunches. We prep everything — you enjoy. Perfect for any size gathering.",
-    bullets: [
-      "Taco Trays — $59/tray (3 min)",
-      "XS Bar (10–15 guests) — $149",
-      "SM Bar (30–50 guests) — $499",
-      "MD Bar (50–75 guests) — $749",
-      "LG Bar (100–150 guests) — $1,499",
-    ],
-    link: "#contact",
+    icon: <Truck size={32} strokeWidth={1.5} />,
+    title: "Food Truck Booking",
+    desc: "Roll up our truck to your block party, festival, office, or private event. Full service, full fiesta.",
+    link: "Book the truck →",
   },
   {
-    icon: "👨‍🍳",
-    title: "Staffed Events",
-    desc: "Our tacobae team comes to you. Live action taco stations, buffet setups, or taco bite tables. Full set-up, service & breakdown included.",
-    bullets: [
-      "Made 2 Order — from $17/pp",
-      "Staffed Buffet — from $15/pp",
-      "Taco Bite Table — from $25/pp",
-      "3 hrs qualiTAY service included",
-      "Host Helpers & Bar services avail.",
-    ],
-    link: "#contact",
+    icon: <Users size={32} strokeWidth={1.5} />,
+    title: "Staffed Catering",
+    desc: "Full setup, professional crew, fresh tortillas on-site. We handle everything so you enjoy every bite.",
+    link: "Book staffed event →",
   },
   {
-    icon: "🚚",
-    title: "Food Truck",
-    desc: "Book the truck! Bring the full Taylor's Tacos experience directly to your event. Ideal for festivals, brand activations & big celebrations.",
-    bullets: [
-      "$499 booking fee",
-      "125 taco minimum",
-      "Up to 40 miles from kitchen",
-      "Full truck crew included",
-      "Perfect for activations & vending",
-    ],
-    link: "#contact",
+    icon: <Package size={32} strokeWidth={1.5} />,
+    title: "Delivery & Pickup",
+    desc: "Hot, fresh tacos delivered right to your door. Minimum orders for groups of all sizes available.",
+    link: "Get a quote →",
+  },
+  {
+    icon: <Building2 size={32} strokeWidth={1.5} />,
+    title: "Corporate Events",
+    desc: "Team lunches, client dinners, company milestones. We make your people feel like VIPs with tacos.",
+    link: "Corporate catering →",
+  },
+  {
+    icon: <Heart size={32} strokeWidth={1.5} />,
+    title: "Weddings",
+    desc: "A taco bar your guests will be raving about for years. Make your big day unforgettable.",
+    link: "Wedding catering →",
+  },
+  {
+    icon: <UtensilsCrossed size={32} strokeWidth={1.5} />,
+    title: "Taco Tuesday",
+    desc: "Chicago's most beloved weekly ritual. Join us every Tuesday for our legendary in-house specials.",
+    link: "Learn more →",
   },
 ];
 
@@ -57,7 +55,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      style={{ background: "#120C07", padding: "112px 52px" }}
+      style={{ background: "#120C07", padding: "clamp(60px, 8vw, 112px) clamp(20px, 4vw, 52px)" }}
     >
       <div style={{ maxWidth: "1280px", margin: "0 auto" }} ref={ref}>
 
@@ -68,7 +66,7 @@ export default function Services() {
           transition={{ duration: 0.5 }}
           className="section-label"
         >
-          What We Offer
+          What We Do
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -76,21 +74,21 @@ export default function Services() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="section-title"
         >
-          Three Ways to <em>Taco</em>
+          Catering for <em>Every</em><br />Occasion
         </motion.h2>
 
-        {/* Cards grid */}
+        {/* Cards grid — 3 cols × 2 rows */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px] mt-14">
           {services.map((svc, i) => (
             <motion.div
               key={svc.title}
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 + i * 0.15 }}
+              transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
               className="service-card relative overflow-hidden transition-all duration-400 hover:-translate-y-1 cursor-none"
               style={{
                 background: "rgba(255,255,255,0.025)",
-                padding: "40px 34px",
+                padding: "clamp(24px, 3vw, 40px) clamp(20px, 2.5vw, 34px)",
                 border: "1px solid rgba(255,255,255,0.06)",
               }}
               onMouseEnter={(e) => {
@@ -108,12 +106,12 @@ export default function Services() {
                 ✦
               </span>
 
-              <span style={{ fontSize: "36px", marginBottom: "20px", display: "block" }}>
+              <div style={{ color: "var(--yellow)", marginBottom: "20px", display: "block" }}>
                 {svc.icon}
-              </span>
+              </div>
               <h3
                 style={{
-                  fontSize: "22px",
+                  fontSize: "24px",
                   fontWeight: 800,
                   color: "var(--off-white)",
                   marginBottom: "12px",
@@ -124,46 +122,21 @@ export default function Services() {
               </h3>
               <p
                 style={{
-                  fontSize: "13px",
+                  fontSize: "16px",
                   lineHeight: 1.8,
                   color: "rgba(250,246,238,0.55)",
                   fontWeight: 300,
-                  marginBottom: "18px",
+                  marginBottom: "20px",
                 }}
               >
                 {svc.desc}
               </p>
 
-              <ul className="space-y-1 mb-6">
-                {svc.bullets.map((b) => (
-                  <li
-                    key={b}
-                    style={{
-                      fontSize: "12px",
-                      color: "rgba(250,246,238,0.5)",
-                      paddingLeft: "12px",
-                      position: "relative",
-                    }}
-                  >
-                    <span
-                      style={{
-                        position: "absolute",
-                        left: 0,
-                        color: "var(--yellow)",
-                      }}
-                    >
-                      ·
-                    </span>
-                    {b}
-                  </li>
-                ))}
-              </ul>
-
               <button
-                onClick={() => scrollTo(svc.link)}
-                className="flex items-center gap-2 transition-all duration-300 group-hover:gap-4"
+                onClick={() => scrollTo("#contact")}
+                className="flex items-center gap-2 transition-all duration-300"
                 style={{
-                  fontSize: "10px",
+                  fontSize: "16px",
                   letterSpacing: "3px",
                   textTransform: "uppercase",
                   color: "var(--yellow)",
@@ -174,7 +147,7 @@ export default function Services() {
                   padding: 0,
                 }}
               >
-                Book This Service →
+                {svc.link}
               </button>
             </motion.div>
           ))}

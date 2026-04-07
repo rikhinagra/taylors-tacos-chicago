@@ -2,44 +2,38 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
 
 const menuCards = [
   {
-    tag: "Signature",
-    name: "Self-Serve Taco Bar",
-    img: "/images/gallery/MD Main.webp",
+    tag: "Our Signature",
+    name: "Street Tacos",
+    img: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&auto=format&fit=crop&q=80",
     span2: true,
   },
   {
-    tag: "Staffed",
-    name: "Live Action Station",
-    img: "/images/gallery/live.webp",
+    tag: "Classic",
+    name: "Carne Asada",
+    img: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&auto=format&fit=crop&q=80",
   },
   {
-    tag: "Pick-Up",
-    name: "Individual Lunches",
-    img: "/images/gallery/lunch special.webp",
+    tag: "Sides",
+    name: "Fresh Sides",
+    img: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&auto=format&fit=crop&q=80",
   },
   {
-    tag: "Trending",
-    name: "Taco Tuesday Spread",
-    img: "/images/gallery/Taco Tuesday.webp",
+    tag: "Fan Favorite",
+    name: "Al Pastor",
+    img: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=600&auto=format&fit=crop&q=80",
   },
   {
-    tag: "Specialty",
-    name: "Staffed + Customized",
-    img: "/images/gallery/features.webp",
+    tag: "Plant-Based",
+    name: "Veggie Tacos",
+    img: "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=600&auto=format&fit=crop&q=80",
   },
   {
-    tag: "Community",
-    name: "Friendsgiving Event",
-    img: "/images/gallery/friendsgiving.webp",
-  },
-  {
-    tag: "Catering",
-    name: "Come Hungry",
-    img: "/images/gallery/come hungry.webp",
+    tag: "Coming Soon",
+    name: "New Item",
+    img: "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?w=600&auto=format&fit=crop&q=80",
   },
 ];
 
@@ -55,12 +49,21 @@ export default function Menu() {
   return (
     <section
       id="menu"
-      style={{ background: "var(--black)", padding: "112px 52px" }}
+      style={{ background: "var(--black)", padding: "clamp(60px, 8vw, 112px) clamp(20px, 4vw, 52px)" }}
     >
       <div style={{ maxWidth: "1280px", margin: "0 auto" }} ref={ref}>
 
-        {/* Header row */}
-        <div className="flex items-end justify-between mb-12 flex-wrap gap-5">
+        {/* ── Header ─────────────────────────────────────────── */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "space-between",
+            marginBottom: "48px",
+            flexWrap: "wrap",
+            gap: "20px",
+          }}
+        >
           <div>
             <motion.span
               initial={{ opacity: 0, y: 20 }}
@@ -76,52 +79,77 @@ export default function Menu() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="section-title"
             >
-              Our <em>Full Menu</em>
+              The <em>Menu</em>
             </motion.h2>
           </div>
+
           <motion.button
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ delay: 0.3 }}
             onClick={() => scrollTo("#contact")}
             style={{
-              fontSize: "10px",
-              letterSpacing: "3px",
+              fontSize: "15px",
+              letterSpacing: "2.5px",
               textTransform: "uppercase",
-              color: "var(--yellow)",
+              color: "white",
               fontWeight: 700,
-              background: "none",
-              border: "none",
+              background: "var(--red)",
+              border: "2px solid var(--red)",
               cursor: "none",
+              padding: "10px 20px",
+              borderRadius: "3px",
+              transition: "all 0.3s",
+            } as React.CSSProperties}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLElement).style.background = "transparent";
+              (e.currentTarget as HTMLElement).style.color = "var(--red)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLElement).style.background = "var(--red)";
+              (e.currentTarget as HTMLElement).style.color = "white";
             }}
           >
-            View Full Menu →
+            Full Catering Menu →
           </motion.button>
         </div>
 
-        {/* Asymmetric 4-col grid — first card spans 2 rows */}
+        {/* ── Grid ───────────────────────────────────────────── */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-[14px]"
+          className="menu-grid-responsive"
         >
-          {menuCards.map((card, i) => (
+          {menuCards.map((card) => (
             <div
               key={card.name}
-              className="menu-card relative rounded-md overflow-hidden cursor-none"
+              className={`menu-card group ${card.span2 ? "menu-card-span2" : ""}`}
               style={{
+                position: "relative",
+                borderRadius: "6px",
+                overflow: "hidden",
+                cursor: "none",
+                aspectRatio: "3/4",
                 gridRow: card.span2 ? "span 2" : "span 1",
-                aspectRatio: card.span2 ? "3/4" : "3/4",
               }}
             >
-              <Image
+              {/* Image — scales on card hover via group */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={card.img}
                 alt={card.name}
-                fill
-                className="object-cover transition-transform duration-700 hover:scale-110"
+                className="object-cover transition-transform duration-[600ms] ease-in-out group-hover:scale-110"
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
               />
-              {/* Dark overlay */}
+
+              {/* Dark gradient overlay */}
               <div
                 className="absolute inset-0"
                 style={{
@@ -134,19 +162,20 @@ export default function Menu() {
               >
                 <span
                   style={{
-                    fontSize: "8px",
+                    fontSize: "14px",
                     letterSpacing: "4px",
                     textTransform: "uppercase",
                     color: "var(--yellow)",
                     fontWeight: 700,
-                    marginBottom: "4px",
+                    marginBottom: "6px",
+                    display: "block",
                   }}
                 >
                   {card.tag}
                 </span>
                 <h3
                   style={{
-                    fontSize: "19px",
+                    fontSize: "22px",
                     fontWeight: 800,
                     color: "white",
                     lineHeight: 1.1,
@@ -160,22 +189,7 @@ export default function Menu() {
           ))}
         </motion.div>
 
-        {/* Toppings note */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.6 }}
-          className="mt-10 p-6 rounded-md"
-          style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(251,175,28,0.15)" }}
-        >
-          <p style={{ fontSize: "12px", color: "rgba(250,246,238,0.55)", letterSpacing: "0.5px" }}>
-            <span style={{ color: "var(--yellow)", fontWeight: 700, marginRight: "8px" }}>
-              🌮 Always Included:
-            </span>
-            Secret Salsa · Cilantro · Cheese · Limes · Maya&apos;s Pickled Red Cabbage
-            &nbsp;|&nbsp; Add-ons: Salsa VerTAY, Jalapeños, Sazon Tomatoes, Tangy Onions +$10 each
-          </p>
-        </motion.div>
+
       </div>
     </section>
   );

@@ -38,6 +38,7 @@ body {
   background: var(--black);
   color: var(--off-white);
   font-family: "Hannik", sans-serif;
+  letter-spacing: 0.04em;
   overflow-x: hidden;
   cursor: none;
 }
@@ -100,11 +101,9 @@ body {
 .photo-strip-img {
   width: 100%; height: 100%;
   object-fit: cover;
-  filter: saturate(0.5) sepia(0.2);
-  transition: filter 0.5s, transform 0.5s;
+  transition: transform 0.5s;
 }
 .photo-strip-item:hover .photo-strip-img {
-  filter: saturate(1.3) sepia(0);
   transform: scale(1.06);
 }
 .photo-strip-label {
@@ -159,6 +158,12 @@ body {
   50%       { transform: translateY(-12px); }
 }
 
+/* ── Floating button bounce ──────────────────────────────── */
+@keyframes floatBounce {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
 /* ── Scroll pulse ────────────────────────────────────────── */
 @keyframes scrollPulse {
   0%, 100% { opacity: 1; transform: scaleY(1); }
@@ -169,6 +174,12 @@ body {
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Gallery auto-scroll reel ────────────────────────────── */
+@keyframes galleryScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 /* ── Scrollbar ───────────────────────────────────────────── */
@@ -190,7 +201,7 @@ body {
 }
 
 .section-label {
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 6px;
   text-transform: uppercase;
   color: var(--yellow);
@@ -214,3 +225,83 @@ body {
 /* Hide scrollbar for photo strip */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@layer utilities {
+  /* ── Responsive Menu Grid */
+  .menu-grid-responsive {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 1024px) {
+    .menu-grid-responsive { grid-template-columns: repeat(4, 1fr); }
+  }
+  @media (max-width: 767px) {
+    .menu-card-span2 { grid-row: span 1 !important; }
+  }
+
+  /* ── Responsive Section Padding */
+  @media (max-width: 768px) {
+    .section-label { font-size: 12px; letter-spacing: 4px; }
+    .photo-strip-label { font-size: 13px; }
+  }
+
+  /* ── Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 640px) {
+    .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 16px !important; }
+  }
+
+  /* ── Form Grid */
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  @media (max-width: 640px) {
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  /* ── Floating Book Button — consistent position all screens */
+  .floating-book-pos {
+    bottom: 36px !important;
+    right: 30px !important;
+  }
+
+  /* ── Hamburger — hide on desktop */
+  .hamburger-btn {
+    display: flex;
+  }
+  @media (min-width: 768px) {
+    .hamburger-btn {
+      display: none !important;
+    }
+  }
+
+  /* ── Gallery — Desktop hover strip vs Mobile scroll reel */
+  .gallery-desktop {
+    display: flex;
+    overflow: hidden;
+  }
+  .gallery-mobile {
+    display: none;
+  }
+  @media (max-width: 1023px) {
+    .gallery-desktop { display: none !important; }
+    .gallery-mobile  { display: block !important; }
+  }
+
+  /* ── Gallery scroll track */
+  .gallery-scroll-track {
+    display: flex;
+    width: max-content;
+    animation: galleryScroll 28s linear infinite;
+  }
+  .gallery-scroll-track:hover {
+    animation-play-state: paused;
+  }
+}

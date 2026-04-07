@@ -16,11 +16,11 @@ export default function About() {
   return (
     <section
       id="about"
-      style={{ background: "var(--black)", padding: "112px 52px" }}
+      style={{ background: "var(--black)", padding: "clamp(60px, 8vw, 112px) clamp(20px, 4vw, 52px)" }}
     >
       <div style={{ maxWidth: "1280px", margin: "0 auto" }} ref={ref}>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
           {/* ── Left: Image Stack ─────────────────────────── */}
           <motion.div
@@ -86,8 +86,8 @@ export default function About() {
                 outline: "6px solid transparent",
               }}
             >
-              <strong style={{ fontSize: "28px", lineHeight: 1 }}>5★</strong>
-              Rated in
+              <strong style={{ fontSize: "28px", lineHeight: 1 }}>10+</strong>
+              Years in
               Chicago
             </motion.div>
           </motion.div>
@@ -109,7 +109,7 @@ export default function About() {
               animate={inView ? "show" : "hidden"}
               className="section-title mb-5"
             >
-              Building <em>CommuniTAY</em><br />One Taco at a Time
+              From <em>LA</em><br />to Chicago Soul
             </motion.h2>
 
             <motion.div
@@ -117,24 +117,15 @@ export default function About() {
               initial="hidden"
               animate={inView ? "show" : "hidden"}
             >
-              <p style={{ fontSize: "16px", lineHeight: 1.85, color: "rgba(250,246,238,0.7)", marginBottom: "18px", fontWeight: 300 }}>
-                Taylor&apos;s Tacos Chicago was born from a simple belief — food is the
-                ultimate community builder. Founded by{" "}
-                <strong style={{ color: "var(--off-white)" }}>Taylor Mason</strong>,
-                we&apos;ve grown from a passion project into Chicago&apos;s most loved
-                taco catering brand.
+              <p style={{ fontSize: "18px", lineHeight: 2.0, color: "rgba(250,246,238,0.7)", marginBottom: "28px", fontWeight: 300 }}>
+                Taylor&apos;s Tacos was born from a love of authentic Mexican street
+                food and Chicago&apos;s unstoppable spirit. We brought LA&apos;s bold
+                taco culture north and fused it with the heart and hustle of the Chi.
               </p>
-              <p style={{ fontSize: "16px", lineHeight: 1.85, color: "rgba(250,246,238,0.7)", marginBottom: "18px", fontWeight: 300 }}>
-                Operating from our production kitchen at{" "}
-                <strong style={{ color: "var(--off-white)" }}>
-                  135 N. Kedzie @ The Hatchery
-                </strong>
-                , we craft every taco with bold flavors and genuine care — from
-                corporate luncheons to dream weddings.
-              </p>
-              <p style={{ fontSize: "16px", lineHeight: 1.85, color: "rgba(250,246,238,0.7)", fontWeight: 300 }}>
-                We believe every event deserves something to{" "}
-                <em style={{ color: "var(--yellow)" }}>taco &apos;bout</em>.
+              <p style={{ fontSize: "18px", lineHeight: 2.0, color: "rgba(250,246,238,0.7)", fontWeight: 300 }}>
+                Planted at 135 N. Kedzie, we&apos;re not just a taco shop. We&apos;re
+                a full-service catering company that shows up for your community,
+                your corporate team, your wedding day and everything in between.
               </p>
             </motion.div>
 
@@ -143,18 +134,24 @@ export default function About() {
               variants={fadeUp(0.45)}
               initial="hidden"
               animate={inView ? "show" : "hidden"}
-              className="grid grid-cols-3 gap-4 mt-10 pt-10"
-              style={{ borderTop: "1px solid rgba(250,246,238,0.1)" }}
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(3, 1fr)",
+                borderTop: "1px solid rgba(250,246,238,0.1)",
+                marginTop: "36px",
+                paddingTop: "36px",
+                gap: "clamp(12px, 4vw, 48px)",
+              }}
             >
               {[
                 { num: "500+", label: "Events Catered" },
-                { num: "10K+", label: "Tacos Served" },
-                { num: "2019", label: "Est. Chicago" },
+                { num: "1M+",  label: "Tacos Served" },
+                { num: "5★",   label: "Avg Rating" },
               ].map((s) => (
                 <div key={s.label}>
                   <div
                     style={{
-                      fontSize: "52px",
+                      fontSize: "clamp(28px, 4vw, 52px)",
                       fontWeight: 900,
                       color: "var(--yellow)",
                       lineHeight: 1,
@@ -164,11 +161,11 @@ export default function About() {
                   </div>
                   <div
                     style={{
-                      fontSize: "10px",
+                      fontSize: "14px",
                       letterSpacing: "2px",
                       textTransform: "uppercase",
                       color: "rgba(250,246,238,0.4)",
-                      marginTop: "4px",
+                      marginTop: "6px",
                     }}
                   >
                     {s.label}

@@ -1,12 +1,14 @@
 "use client";
 
+import { UtensilsCrossed, Briefcase, Heart, Truck, Flame, MapPin } from "lucide-react";
+
 const items = [
-  "🌮 Taco Catering",
-  "🎉 Corporate Events",
-  "💍 Weddings",
-  "🚚 Food Truck Chicago",
-  "🌶️ Taco Tuesday",
-  "📍 135 N. Kedzie",
+  { icon: <UtensilsCrossed size={16} strokeWidth={2} />, label: "Taco Catering" },
+  { icon: <Briefcase size={16} strokeWidth={2} />,       label: "Corporate Events" },
+  { icon: <Heart size={16} strokeWidth={2} />,           label: "Weddings" },
+  { icon: <Truck size={16} strokeWidth={2} />,           label: "Food Truck Chicago" },
+  { icon: <Flame size={16} strokeWidth={2} />,           label: "Taco Tuesday" },
+  { icon: <MapPin size={16} strokeWidth={2} />,          label: "135 N. Kedzie" },
 ];
 
 // Duplicate for seamless infinite loop
@@ -36,12 +38,15 @@ export default function MarqueeBanner() {
               padding: "0 32px",
               display: "inline-flex",
               alignItems: "center",
-              gap: "32px",
+              gap: "10px",
               whiteSpace: "nowrap",
             }}
           >
-            {item}
-            <span style={{ color: "var(--yellow)", fontSize: "20px" }}>✦</span>
+            <span style={{ color: "var(--yellow)", display: "flex", alignItems: "center" }}>
+              {item.icon}
+            </span>
+            {item.label}
+            <span style={{ color: "var(--yellow)", fontSize: "20px", marginLeft: "22px" }}>✦</span>
           </span>
         ))}
       </div>

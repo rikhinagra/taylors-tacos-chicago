@@ -42,7 +42,7 @@ export default function Navbar() {
         className="fixed left-0 right-0 z-50 transition-all duration-400"
         style={{
           top: scrolled ? "0" : "8px",
-          padding: scrolled ? "12px 52px" : "18px 52px",
+          padding: scrolled ? "12px clamp(20px, 4vw, 52px)" : "18px clamp(20px, 4vw, 52px)",
           background: scrolled ? "rgba(14,10,8,0.97)" : "transparent",
           backdropFilter: scrolled ? "blur(20px)" : "none",
           borderBottom: scrolled ? "3px solid var(--yellow)" : "none",
@@ -55,9 +55,9 @@ export default function Navbar() {
             onClick={() => scrollTo("#home")}
             className="flex-shrink-0"
           >
-            <div className="relative" style={{ width: "140px", height: "52px" }}>
+            <div className="relative" style={{ width: "170px", height: "64px" }}>
               <Image
-                src="/images/logo/Taylor's Tacos Horizontal.webp"
+                src="/images/logo/main logo full two.webp"
                 alt="Taylor's Tacos Chicago"
                 fill
                 className="object-contain"
@@ -76,14 +76,14 @@ export default function Navbar() {
                   className="relative group transition-colors duration-300"
                   style={{
                     color: link.label === "Book Now →" ? "white" : "rgba(250,246,238,0.72)",
-                    fontSize: "12px",
+                    fontSize: "16px",
                     fontWeight: 600,
                     letterSpacing: "2px",
                     textTransform: "uppercase",
                     background: link.label === "Book Now →"
                       ? "var(--red)"
                       : "transparent",
-                    padding: link.label === "Book Now →" ? "11px 24px" : "0",
+                    padding: link.label === "Book Now →" ? "8px 18px" : "0",
                     borderRadius: link.label === "Book Now →" ? "3px" : "0",
                     border: "none",
                   } as React.CSSProperties}
@@ -119,8 +119,18 @@ export default function Navbar() {
           {/* Mobile Hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden p-2 text-[var(--off-white)]"
             aria-label="Toggle menu"
+            style={{
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "10px",
+              marginRight: "4px",
+              background: "none",
+              border: "none",
+              color: "var(--off-white)",
+              cursor: "pointer",
+            }}
+            className="hamburger-btn"
           >
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -135,18 +145,55 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.35 }}
-            className="fixed inset-0 z-40 md:hidden"
+            className="md:hidden"
+            style={{ position: "fixed", inset: 0, zIndex: 9000 }}
           >
             <div
-              className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+              style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.75)", backdropFilter: "blur(4px)" }}
               onClick={() => setMenuOpen(false)}
             />
             <div
-              className="absolute right-0 top-0 bottom-0 w-[280px] flex flex-col pt-20 pb-8 px-6 shadow-2xl"
-              style={{ background: "rgba(14,10,8,0.98)", borderLeft: "3px solid var(--yellow)" }}
+              style={{
+                position: "absolute",
+                right: 0,
+                top: 0,
+                bottom: 0,
+                width: "280px",
+                display: "flex",
+                flexDirection: "column",
+                paddingTop: "80px",
+                paddingBottom: "52px",
+                paddingLeft: "24px",
+                paddingRight: "24px",
+                background: "#0E0A08",
+                borderLeft: "3px solid var(--yellow)",
+                boxShadow: "0 25px 50px rgba(0,0,0,0.5)",
+              }}
             >
-              <div className="brand-stripe w-full mb-8 rounded-sm" />
-              <nav className="flex flex-col gap-1">
+              {/* Close button */}
+              <button
+                onClick={() => setMenuOpen(false)}
+                style={{
+                  position: "absolute",
+                  top: "18px",
+                  right: "18px",
+                  background: "none",
+                  border: "none",
+                  color: "var(--off-white)",
+                  cursor: "pointer",
+                  padding: "4px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+                aria-label="Close menu"
+              >
+                <X size={24} />
+              </button>
+
+              <div className="brand-stripe" style={{ width: "100%", marginBottom: "32px", borderRadius: "3px" }} />
+
+              <nav style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
                 {navLinks.map((link, i) => (
                   <motion.button
                     key={link.href}
@@ -154,10 +201,19 @@ export default function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.07 }}
                     onClick={() => { scrollTo(link.href); setMenuOpen(false); }}
-                    className="text-left py-3 px-4 rounded font-semibold uppercase tracking-widest text-sm transition-colors"
                     style={{
-                      color: "rgba(250,246,238,0.75)",
+                      textAlign: "left",
+                      padding: "12px 16px",
+                      borderRadius: "4px",
+                      fontWeight: 600,
+                      textTransform: "uppercase",
+                      fontSize: "14px",
                       letterSpacing: "2px",
+                      color: "rgba(250,246,238,0.75)",
+                      background: "none",
+                      border: "none",
+                      cursor: "pointer",
+                      transition: "color 0.2s",
                     }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = "var(--yellow)")}
                     onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(250,246,238,0.75)")}
@@ -166,11 +222,21 @@ export default function Navbar() {
                   </motion.button>
                 ))}
               </nav>
-              <div className="mt-auto">
+
+              <div style={{ marginTop: "auto" }}>
                 <a
                   href="tel:7732261596"
-                  className="block text-center py-3 rounded text-sm font-semibold text-white"
-                  style={{ background: "var(--red)" }}
+                  style={{
+                    display: "block",
+                    textAlign: "center",
+                    padding: "12px",
+                    borderRadius: "4px",
+                    fontSize: "15px",
+                    fontWeight: 700,
+                    color: "white",
+                    background: "var(--red)",
+                    textDecoration: "none",
+                  }}
                 >
                   (773) 226-1596
                 </a>

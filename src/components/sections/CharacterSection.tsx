@@ -13,7 +13,7 @@ export default function CharacterSection() {
     <section
       className="relative overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, var(--deep-purple) 0%, #3d1228 50%, var(--deep-red) 100%)",
+        background: "linear-gradient(135deg, #3d1228 0%, #3d1228 50%, var(--deep-red) 100%)",
         minHeight: "400px",
         display: "flex",
         alignItems: "center",
@@ -29,7 +29,7 @@ export default function CharacterSection() {
 
       <div
         className="relative z-10 grid grid-cols-1 md:grid-cols-[280px_1fr] gap-16 items-center w-full"
-        style={{ maxWidth: "1280px", margin: "0 auto", padding: "52px" }}
+        style={{ maxWidth: "1280px", margin: "0 auto", padding: "clamp(28px, 4vw, 52px)" }}
       >
         {/* Floating character */}
         <motion.div
@@ -45,7 +45,7 @@ export default function CharacterSection() {
             className="object-contain"
             style={{
               filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.5))",
-              height: "320px",
+              height: "clamp(180px, 30vw, 320px)",
               width: "auto",
             }}
           />
@@ -63,14 +63,15 @@ export default function CharacterSection() {
               fontFamily: "Hannik, sans-serif",
             }}
           >
-            We&apos;re Not Just Caterers.{" "}
+            Chicago&apos;s Most{" "}
             <span style={{ color: "var(--green)" }}>
-              We Build CommuniTAY.
-            </span>
+              Iconic Taco
+            </span>{" "}
+            Brand
           </h2>
           <p
             style={{
-              fontSize: "16px",
+              fontSize: "18px",
               lineHeight: 1.8,
               color: "rgba(255,255,255,0.78)",
               fontWeight: 300,
@@ -78,9 +79,9 @@ export default function CharacterSection() {
               maxWidth: "520px",
             }}
           >
-            Every taco we serve is made with love, culture, and a whole lot of
-            flavor. Taylor&apos;s Tacos is more than food — it&apos;s an experience
-            that brings people together, one taco at a time.
+            Built on bold flavors, real community, and the kind of tacos that
+            make people talk. From LA streets to Chicago neighborhoods,
+            Taylor&apos;s Tacos brings the soul to every event.
           </p>
           <button
             onClick={() => scrollTo("#contact")}
@@ -88,8 +89,8 @@ export default function CharacterSection() {
             style={{
               background: "var(--green)",
               color: "var(--black)",
-              padding: "16px 36px",
-              fontSize: "13px",
+              padding: "12px 28px",
+              fontSize: "17px",
               fontWeight: 800,
               letterSpacing: "2px",
               textTransform: "uppercase",
@@ -98,7 +99,7 @@ export default function CharacterSection() {
               cursor: "none",
             }}
           >
-            Let&apos;s Create Together 🌮
+            Book Us for Your Event →
           </button>
         </div>
       </div>

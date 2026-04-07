@@ -11,7 +11,7 @@ export default function CTABand() {
       className="relative overflow-hidden"
       style={{
         background: "linear-gradient(135deg, var(--deep-purple), var(--deep-red) 60%, var(--deep-purple))",
-        padding: "64px 52px",
+        padding: "clamp(40px, 6vw, 64px) clamp(20px, 4vw, 52px)",
       }}
     >
       {/* Watermark text */}
@@ -22,7 +22,7 @@ export default function CTABand() {
           top: "-80px",
           fontSize: "300px",
           fontWeight: 900,
-          letterSpacing: "-10px",
+          letterSpacing: "20px",
           color: "rgba(255,255,255,0.04)",
           lineHeight: 1,
           fontFamily: "Hannik, sans-serif",
@@ -54,22 +54,20 @@ export default function CTABand() {
               fontFamily: "Hannik, sans-serif",
             }}
           >
-            Ready to Give &apos;Em<br />
-            <em style={{ color: "var(--yellow)", fontStyle: "normal" }}>
-              Somethin&apos; to Taco &apos;Bout?
-            </em>
+            Bring Tacos<br />
+            to Your <em style={{ color: "var(--yellow)", fontStyle: "normal" }}>Event</em>
           </h2>
           <p
             style={{
-              fontSize: "15px",
+              fontSize: "17px",
               color: "rgba(255,255,255,0.78)",
               marginTop: "12px",
-              maxWidth: "440px",
+              maxWidth: "min(440px, 100%)",
               lineHeight: 1.75,
             }}
           >
-            From intimate gatherings to large-scale events — our taco team is
-            ready to make your event unforgettable.
+            Food truck rollouts, staffed catering, corporate lunches, weddings,
+            schools, nonprofits. We love feeding the people who feed the people.
           </p>
         </div>
 
@@ -79,8 +77,8 @@ export default function CTABand() {
           style={{
             background: "var(--yellow)",
             color: "var(--black)",
-            padding: "18px 50px",
-            fontSize: "14px",
+            padding: "14px 40px",
+            fontSize: "18px",
             fontWeight: 800,
             letterSpacing: "2px",
             textTransform: "uppercase",
@@ -96,7 +94,7 @@ export default function CTABand() {
             (e.currentTarget as HTMLElement).style.background = "var(--yellow)";
           }}
         >
-          Book Your Event 🌮
+          Get a Quote
         </button>
       </div>
     </section>

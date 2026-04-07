@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { UtensilsCrossed } from "lucide-react";
 
 const bannerImages = [
   "/images/banners/taylor's_tacos_banner.webp",
@@ -19,7 +20,7 @@ const bannerImages = [
   "/images/banners/taylor's_tacos_banner11.webp",
 ];
 
-const papelFlags = Array.from({ length: 28 });
+const papelFlags = Array.from({ length: 16 });
 
 const scrollTo = (id: string) => {
   const el = document.querySelector(id);
@@ -75,8 +76,11 @@ export default function Hero() {
         />
       </div>
 
+      {/* ── Brand stripe ribbon (top) ────────────────────────────────────────── */}
+      <div className="brand-stripe absolute top-0 left-0 right-0 z-30 pointer-events-none" />
+
       {/* ── Papel Picado flags ───────────────────────────────────────────────── */}
-      <div className="absolute top-0 left-0 right-0 z-20 flex justify-around pointer-events-none">
+      <div className="absolute left-0 right-0 z-20 flex justify-around pointer-events-none" style={{ top: "10px" }}>
         {papelFlags.map((_, i) => (
           <div key={i} className="papel-flag" />
         ))}
@@ -106,7 +110,15 @@ export default function Hero() {
       {/* ── Hero Content ─────────────────────────────────────────────────────── */}
       {/* NOTE: Character mascot removed — video placeholder. Will be restored with real video. */}
       <div
-        className="relative z-40 text-center px-8 max-w-[820px]"
+        style={{
+          position: "relative",
+          zIndex: 40,
+          textAlign: "center",
+          padding: "0 clamp(20px, 5vw, 32px)",
+          maxWidth: "820px",
+          width: "100%",
+          margin: "0 auto",
+        }}
       >
         {/* Eyebrow */}
         <motion.p
@@ -114,7 +126,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.5 }}
           style={{
-            fontSize: "11px",
+            fontSize: "13px",
             letterSpacing: "7px",
             textTransform: "uppercase",
             color: "var(--yellow)",
@@ -122,7 +134,7 @@ export default function Hero() {
             marginBottom: "16px",
           }}
         >
-          Chicago&apos;s Favorite Taco Caterer
+          Chicago&apos;s Soul &nbsp;·&nbsp; LA&apos;s Flavor &nbsp;·&nbsp; 135 N. Kedzie
         </motion.p>
 
         {/* Main Logo */}
@@ -158,7 +170,7 @@ export default function Hero() {
             marginBottom: "48px",
           }}
         >
-          Building CommuniTAY · One Taco at a Time
+          #1 Taco Catering in the Chi
         </motion.p>
 
         {/* CTA Buttons */}
@@ -174,10 +186,10 @@ export default function Hero() {
             style={{
               background: "var(--red)",
               color: "white",
-              padding: "16px 40px",
+              padding: "11px 24px",
               fontSize: "13px",
               fontWeight: 700,
-              letterSpacing: "2.5px",
+              letterSpacing: "2px",
               textTransform: "uppercase",
               borderRadius: "3px",
               border: "2px solid var(--red)",
@@ -191,7 +203,7 @@ export default function Hero() {
               (e.currentTarget as HTMLButtonElement).style.color = "white";
             }}
           >
-            Book Your Event 🌮
+            Book Your Event <UtensilsCrossed size={16} strokeWidth={2} />
           </button>
           <button
             onClick={() => scrollTo("#menu")}
@@ -199,16 +211,16 @@ export default function Hero() {
             style={{
               background: "transparent",
               color: "var(--off-white)",
-              padding: "16px 40px",
+              padding: "11px 24px",
               fontSize: "13px",
               fontWeight: 700,
-              letterSpacing: "2.5px",
+              letterSpacing: "2px",
               textTransform: "uppercase",
               borderRadius: "3px",
               border: "2px solid rgba(250,246,238,0.28)",
             }}
           >
-            View Our Menu
+            View Menu →
           </button>
         </motion.div>
       </div>
