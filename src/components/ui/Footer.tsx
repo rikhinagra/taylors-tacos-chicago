@@ -226,11 +226,11 @@ export default function Footer() {
                   href={item.href}
                   style={{
                     color: "rgba(250,246,238,0.42)",
-                    fontSize: "14px",
+                    fontSize: "13px",
                     textDecoration: "none",
                     transition: "color 0.3s",
                     display: "block",
-                    wordBreak: "break-all",
+                    whiteSpace: "nowrap",
                   }}
                   onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--off-white)")}
                   onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(250,246,238,0.42)")}

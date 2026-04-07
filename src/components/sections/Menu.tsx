@@ -7,33 +7,33 @@ const menuCards = [
   {
     tag: "Our Signature",
     name: "Street Tacos",
-    img: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&auto=format&fit=crop&q=80",
+    img: "/images/food/taylors-tacos-chicago-trio-tacos-newspaper-wrap.webp",
     span2: true,
   },
   {
     tag: "Classic",
     name: "Carne Asada",
-    img: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&auto=format&fit=crop&q=80",
-  },
-  {
-    tag: "Sides",
-    name: "Fresh Sides",
-    img: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&auto=format&fit=crop&q=80",
+    img: "/images/food/taylors-tacos-chicago-taco-banner-colorful-toppings.webp",
   },
   {
     tag: "Fan Favorite",
-    name: "Al Pastor",
-    img: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=600&auto=format&fit=crop&q=80",
+    name: "Birria Tacos",
+    img: "/images/food/taylors-tacos-chicago-birria-tacos-basket-hot-sauce.webp",
   },
   {
-    tag: "Plant-Based",
-    name: "Veggie Tacos",
-    img: "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=600&auto=format&fit=crop&q=80",
+    tag: "Fan Favorite",
+    name: "Birria Taco",
+    img: "/images/food/taylors-tacos-chicago-birria-taco-cotija-cheese.webp",
   },
   {
-    tag: "Coming Soon",
-    name: "New Item",
-    img: "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?w=600&auto=format&fit=crop&q=80",
+    tag: "Catering Special",
+    name: "Catering Tray",
+    img: "/images/food/taylors-tacos-chicago-catering-tray-purple-cabbage.webp",
+  },
+  {
+    tag: "Must Try",
+    name: "Asparagus Taco",
+    img: "/images/food/taylors-tacos-chicago-asparagus-taco-pickled-onion.webp",
   },
 ];
 

@@ -34,7 +34,7 @@ export default function About() {
               style={{ border: "3px solid rgba(251,175,28,0.2)" }}
             >
               <Image
-                src="/images/gallery/founders.webp"
+                src="/images/logo/taylors-tacos-chicago-mascot-founders-branding.webp"
                 alt="Taylor Mason — Founder, Taylor's Tacos Chicago"
                 fill
                 className="object-cover"
@@ -56,7 +56,7 @@ export default function About() {
               }}
             >
               <Image
-                src="/images/gallery/live.webp"
+                src="/images/behind-the-scenes/taylors-tacos-chicago-owners-holding-taco-board.webp"
                 alt="Live taco service"
                 fill
                 className="object-cover"

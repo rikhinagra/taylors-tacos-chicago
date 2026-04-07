@@ -86,6 +86,7 @@ export default function Navbar() {
                     padding: link.label === "Book Now →" ? "8px 18px" : "0",
                     borderRadius: link.label === "Book Now →" ? "3px" : "0",
                     border: "none",
+                    textShadow: link.label !== "Book Now →" ? "0 2px 12px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,1)" : "none",
                   } as React.CSSProperties}
                   onMouseEnter={(e) => {
                     if (link.label !== "Book Now →") {

@@ -6,18 +6,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { UtensilsCrossed } from "lucide-react";
 
 const bannerImages = [
-  "/images/banners/taylor's_tacos_banner.webp",
-  "/images/banners/taylor's_tacos_banner01.webp",
-  "/images/banners/taylor's_tacos_banner02.webp",
-  "/images/banners/taylor's_tacos_banner03.webp",
-  "/images/banners/taylor's_tacos_banner04.webp",
-  "/images/banners/taylor's_tacos_banner05.webp",
-  "/images/banners/taylor's_tacos_banner06.webp",
-  "/images/banners/taylor's_tacos_banner07.webp",
-  "/images/banners/taylor's_tacos_banner08.webp",
-  "/images/banners/taylor's_tacos_banner09.webp",
-  "/images/banners/taylor's_tacos_banner10.webp",
-  "/images/banners/taylor's_tacos_banner11.webp",
+  "/images/banners/taylors-tacos-chicago-catering-booking-banner.webp",
+  "/images/banners/taylors-tacos-chicago-live-taco-prep-catering.webp",
+  "/images/banners/taylors-tacos-chicago-customer-service-event.webp",
+  "/images/banners/taylors-tacos-chicago-catering-team-service-station.webp",
+  "/images/banners/taylors-tacos-chicago-catering-live-service-collage.webp",
+  "/images/events/taylors-tacos-chicago-event-crowd-celebration.webp",
+  "/images/events/taylors-tacos-chicago-downtown-chicago-food-market-booth.webp",
+  "/images/events/taylors-tacos-chicago-taco-bar-serape-table-setup.webp",
+  "/images/behind-the-scenes/taylors-tacos-chicago-catering-team-ready-to-serve.webp",
+  "/images/behind-the-scenes/taylors-tacos-chicago-store-location-founder.webp",
+  "/images/behind-the-scenes/taylors-tacos-chicago-owner-taylor-mason-restaurant.webp",
+  "/images/brand/taylors-tacos-chicago-mascot-mural-pink-car-artwork.webp",
 ];
 
 const papelFlags = Array.from({ length: 16 });
@@ -66,12 +66,12 @@ export default function Hero() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Dark overlay — matches approved design opacity */}
+        {/* LIGHTENED OVERLAY */}
         <div
           className="absolute inset-0 z-10"
           style={{
             background:
-              "linear-gradient(160deg, rgba(14,10,8,0.88) 0%, rgba(14,10,8,0.55) 50%, rgba(85,26,58,0.25) 100%)",
+              "linear-gradient(160deg, rgba(14,10,8,0.35) 0%, rgba(14,10,8,0.15) 50%, rgba(85,26,58,0.05) 100%)",
           }}
         />
       </div>
@@ -132,6 +132,7 @@ export default function Hero() {
             color: "var(--yellow)",
             fontWeight: 600,
             marginBottom: "16px",
+            textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,1)",
           }}
         >
           Chicago&apos;s Soul &nbsp;·&nbsp; LA&apos;s Flavor &nbsp;·&nbsp; 135 N. Kedzie
@@ -163,11 +164,12 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.7 }}
           style={{
             fontSize: "clamp(13px, 1.6vw, 17px)",
-            color: "rgba(250,246,238,0.72)",
-            fontWeight: 300,
+            color: "rgba(250,246,238,1)",
+            fontWeight: 400,
             letterSpacing: "3px",
             textTransform: "uppercase",
             marginBottom: "48px",
+            textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,1)",
           }}
         >
           #1 Taco Catering in the Chi
@@ -218,6 +220,7 @@ export default function Hero() {
               textTransform: "uppercase",
               borderRadius: "3px",
               border: "2px solid rgba(250,246,238,0.28)",
+              textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,1)",
             }}
           >
             View Menu →

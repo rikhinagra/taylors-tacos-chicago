@@ -5,14 +5,14 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 
 const photos = [
-  { src: "/images/gallery/header image.webp",  label: "Our Setup" },
-  { src: "/images/gallery/live.webp",           label: "Live Events" },
-  { src: "/images/gallery/_31A7978.webp",       label: "Taco Bar" },
-  { src: "/images/gallery/Taco Tuesday.webp",   label: "Taco Tuesday" },
-  { src: "/images/gallery/_31A8024.webp",       label: "Fresh Tacos" },
-  { src: "/images/gallery/come hungry.webp",    label: "Come Hungry" },
-  { src: "/images/gallery/_31A8039.webp",       label: "The Service" },
-  { src: "/images/gallery/friendsgiving.webp",  label: "Friendsgiving" },
+  { src: "/images/banners/taylors-tacos-chicago-menu-board-chicken-beef-shrimp.webp",       label: "Menu Board" },
+  { src: "/images/behind-the-scenes/taylors-tacos-chicago-chef-plating-cream-sauce.webp",   label: "Fresh Prep" },
+  { src: "/images/behind-the-scenes/taylors-tacos-chicago-staff-preparing-orders.webp",     label: "Behind The Bar" },
+  { src: "/images/events/taylors-tacos-chicago-friendsgiving-special-catering.webp",        label: "Friendsgiving" },
+  { src: "/images/events/taylors-tacos-chicago-velvet-taco-tuesday-special.webp",           label: "Taco Tuesday" },
+  { src: "/images/events/taylors-tacos-chicago-catering-buffet-guests-serving.webp",        label: "Come Hungry" },
+  { src: "/images/events/taylors-tacos-chicago-catering-buffet-rice-lime-setup.webp",       label: "The Spread" },
+  { src: "/images/events/taylors-tacos-chicago-pride-event-street-food-bowl.webp",          label: "Pride Fest" },
 ];
 
 // Duplicate array for seamless infinite loop

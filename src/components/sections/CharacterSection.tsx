@@ -38,7 +38,7 @@ export default function CharacterSection() {
           className="flex justify-center"
         >
           <Image
-            src="/images/logo/Character.webp"
+            src="/images/logo/taylors-tacos-chicago-cactus-mascot-character.webp"
             alt="Taylor's Tacos mascot"
             width={260}
             height={320}

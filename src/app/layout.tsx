@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/banners/taylor's_tacos_banner.webp",
+        url: "/images/banners/taylors-tacos-chicago-catering-booking-banner.webp",
         width: 1200,
         height: 630,
         alt: "Taylor's Tacos Chicago",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Taylor's Tacos Chicago | Catering & Food Truck",
     description:
       "Building CommuniTAY one taco at a time. Book your next event with Taylor's Tacos.",
-    images: ["/images/banners/taylor's_tacos_banner.webp"],
+    images: ["/images/banners/taylors-tacos-chicago-catering-booking-banner.webp"],
   },
   metadataBase: new URL("https://www.taylorstacoschicago.com"),
   robots: {
@@ -57,7 +57,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <StructuredData />
         {children}
       </body>
