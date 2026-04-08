@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/images/logo/taylors-tacos-chicago-logo-stacked.webp" alt="Taylor's Tacos Chicago" width="280" />
+</p>
+
 # Taylor's Tacos Chicago
 
 Website for Taylor's Tacos Chicago — the #1 taco catering company in the Chi. Built to showcase the brand, attract customers, and make it easy to book events.
