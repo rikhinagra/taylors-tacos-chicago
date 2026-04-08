@@ -23,7 +23,7 @@ export default function StructuredData() {
     },
     servesCuisine: ["Mexican", "Tacos", "Catering"],
     priceRange: "$$ - $$$",
-    image: "https://www.taylorstacoschicago.com/images/logo/main logo full.webp",
+    image: "https://www.taylorstacoschicago.com/images/logo/taylors-tacos-chicago-logo-stacked.webp",
     sameAs: [
       "https://www.instagram.com/taylorstacoschicago",
       "https://www.facebook.com/taylorstacoschicago",
