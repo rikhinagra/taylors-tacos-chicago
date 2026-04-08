@@ -5,14 +5,14 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 
 const photos = [
-  { src: "/images/banners/taylors-tacos-chicago-menu-board-chicken-beef-shrimp.webp",       label: "Menu Board" },
-  { src: "/images/behind-the-scenes/taylors-tacos-chicago-chef-plating-cream-sauce.webp",   label: "Fresh Prep" },
-  { src: "/images/behind-the-scenes/taylors-tacos-chicago-staff-preparing-orders.webp",     label: "Behind The Bar" },
-  { src: "/images/events/taylors-tacos-chicago-friendsgiving-special-catering.webp",        label: "Friendsgiving" },
-  { src: "/images/events/taylors-tacos-chicago-velvet-taco-tuesday-special.webp",           label: "Taco Tuesday" },
-  { src: "/images/events/taylors-tacos-chicago-catering-buffet-guests-serving.webp",        label: "Come Hungry" },
-  { src: "/images/events/taylors-tacos-chicago-catering-buffet-rice-lime-setup.webp",       label: "The Spread" },
-  { src: "/images/events/taylors-tacos-chicago-pride-event-street-food-bowl.webp",          label: "Pride Fest" },
+  { src: "/images/banners/taylors-tacos-chicago-menu-board-chicken-beef-shrimp.webp",       label: "Menu Board",     alt: "Taylor's Tacos Chicago menu board featuring chicken, beef, and shrimp taco options" },
+  { src: "/images/behind-the-scenes/taylors-tacos-chicago-chef-plating-cream-sauce.webp",   label: "Fresh Prep",     alt: "Taylor's Tacos Chicago chef plating fresh tacos with cream sauce" },
+  { src: "/images/behind-the-scenes/taylors-tacos-chicago-staff-preparing-orders.webp",     label: "Behind The Bar", alt: "Taylor's Tacos Chicago staff preparing taco orders behind the service bar" },
+  { src: "/images/events/taylors-tacos-chicago-friendsgiving-special-catering.webp",        label: "Friendsgiving",  alt: "Taylor's Tacos Chicago catering a Friendsgiving special event" },
+  { src: "/images/events/taylors-tacos-chicago-velvet-taco-tuesday-special.webp",           label: "Taco Tuesday",   alt: "Taylor's Tacos Chicago Taco Tuesday velvet special event setup" },
+  { src: "/images/events/taylors-tacos-chicago-catering-buffet-guests-serving.webp",        label: "Come Hungry",    alt: "Guests serving themselves at a Taylor's Tacos Chicago catering buffet" },
+  { src: "/images/events/taylors-tacos-chicago-catering-buffet-rice-lime-setup.webp",       label: "The Spread",     alt: "Taylor's Tacos Chicago full catering spread with rice, lime, and fresh toppings" },
+  { src: "/images/events/taylors-tacos-chicago-pride-event-street-food-bowl.webp",          label: "Pride Fest",     alt: "Taylor's Tacos Chicago serving street food bowls at Chicago Pride Fest" },
 ];
 
 // Duplicate array for seamless infinite loop
@@ -66,7 +66,7 @@ export default function Gallery() {
           <div key={i} className="photo-strip-item" style={{ height: "280px" }}>
             <Image
               src={photo.src}
-              alt={photo.label}
+              alt={photo.alt}
               width={400}
               height={280}
               className="photo-strip-img"
@@ -103,7 +103,7 @@ export default function Gallery() {
             >
               <Image
                 src={photo.src}
-                alt={photo.label}
+                alt={photo.alt}
                 fill
                 style={{ objectFit: "cover" }}
               />

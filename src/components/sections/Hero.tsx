@@ -6,18 +6,54 @@ import { motion, AnimatePresence } from "framer-motion";
 import { UtensilsCrossed } from "lucide-react";
 
 const bannerImages = [
-  "/images/banners/taylors-tacos-chicago-catering-booking-banner.webp",
-  "/images/banners/taylors-tacos-chicago-live-taco-prep-catering.webp",
-  "/images/banners/taylors-tacos-chicago-customer-service-event.webp",
-  "/images/banners/taylors-tacos-chicago-catering-team-service-station.webp",
-  "/images/banners/taylors-tacos-chicago-catering-live-service-collage.webp",
-  "/images/events/taylors-tacos-chicago-event-crowd-celebration.webp",
-  "/images/events/taylors-tacos-chicago-downtown-chicago-food-market-booth.webp",
-  "/images/events/taylors-tacos-chicago-taco-bar-serape-table-setup.webp",
-  "/images/behind-the-scenes/taylors-tacos-chicago-catering-team-ready-to-serve.webp",
-  "/images/behind-the-scenes/taylors-tacos-chicago-store-location-founder.webp",
-  "/images/behind-the-scenes/taylors-tacos-chicago-owner-taylor-mason-restaurant.webp",
-  "/images/brand/taylors-tacos-chicago-mascot-mural-pink-car-artwork.webp",
+  {
+    src: "/images/banners/taylors-tacos-chicago-catering-booking-banner.webp",
+    alt: "Taylor's Tacos Chicago — premium taco catering and food truck booking in Chicago",
+  },
+  {
+    src: "/images/banners/taylors-tacos-chicago-live-taco-prep-catering.webp",
+    alt: "Live taco preparation at a Taylor's Tacos Chicago catering event",
+  },
+  {
+    src: "/images/banners/taylors-tacos-chicago-customer-service-event.webp",
+    alt: "Taylor's Tacos Chicago team serving customers at a catered event",
+  },
+  {
+    src: "/images/banners/taylors-tacos-chicago-catering-team-service-station.webp",
+    alt: "Taylor's Tacos Chicago staffed catering team at a service station",
+  },
+  {
+    src: "/images/banners/taylors-tacos-chicago-catering-live-service-collage.webp",
+    alt: "Collage of Taylor's Tacos Chicago live catering service and food truck events",
+  },
+  {
+    src: "/images/events/taylors-tacos-chicago-event-crowd-celebration.webp",
+    alt: "Crowd celebrating at a Taylor's Tacos Chicago catered event in Chicago",
+  },
+  {
+    src: "/images/events/taylors-tacos-chicago-downtown-chicago-food-market-booth.webp",
+    alt: "Taylor's Tacos Chicago booth at a downtown Chicago food market",
+  },
+  {
+    src: "/images/events/taylors-tacos-chicago-taco-bar-serape-table-setup.webp",
+    alt: "Festive taco bar setup with serape table cloth at a Taylor's Tacos Chicago event",
+  },
+  {
+    src: "/images/behind-the-scenes/taylors-tacos-chicago-catering-team-ready-to-serve.webp",
+    alt: "Taylor's Tacos Chicago catering team ready to serve at an event",
+  },
+  {
+    src: "/images/behind-the-scenes/taylors-tacos-chicago-store-location-founder.webp",
+    alt: "Taylor's Tacos Chicago store location at 135 N. Kedzie with founder",
+  },
+  {
+    src: "/images/behind-the-scenes/taylors-tacos-chicago-owner-taylor-mason-restaurant.webp",
+    alt: "Taylor Mason, owner and founder of Taylor's Tacos Chicago, inside the restaurant",
+  },
+  {
+    src: "/images/brand/taylors-tacos-chicago-mascot-mural-pink-car-artwork.webp",
+    alt: "Taylor's Tacos Chicago brand mural featuring mascot and pink car street artwork",
+  },
 ];
 
 const papelFlags = Array.from({ length: 16 });
@@ -56,8 +92,8 @@ export default function Hero() {
             className="absolute inset-0"
           >
             <Image
-              src={bannerImages[current]}
-              alt="Taylor's Tacos Chicago"
+              src={bannerImages[current].src}
+              alt={bannerImages[current].alt}
               fill
               className="object-cover object-center"
               priority={current === 0}
@@ -146,9 +182,10 @@ export default function Hero() {
           className="relative mx-auto mb-6"
           style={{ width: "min(580px, 75vw)", height: "auto" }}
         >
+          <h1 className="sr-only">Taylor&apos;s Tacos Chicago — Taco Catering &amp; Food Truck in Chicago</h1>
           <Image
             src="/images/logo/taylors-tacos-chicago-logo-stacked.webp"
-            alt="Taylor's Tacos"
+            alt="Taylor's Tacos Chicago — Official Logo"
             width={580}
             height={220}
             className="w-full h-auto"

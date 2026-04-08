@@ -57,7 +57,7 @@ export default function About() {
             >
               <Image
                 src="/images/behind-the-scenes/taylors-tacos-chicago-owners-holding-taco-board.webp"
-                alt="Live taco service"
+                alt="Taylor Mason and the Taylor's Tacos Chicago team holding the signature taco board"
                 fill
                 className="object-cover"
               />

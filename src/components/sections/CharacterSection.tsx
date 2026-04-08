@@ -39,7 +39,7 @@ export default function CharacterSection() {
         >
           <Image
             src="/images/logo/taylors-tacos-chicago-cactus-mascot-character.webp"
-            alt="Taylor's Tacos mascot"
+            alt="Taylor's Tacos Chicago cactus mascot character"
             width={260}
             height={320}
             className="object-contain"

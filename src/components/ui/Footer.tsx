@@ -15,11 +15,6 @@ const FacebookIcon = () => (
   </svg>
 );
 
-const TikTokIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
-  </svg>
-);
 
 const scrollTo = (href: string) => {
   const el = document.querySelector(href);
@@ -71,7 +66,6 @@ export default function Footer() {
             {[
               { icon: <InstagramIcon />, href: "https://www.instagram.com/taylorstacoschicago" },
               { icon: <FacebookIcon />,  href: "https://www.facebook.com/taylorstacoschicago" },
-              { icon: <TikTokIcon />,    href: "#" },
             ].map((s, i) => (
               <a
                 key={i}
@@ -218,12 +212,13 @@ export default function Footer() {
             {[
               { label: "(773) 226-1596", href: "tel:7732261596" },
               { label: "info@taylorstacoschicago.com", href: "mailto:info@taylorstacoschicago.com" },
-              { label: "135 N. Kedzie", href: "#" },
-              { label: "Chicago, IL 60612", href: "#" },
+              { label: "135 N. Kedzie", href: "https://maps.google.com/?q=135+N+Kedzie+Chicago+IL+60612", external: true },
+              { label: "Chicago, IL 60612", href: "https://maps.google.com/?q=135+N+Kedzie+Chicago+IL+60612", external: true },
             ].map((item) => (
               <li key={item.label}>
                 <a
                   href={item.href}
+                  {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   style={{
                     color: "rgba(250,246,238,0.42)",
                     fontSize: "13px",

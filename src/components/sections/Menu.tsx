@@ -2,37 +2,44 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
 const menuCards = [
   {
     tag: "Our Signature",
     name: "Street Tacos",
+    alt: "Taylor's Tacos Chicago street tacos served in newspaper wrap",
     img: "/images/food/taylors-tacos-chicago-trio-tacos-newspaper-wrap.webp",
     span2: true,
   },
   {
     tag: "Classic",
     name: "Carne Asada",
+    alt: "Taylor's Tacos Chicago carne asada taco with colorful fresh toppings",
     img: "/images/food/taylors-tacos-chicago-taco-banner-colorful-toppings.webp",
   },
   {
     tag: "Fan Favorite",
     name: "Birria Tacos",
+    alt: "Taylor's Tacos Chicago birria tacos in basket with house hot sauce",
     img: "/images/food/taylors-tacos-chicago-birria-tacos-basket-hot-sauce.webp",
   },
   {
     tag: "Fan Favorite",
     name: "Birria Taco",
+    alt: "Taylor's Tacos Chicago birria taco topped with cotija cheese",
     img: "/images/food/taylors-tacos-chicago-birria-taco-cotija-cheese.webp",
   },
   {
     tag: "Catering Special",
     name: "Catering Tray",
+    alt: "Taylor's Tacos Chicago catering tray with purple cabbage and fresh toppings",
     img: "/images/food/taylors-tacos-chicago-catering-tray-purple-cabbage.webp",
   },
   {
     tag: "Must Try",
     name: "Asparagus Taco",
+    alt: "Taylor's Tacos Chicago asparagus taco with pickled onions — vegetarian option",
     img: "/images/food/taylors-tacos-chicago-asparagus-taco-pickled-onion.webp",
   },
 ];
@@ -135,18 +142,12 @@ export default function Menu() {
               }}
             >
               {/* Image — scales on card hover via group */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={card.img}
-                alt={card.name}
+                alt={card.alt}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 className="object-cover transition-transform duration-[600ms] ease-in-out group-hover:scale-110"
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                }}
               />
 
               {/* Dark gradient overlay */}
