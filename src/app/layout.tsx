@@ -73,7 +73,9 @@ export const metadata: Metadata = {
     "geo.position":  "41.8781;-87.6298",
     "ICBM":          "41.8781, -87.6298",
   },
-  metadataBase: new URL("https://www.taylorstacoschicago.com"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.taylorstacoschicago.com"
+  ),
   robots: {
     index: true,
     follow: true,
