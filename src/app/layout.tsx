@@ -55,6 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@taylorstacoschicago",
+    creator: "@taylorstacoschicago",
     title: "Taylor's Tacos Chicago | Taco Catering & Food Truck",
     description:
       "Building CommuniTAY one taco at a time. Book Chicago's #1 taco catering for your corporate event, wedding, or party.",
@@ -64,6 +66,12 @@ export const metadata: Metadata = {
         alt: "Taylor's Tacos Chicago — taco catering and food truck for events in Chicagoland",
       },
     ],
+  },
+  other: {
+    "geo.region":    "US-IL",
+    "geo.placename": "Chicago, Illinois",
+    "geo.position":  "41.8781;-87.6298",
+    "ICBM":          "41.8781, -87.6298",
   },
   metadataBase: new URL("https://www.taylorstacoschicago.com"),
   robots: {
