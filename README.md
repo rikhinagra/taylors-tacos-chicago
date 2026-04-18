@@ -70,3 +70,32 @@ public/
 ---
 
 Built by [Sachhsoft](https://www.sachhsoft.com/)
+
+---
+
+## Pending Tasks
+
+These things are not done yet and need to be completed:
+
+### 1. Google Search Console
+- Ask client for their Gmail account
+- Go to [search.google.com/search-console](https://search.google.com/search-console)
+- Add property → enter `https://www.taylorstacoschicago.com`
+- Verify ownership using the HTML tag method
+- Submit sitemap: `https://www.taylorstacoschicago.com/sitemap.xml`
+- This tells Google the site exists and starts SEO indexing
+
+### 2. Google Analytics
+- Ask client for their Gmail account
+- Go to [analytics.google.com](https://analytics.google.com)
+- Create a new property for `taylorstacoschicago.com`
+- Get the Measurement ID (looks like `G-XXXXXXXXXX`)
+- Add it to the project code
+- This tracks visitors, traffic sources, and user behaviour
+
+### 3. When connecting the main domain to Vercel
+- Go to Vercel → Settings → Environment Variables
+- Find `NEXT_PUBLIC_SITE_URL`
+- Change the value from `https://taylors-tacos-chicago.vercel.app` to `https://www.taylorstacoschicago.com`
+- Click Save → Redeploy
+- This fixes the OG image preview on WhatsApp and Slack
