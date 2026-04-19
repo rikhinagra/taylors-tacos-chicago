@@ -244,8 +244,8 @@ export default function Hero() {
           >
             Book Your Event <UtensilsCrossed size={16} strokeWidth={2} />
           </button>
-          <button
-            onClick={() => scrollTo("#menu")}
+          <a
+            href="/catering-menu"
             className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--yellow)] hover:text-[var(--yellow)]"
             style={{
               background: "transparent",
@@ -258,10 +258,12 @@ export default function Hero() {
               borderRadius: "3px",
               border: "2px solid rgba(250,246,238,0.28)",
               textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,1)",
+              textDecoration: "none",
+              cursor: "none",
             }}
           >
             View Menu →
-          </button>
+          </a>
         </motion.div>
       </div>
 

@@ -90,12 +90,13 @@ export default function Menu() {
             </motion.h2>
           </div>
 
-          <motion.button
+          <motion.a
+            href="/catering-menu"
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ delay: 0.3 }}
-            onClick={() => scrollTo("#contact")}
             style={{
+              display: "inline-block",
               fontSize: "15px",
               letterSpacing: "2.5px",
               textTransform: "uppercase",
@@ -107,6 +108,7 @@ export default function Menu() {
               padding: "10px 20px",
               borderRadius: "3px",
               transition: "all 0.3s",
+              textDecoration: "none",
             } as React.CSSProperties}
             onMouseEnter={(e) => {
               (e.currentTarget as HTMLElement).style.background = "transparent";
@@ -118,7 +120,7 @@ export default function Menu() {
             }}
           >
             Full Catering Menu →
-          </motion.button>
+          </motion.a>
         </div>
 
         {/* ── Grid ───────────────────────────────────────────── */}

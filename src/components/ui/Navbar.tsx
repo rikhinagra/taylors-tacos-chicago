@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -8,7 +9,7 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { label: "Our Story",  href: "#about" },
   { label: "Catering",   href: "#services" },
-  { label: "Menu",       href: "#menu" },
+  { label: "Menu",       href: "/catering-menu" },
   { label: "Book Now →", href: "#contact" },
 ];
 
@@ -20,6 +21,28 @@ const scrollTo = (href: string) => {
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const handleNavClick = (href: string, closeMenu?: () => void) => {
+    if (closeMenu) closeMenu();
+    if (href.startsWith("/")) {
+      window.location.href = href;
+      return;
+    }
+    if (pathname === "/") {
+      scrollTo(href);
+    } else {
+      window.location.href = `/${href}`;
+    }
+  };
+
+  const handleLogoClick = () => {
+    if (pathname === "/") {
+      scrollTo("#home");
+    } else {
+      window.location.href = "/";
+    }
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -52,7 +75,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <button
-            onClick={() => scrollTo("#home")}
+            onClick={handleLogoClick}
             className="flex-shrink-0"
           >
             <div className="relative" style={{ width: "170px", height: "64px" }}>
@@ -72,10 +95,10 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <li key={link.href}>
                 <button
-                  onClick={() => scrollTo(link.href)}
+                  onClick={() => handleNavClick(link.href)}
                   className="relative group transition-colors duration-300"
                   style={{
-                    color: link.label === "Book Now →" ? "white" : "rgba(250,246,238,0.72)",
+                    color: link.label === "Book Now →" ? "white" : pathname === "/catering-menu" && link.label === "Menu" ? "var(--yellow)" : "rgba(250,246,238,0.72)",
                     fontSize: "16px",
                     fontWeight: 600,
                     letterSpacing: "2px",
@@ -201,7 +224,7 @@ export default function Navbar() {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.07 }}
-                    onClick={() => { scrollTo(link.href); setMenuOpen(false); }}
+                    onClick={() => handleNavClick(link.href, () => setMenuOpen(false))}
                     style={{
                       textAlign: "left",
                       padding: "12px 16px",

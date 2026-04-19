@@ -122,12 +122,12 @@ export default function Footer() {
             {[
               { label: "Our Story", href: "#about" },
               { label: "Services",  href: "#services" },
-              { label: "Menu",      href: "#menu" },
+              { label: "Menu",      href: "/catering-menu" },
               { label: "Book Now",  href: "#contact" },
             ].map((link) => (
               <li key={link.href}>
                 <button
-                  onClick={() => scrollTo(link.href)}
+                  onClick={() => link.href.startsWith("/") ? (window.location.href = link.href) : scrollTo(link.href)}
                   style={{
                     color: "rgba(250,246,238,0.42)",
                     fontSize: "14px",

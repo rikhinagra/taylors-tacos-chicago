@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { UtensilsCrossed } from "lucide-react";
 
 const scrollTo = (id: string) => {
@@ -8,9 +9,19 @@ const scrollTo = (id: string) => {
 };
 
 export default function FloatingBookButton() {
+  const pathname = usePathname();
+
+  const handleClick = () => {
+    if (pathname === "/") {
+      scrollTo("#contact");
+    } else {
+      window.location.href = "/#contact";
+    }
+  };
+
   return (
     <button
-      onClick={() => scrollTo("#contact")}
+      onClick={handleClick}
       className="floating-book-pos"
       style={{
         position: "fixed",
