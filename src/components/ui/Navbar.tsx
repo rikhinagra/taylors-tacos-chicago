@@ -7,10 +7,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Our Story",  href: "#about" },
-  { label: "Catering",   href: "#services" },
-  { label: "Menu",       href: "/catering-menu" },
-  { label: "Book Now →", href: "#contact" },
+  { label: "Our Story",    href: "#about" },
+  { label: "Catering",     href: "#services" },
+  { label: "Menu",         href: "/catering-menu" },
+  { label: "Taco Tuesday", href: "/taco-tuesday" },
+  { label: "Book Now →",   href: "#contact" },
 ];
 
 const scrollTo = (href: string) => {
@@ -98,7 +99,11 @@ export default function Navbar() {
                   onClick={() => handleNavClick(link.href)}
                   className="relative group transition-colors duration-300"
                   style={{
-                    color: link.label === "Book Now →" ? "white" : pathname === "/catering-menu" && link.label === "Menu" ? "var(--yellow)" : "rgba(250,246,238,0.72)",
+                    color: link.label === "Book Now →" ? "white" :
+                      (pathname === "/catering-menu" && link.label === "Menu") ||
+                      (pathname === "/taco-tuesday" && link.label === "Taco Tuesday")
+                        ? "var(--yellow)"
+                        : "rgba(250,246,238,0.72)",
                     fontSize: "16px",
                     fontWeight: 600,
                     letterSpacing: "2px",

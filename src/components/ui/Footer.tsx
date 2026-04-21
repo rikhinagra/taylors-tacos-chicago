@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+
 const InstagramIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -22,6 +24,18 @@ const scrollTo = (href: string) => {
 };
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  const handleLink = (href: string) => {
+    if (href.startsWith("/")) {
+      window.location.href = href;
+    } else if (pathname === "/") {
+      scrollTo(href);
+    } else {
+      window.location.href = `/${href}`;
+    }
+  };
+
   return (
     <footer style={{ background: "#050302", padding: "clamp(40px, 6vw, 72px) clamp(20px, 4vw, 52px) 32px" }}>
 
@@ -127,7 +141,7 @@ export default function Footer() {
             ].map((link) => (
               <li key={link.href}>
                 <button
-                  onClick={() => link.href.startsWith("/") ? (window.location.href = link.href) : scrollTo(link.href)}
+                  onClick={() => handleLink(link.href)}
                   style={{
                     color: "rgba(250,246,238,0.42)",
                     fontSize: "14px",
@@ -168,11 +182,11 @@ export default function Footer() {
               { label: "Food Truck",   href: "#contact" },
               { label: "Corporate",    href: "#contact" },
               { label: "Weddings",     href: "#contact" },
-              { label: "Taco Tuesday", href: "#contact" },
+              { label: "Taco Tuesday", href: "/taco-tuesday" },
             ].map((link) => (
               <li key={link.label}>
                 <button
-                  onClick={() => scrollTo(link.href)}
+                  onClick={() => handleLink(link.href)}
                   style={{
                     color: "rgba(250,246,238,0.42)",
                     fontSize: "14px",

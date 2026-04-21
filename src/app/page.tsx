@@ -7,6 +7,7 @@ import Marquee          from "@/components/sections/Marquee";
 import About            from "@/components/sections/About";
 import CTABand          from "@/components/sections/CTABand";
 import Services         from "@/components/sections/Services";
+import TacoTuesdayBand  from "@/components/sections/TacoTuesdayBand";
 import Menu             from "@/components/sections/Menu";
 import Gallery          from "@/components/sections/Gallery";
 import CharacterSection from "@/components/sections/CharacterSection";
@@ -25,6 +26,7 @@ export default function Home() {
         <About />
         <CharacterSection />
         <Services />
+        <TacoTuesdayBand />
         <Gallery />
         <Menu />
         <Contact />

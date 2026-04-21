@@ -39,7 +39,8 @@ const services = [
     icon: <UtensilsCrossed size={32} strokeWidth={1.5} />,
     title: "Taco Tuesday",
     desc: "Chicago's most beloved weekly ritual. Join us every Tuesday for our legendary in-house specials.",
-    link: "Learn more →",
+    link: "Order online →",
+    href: "/taco-tuesday",
   },
 ];
 
@@ -132,23 +133,42 @@ export default function Services() {
                 {svc.desc}
               </p>
 
-              <button
-                onClick={() => scrollTo("#contact")}
-                className="flex items-center gap-2 transition-all duration-300"
-                style={{
-                  fontSize: "16px",
-                  letterSpacing: "3px",
-                  textTransform: "uppercase",
-                  color: "var(--yellow)",
-                  fontWeight: 700,
-                  background: "none",
-                  border: "none",
-                  cursor: "none",
-                  padding: 0,
-                }}
-              >
-                {svc.link}
-              </button>
+              {svc.href ? (
+                <a
+                  href={svc.href}
+                  className="flex items-center gap-2 transition-all duration-300"
+                  style={{
+                    fontSize: "16px",
+                    letterSpacing: "3px",
+                    textTransform: "uppercase",
+                    color: "var(--yellow)",
+                    fontWeight: 700,
+                    textDecoration: "none",
+                    cursor: "none",
+                    padding: 0,
+                  }}
+                >
+                  {svc.link}
+                </a>
+              ) : (
+                <button
+                  onClick={() => scrollTo("#contact")}
+                  className="flex items-center gap-2 transition-all duration-300"
+                  style={{
+                    fontSize: "16px",
+                    letterSpacing: "3px",
+                    textTransform: "uppercase",
+                    color: "var(--yellow)",
+                    fontWeight: 700,
+                    background: "none",
+                    border: "none",
+                    cursor: "none",
+                    padding: 0,
+                  }}
+                >
+                  {svc.link}
+                </button>
+              )}
             </motion.div>
           ))}
         </div>

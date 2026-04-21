@@ -22,7 +22,7 @@ export default function CTABand() {
           top: "-80px",
           fontSize: "300px",
           fontWeight: 900,
-          letterSpacing: "20px",
+          letterSpacing: "8px",
           color: "rgba(255,255,255,0.04)",
           lineHeight: 1,
           fontFamily: "Hannik, sans-serif",
