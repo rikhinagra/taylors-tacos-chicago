@@ -1081,7 +1081,7 @@ export default function CateringMenu() {
 
                 {/* CTA */}
                 <div style={{ display: "flex", justifyContent: "center" }}>
-                  <BookButton label="Book a Staffed Event" href="https://docs.google.com/forms/d/e/1FAIpQLSct3q6ZxsjN8B57GQrikpoykClJVBHwCs9AyadMdvO3qOr3oA/viewform" />
+                  <BookButton label="Book a Staffed Event" href="https://docs.google.com/forms/d/e/1FAIpQLSeqLtvamIT4hFwqVhBUJ3aKYoVeexx41gwGWYdXVrxBR3hXFQ/viewform" />
                 </div>
               </motion.div>
 
@@ -1272,7 +1272,7 @@ export default function CateringMenu() {
 
                 {/* CTA */}
                 <div style={{ display: "flex", justifyContent: "center" }}>
-                  <BookButton label="Order Delivery / Pick-Up" href="https://docs.google.com/forms/d/11AL2hjhX9QtyOsrDAFwsY_gV9yMb1PjKdJMJYQbyfKc/viewform" />
+                  <BookButton label="Order Delivery / Pick-Up" href="https://docs.google.com/forms/d/e/1FAIpQLSeQZssjIGpR7CAB4M65e2DPGpZuPmzke5rtzmCgVG_MhuIl7g/viewform" />
                 </div>
               </motion.div>
             )}
