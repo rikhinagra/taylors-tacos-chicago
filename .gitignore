@@ -44,7 +44,9 @@ next-env.d.ts
 # Claude / AI agent files
 AGENTS.md
 CLAUDE.md
+GEMINI.md
 .claude
+.gemini/
 
 # graphify
 graphify-out/
