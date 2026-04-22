@@ -39,7 +39,16 @@ export default function Contact() {
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
+    try {
+      await fetch(process.env.NEXT_PUBLIC_CONTACT_FORM_URL!, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+        mode: "no-cors",
+      });
+    } catch (err) {
+      console.error("Form submission error:", err);
+    }
     setLoading(false);
     setSubmitted(true);
   };
