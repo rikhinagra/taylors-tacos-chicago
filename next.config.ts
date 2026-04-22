@@ -7,7 +7,7 @@ const ContentSecurityPolicy = [
   "font-src 'self' data:",
   "img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com",
   "media-src 'self'",
-  "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com",
+  "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://script.google.com https://script.googleusercontent.com",
   "frame-src 'none'",
   "object-src 'none'",
   "base-uri 'self'",
