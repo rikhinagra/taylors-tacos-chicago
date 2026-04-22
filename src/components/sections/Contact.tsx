@@ -64,6 +64,8 @@ export default function Contact() {
     fontSize: "15px",
     outline: "none",
     colorScheme: "dark" as const,
+    textTransform: "none" as const,
+    letterSpacing: "normal",
   };
 
   const labelStyle = {
