@@ -40,11 +40,10 @@ export default function Contact() {
     e.preventDefault();
     setLoading(true);
     try {
-      await fetch(process.env.NEXT_PUBLIC_CONTACT_FORM_URL!, {
+      await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
-        mode: "no-cors",
       });
     } catch (err) {
       console.error("Form submission error:", err);
