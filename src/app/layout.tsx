@@ -1,8 +1,11 @@
 import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import StructuredData from "@/components/ui/StructuredData";
 
 // Font: HANNIK — client-specified brand font, loaded via @font-face in globals.css
+// Font: INTER — used for form inputs only (Hannik is all-caps display font)
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const viewport: Viewport = {
   themeColor: "#BB2423",
@@ -95,7 +98,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+      <body className={`min-h-full flex flex-col ${inter.variable}`} suppressHydrationWarning>
         <StructuredData />
         {children}
       </body>

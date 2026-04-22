@@ -60,7 +60,7 @@ export default function Contact() {
     borderRadius: "3px",
     padding: "12px 15px",
     color: "var(--off-white)",
-    fontFamily: "Hannik, sans-serif",
+    fontFamily: "var(--font-inter), Arial, sans-serif",
     fontSize: "15px",
     outline: "none",
     colorScheme: "dark" as const,
