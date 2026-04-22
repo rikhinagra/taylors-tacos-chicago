@@ -795,11 +795,11 @@ export default function CateringMenu() {
                 display: "inline-flex",
                 background: "rgba(255,255,255,0.04)",
                 border: "1px solid rgba(255,255,255,0.1)",
-                borderRadius: "4px",
-                padding: "4px",
+                borderRadius: "6px",
+                padding: "6px",
                 position: "relative",
                 width: "100%",
-                maxWidth: "520px",
+                maxWidth: "720px",
               }}
             >
               {(["staffed", "delivery"] as const).map((tab) => (
@@ -808,12 +808,12 @@ export default function CateringMenu() {
                   onClick={() => setActiveTab(tab)}
                   style={{
                     flex: 1,
-                    padding: "clamp(10px, 2vw, 14px) clamp(12px, 2.5vw, 24px)",
-                    borderRadius: "3px",
+                    padding: "clamp(16px, 2.5vw, 22px) clamp(20px, 3vw, 40px)",
+                    borderRadius: "4px",
                     fontFamily: "Hannik, sans-serif",
-                    fontWeight: 700,
-                    fontSize: "clamp(11px, 1.8vw, 14px)",
-                    letterSpacing: "1.5px",
+                    fontWeight: 800,
+                    fontSize: "clamp(13px, 2vw, 18px)",
+                    letterSpacing: "2.5px",
                     textTransform: "uppercase",
                     border: "none",
                     cursor: "none",
