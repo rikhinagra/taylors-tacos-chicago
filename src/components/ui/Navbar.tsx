@@ -11,8 +11,10 @@ const navLinks = [
   { label: "Catering",     href: "#services" },
   { label: "Menu",         href: "/catering-menu" },
   { label: "Taco Tuesday", href: "/taco-tuesday" },
-  { label: "Book Now →",   href: "#contact" },
+  { label: "Book Now",     href: "#contact" },
 ];
+
+const PINK_GRADIENT = "linear-gradient(90deg, #E41D75 0%, #E52D5D 50%, #EA3B48 100%)";
 
 const scrollTo = (href: string) => {
   const el = document.querySelector(href);
@@ -20,7 +22,6 @@ const scrollTo = (href: string) => {
 };
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
@@ -46,12 +47,6 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
     const onResize = () => { if (window.innerWidth >= 768) setMenuOpen(false); };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
@@ -59,114 +54,161 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.nav
-        initial={{ y: -80, opacity: 0 }}
+      <motion.header
+        initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="fixed left-0 right-0 z-50 transition-all duration-400"
         style={{
-          top: scrolled ? "0" : "0",
-          padding: scrolled ? "12px clamp(20px, 4vw, 52px)" : "18px clamp(20px, 4vw, 52px)",
-          background: scrolled ? "rgba(14,10,8,0.97)" : "transparent",
-          backdropFilter: scrolled ? "blur(20px)" : "none",
-          borderBottom: scrolled ? "3px solid var(--yellow)" : "none",
+          position: "relative",
+          zIndex: 50,
+          background: PINK_GRADIENT,
+          boxShadow: "0 4px 28px rgba(228,29,117,0.4)",
+          textAlign: "center",
         }}
       >
-        <div className="flex items-center justify-between max-w-[1280px] mx-auto">
+        {/* ── Brand Name (big, bold, centered) — desktop/tablet only ── */}
+        <button
+          onClick={handleLogoClick}
+          className="hidden md:block"
+          style={{
+            background: "none",
+            border: "none",
+            cursor: "none",
+            width: "100%",
+            padding: "20px clamp(20px, 4vw, 52px) 0",
+          }}
+        >
+          <span
+            style={{
+              display: "block",
+              fontSize: "clamp(44px, 8.5vw, 115px)",
+              fontWeight: 900,
+              color: "white",
+              letterSpacing: "clamp(1px, 0.3vw, 5px)",
+              textTransform: "uppercase",
+              lineHeight: 1,
+              fontFamily: "Hannik, sans-serif",
+              textShadow: "0 2px 12px rgba(0,0,0,0.2)",
+            }}
+          >
+            Taylor&apos;s Tacos Catering
+          </span>
+        </button>
 
-          {/* Logo */}
+        {/* ── Desktop Nav Links (centered, below brand name) ── */}
+        <ul
+          className="hidden md:flex items-center justify-center flex-wrap"
+          style={{
+            gap: "clamp(16px, 3vw, 48px)",
+            padding: "14px clamp(20px, 4vw, 52px) 0",
+            listStyle: "none",
+            margin: 0,
+          }}
+        >
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <button
+                onClick={() => handleNavClick(link.href)}
+                className="relative group transition-all duration-300"
+                style={{
+                  color: (
+                    (pathname === "/taco-tuesday" && link.label === "Taco Tuesday") ||
+                    (pathname === "/catering-menu" && link.label === "Book Catering")
+                  ) ? "var(--yellow)" : "#551A3A",
+                  fontSize: "clamp(15px, 1.7vw, 22px)",
+                  fontWeight: 800,
+                  letterSpacing: "2.5px",
+                  textTransform: "uppercase",
+                  background: "transparent",
+                  border: "none",
+                  cursor: "none",
+                  padding: 0,
+                } as React.CSSProperties}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.color = "white";
+                }}
+                onMouseLeave={(e) => {
+                  const isActive =
+                    (pathname === "/taco-tuesday" && link.label === "Taco Tuesday") ||
+                    (pathname === "/catering-menu" && link.label === "Book Catering");
+                  (e.currentTarget as HTMLElement).style.color = isActive ? "var(--yellow)" : "#551A3A";
+                }}
+              >
+                {link.label}
+                <span
+                  className="absolute -bottom-1 left-0 w-0 h-[2px] group-hover:w-full transition-all duration-300"
+                  style={{ background: "white" }}
+                />
+              </button>
+            </li>
+          ))}
+        </ul>
+
+        {/* ── Address + Phone (centered, bottom strip) ── */}
+        <div
+          className="hidden md:block"
+          style={{
+            padding: "14px clamp(20px, 4vw, 52px) 18px",
+            color: "white",
+            fontSize: "clamp(13px, 1.4vw, 18px)",
+            letterSpacing: "2.5px",
+            textTransform: "uppercase",
+            fontWeight: 700,
+          }}
+        >
+          <a
+            href="https://maps.google.com/?q=135+N+Kedzie+Chicago+IL+60612"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "inherit", textDecoration: "none", cursor: "none" }}
+            onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "white")}
+            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "white")}
+          >
+            135 N. Kedzie Chicago, IL
+          </a>
+          <span style={{ margin: "0 14px", color: "white" }}>(773) - 226 - 1596</span>
+        </div>
+
+        {/* ── Mobile: Brand + Hamburger row ── */}
+        <div
+          className="flex md:hidden items-center justify-between"
+          style={{ padding: "14px clamp(20px, 5vw, 32px)" }}
+        >
           <button
             onClick={handleLogoClick}
-            className="flex-shrink-0"
+            style={{ background: "none", border: "none", cursor: "none", padding: 0 }}
           >
-            <div className="relative" style={{ width: "170px", height: "64px" }}>
+            <div className="relative" style={{ width: "180px", height: "64px" }}>
               <Image
                 src="/images/logo/taylors-tacos-chicago-logo-horizontal.webp"
                 alt="Taylor's Tacos Chicago"
                 fill
                 className="object-contain"
-                style={{ filter: "brightness(1.05)" }}
                 priority
               />
             </div>
           </button>
 
-          {/* Desktop Nav Links */}
-          <ul className="hidden md:flex items-center gap-8 list-none">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <button
-                  onClick={() => handleNavClick(link.href)}
-                  className="relative group transition-colors duration-300"
-                  style={{
-                    color: link.label === "Book Now →" ? "white" :
-                      (pathname === "/catering-menu" && link.label === "Menu") ||
-                      (pathname === "/taco-tuesday" && link.label === "Taco Tuesday")
-                        ? "var(--yellow)"
-                        : "rgba(250,246,238,0.72)",
-                    fontSize: "16px",
-                    fontWeight: 600,
-                    letterSpacing: "2px",
-                    textTransform: "uppercase",
-                    background: link.label === "Book Now →"
-                      ? "var(--red)"
-                      : "transparent",
-                    padding: link.label === "Book Now →" ? "8px 18px" : "0",
-                    borderRadius: link.label === "Book Now →" ? "3px" : "0",
-                    border: "none",
-                    textShadow: link.label !== "Book Now →" ? "0 2px 12px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,1)" : "none",
-                  } as React.CSSProperties}
-                  onMouseEnter={(e) => {
-                    if (link.label !== "Book Now →") {
-                      (e.currentTarget as HTMLElement).style.color = "var(--off-white)";
-                    } else {
-                      (e.currentTarget as HTMLElement).style.background = "var(--deep-red)";
-                      (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)";
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    if (link.label !== "Book Now →") {
-                      (e.currentTarget as HTMLElement).style.color = "rgba(250,246,238,0.72)";
-                    } else {
-                      (e.currentTarget as HTMLElement).style.background = "var(--red)";
-                      (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
-                    }
-                  }}
-                >
-                  {link.label}
-                  {link.label !== "Book Now →" && (
-                    <span
-                      className="absolute -bottom-1 left-0 w-0 h-[2px] group-hover:w-full transition-all duration-300"
-                      style={{ background: "var(--yellow)" }}
-                    />
-                  )}
-                </button>
-              </li>
-            ))}
-          </ul>
-
-          {/* Mobile Hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
             style={{
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "10px",
-              marginRight: "4px",
               background: "none",
               border: "none",
-              color: "var(--off-white)",
+              color: "white",
               cursor: "pointer",
+              padding: "8px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
-            className="hamburger-btn"
           >
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            {menuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
-      </motion.nav>
+      </motion.header>
 
-      {/* Mobile Drawer */}
+      {/* ── Mobile Drawer ── */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -194,12 +236,11 @@ export default function Navbar() {
                 paddingBottom: "52px",
                 paddingLeft: "24px",
                 paddingRight: "24px",
-                background: "#0E0A08",
+                background: PINK_GRADIENT,
                 borderLeft: "3px solid var(--yellow)",
                 boxShadow: "0 25px 50px rgba(0,0,0,0.5)",
               }}
             >
-              {/* Close button */}
               <button
                 onClick={() => setMenuOpen(false)}
                 style={{
@@ -208,7 +249,7 @@ export default function Navbar() {
                   right: "18px",
                   background: "none",
                   border: "none",
-                  color: "var(--off-white)",
+                  color: "white",
                   cursor: "pointer",
                   padding: "4px",
                   display: "flex",
@@ -234,18 +275,18 @@ export default function Navbar() {
                       textAlign: "left",
                       padding: "12px 16px",
                       borderRadius: "4px",
-                      fontWeight: 600,
+                      fontWeight: 700,
                       textTransform: "uppercase",
                       fontSize: "14px",
                       letterSpacing: "2px",
-                      color: "rgba(250,246,238,0.75)",
+                      color: "white",
                       background: "none",
                       border: "none",
                       cursor: "pointer",
                       transition: "color 0.2s",
                     }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = "var(--yellow)")}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(250,246,238,0.75)")}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
                   >
                     {link.label}
                   </motion.button>
@@ -256,14 +297,16 @@ export default function Navbar() {
                 <a
                   href="tel:7732261596"
                   style={{
-                    display: "block",
-                    textAlign: "center",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "8px",
                     padding: "12px",
                     borderRadius: "4px",
                     fontSize: "15px",
                     fontWeight: 700,
-                    color: "white",
-                    background: "var(--red)",
+                    color: "#E41D75",
+                    background: "white",
                     textDecoration: "none",
                   }}
                 >
