@@ -262,7 +262,7 @@ function TacoGrid({ tacos, specialty = false }: {
         <div
           key={t.name}
           style={{
-            background: specialty ? "rgba(175,152,202,0.1)" : "rgba(0,0,0,0.28)",
+            background: "rgba(0,0,0,0.28)",
             border: `1px solid ${specialty ? "rgba(175,152,202,0.3)" : "rgba(255,255,255,0.15)"}`,
             borderRadius: "4px",
             padding: "14px 16px",
@@ -332,7 +332,7 @@ function NotTacosGrid({ items }: {
         <div
           key={item.name}
           style={{
-            background: "rgba(251,175,28,0.1)",
+            background: "rgba(0,0,0,0.28)",
             border: "1px solid rgba(255,255,255,0.15)",
             borderRadius: "4px",
             padding: "16px",
@@ -364,7 +364,7 @@ function SidesGrid({ items }: { items: { name: string; badge: string; desc: stri
         <div
           key={item.name}
           style={{
-            background: "rgba(255,255,255,0.18)",
+            background: "rgba(0,0,0,0.28)",
             border: "1px solid rgba(255,255,255,0.15)",
             borderRadius: "4px",
             padding: "14px 16px",
@@ -955,7 +955,7 @@ export default function CateringMenu() {
                 <TacoGrid tacos={staffedSpecialtyTacos} specialty />
 
                 {/* Toppings */}
-                <div style={{ marginTop: "24px", padding: "16px 20px", background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px" }}>
+                <div style={{ marginTop: "24px", padding: "16px 20px", background: "rgba(0,0,0,0.28)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px" }}>
                   <p style={{ fontSize: "12px", letterSpacing: "2px", textTransform: "uppercase", color: "var(--yellow)", fontWeight: 700, marginBottom: "10px" }}>
                     Toppings Included
                   </p>
@@ -1010,7 +1010,7 @@ export default function CateringMenu() {
                     { name: "HORCHATA Ice Cream Sandos", price: "$10.50 each", desc: "A Bartleby's × Taylor's Tacos collab. Cinnamon rice milk ice cream between two decadent blondies. 10 sando minimum." },
                     { name: "Lindsay Italian Ice", price: "$4 each", desc: "Great vegan option! Minimum 24. Flavors: Mango, Lemon, Watermelon, or Strawberry." },
                   ].map((d) => (
-                    <div key={d.name} style={{ background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px", padding: "16px" }}>
+                    <div key={d.name} style={{ background: "rgba(0,0,0,0.28)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px", padding: "16px" }}>
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "6px" }}>
                         <span style={{ fontFamily: "Hannik, sans-serif", fontWeight: 700, fontSize: "14px", color: "var(--off-white)" }}>{d.name}</span>
                         <span style={{ fontFamily: "Hannik, sans-serif", fontWeight: 900, fontSize: "14px", color: "var(--yellow)", whiteSpace: "nowrap", marginLeft: "8px" }}>{d.price}</span>
@@ -1021,7 +1021,7 @@ export default function CateringMenu() {
                 </div>
 
                 {/* Drinks */}
-                <div style={{ marginTop: "20px", padding: "16px 20px", background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px" }}>
+                <div style={{ marginTop: "20px", padding: "16px 20px", background: "rgba(0,0,0,0.28)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px" }}>
                   <p style={{ fontSize: "12px", letterSpacing: "2px", textTransform: "uppercase", color: "var(--yellow)", fontWeight: 700, marginBottom: "10px" }}>
                     Drinks (minimum 24)
                   </p>
@@ -1156,7 +1156,7 @@ export default function CateringMenu() {
                 <TacoGrid tacos={deliverySpecialtyTacos} specialty />
 
                 {/* Toppings */}
-                <div style={{ marginTop: "24px", padding: "16px 20px", background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px" }}>
+                <div style={{ marginTop: "24px", padding: "16px 20px", background: "rgba(0,0,0,0.28)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px" }}>
                   <p style={{ fontSize: "12px", letterSpacing: "2px", textTransform: "uppercase", color: "var(--yellow)", fontWeight: 700, marginBottom: "10px" }}>
                     Toppings Included
                   </p>
@@ -1203,7 +1203,7 @@ export default function CateringMenu() {
                     { name: "Churro Minis", price: "$1 each", desc: "Fried dough filled with chocolate and covered with cinna-sugar!" },
                     { name: "Lindsay's Italian Ice", price: "$4 each", desc: "24 minimum, need at least 72hr notice. Mango, Watermelon, or Lemon." },
                   ].map((d) => (
-                    <div key={d.name} style={{ background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px", padding: "16px" }}>
+                    <div key={d.name} style={{ background: "rgba(0,0,0,0.28)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px", padding: "16px" }}>
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "6px" }}>
                         <span style={{ fontFamily: "Hannik, sans-serif", fontWeight: 700, fontSize: "14px", color: "var(--off-white)" }}>{d.name}</span>
                         <span style={{ fontFamily: "Hannik, sans-serif", fontWeight: 900, fontSize: "14px", color: "var(--yellow)", marginLeft: "8px" }}>{d.price}</span>
@@ -1214,7 +1214,7 @@ export default function CateringMenu() {
                 </div>
 
                 {/* Drinks */}
-                <div style={{ marginTop: "16px", padding: "16px 20px", background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px" }}>
+                <div style={{ marginTop: "16px", padding: "16px 20px", background: "rgba(0,0,0,0.28)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px" }}>
                   <p style={{ fontSize: "12px", letterSpacing: "2px", textTransform: "uppercase", color: "var(--yellow)", fontWeight: 700, marginBottom: "10px" }}>
                     Drinks (minimum 24)
                   </p>
