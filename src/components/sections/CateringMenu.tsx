@@ -1504,7 +1504,7 @@ export default function CateringMenu() {
       {/* ── CONTACT CTA ──────────────────────────────────────── */}
       <section
         style={{
-          background: "#551A3A",
+          background: "linear-gradient(90deg, #E41D75 0%, #E52D5D 50%, #EA3B48 100%)",
           padding: "clamp(52px, 7vw, 80px) clamp(20px, 4vw, 52px)",
           textAlign: "center",
           position: "relative",
@@ -1544,7 +1544,7 @@ export default function CateringMenu() {
           >
             Ready to <em style={{ color: "var(--yellow)", fontStyle: "italic" }}>Book?</em>
           </h2>
-          <p style={{ fontSize: "clamp(14px, 2vw, 17px)", color: "rgba(250,246,238,0.6)", lineHeight: 1.7, maxWidth: "440px", margin: "0 auto 36px" }}>
+          <p style={{ fontSize: "clamp(14px, 2vw, 17px)", color: "rgba(255,255,255,0.9)", lineHeight: 1.7, maxWidth: "440px", margin: "0 auto 36px" }}>
             Email us or call and a dedicated team member will be in touch. We can&apos;t wait to serve you!
           </p>
 
@@ -1556,7 +1556,7 @@ export default function CateringMenu() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "8px",
-                background: "var(--red)",
+                background: "#551A3A",
                 color: "white",
                 padding: "14px 36px",
                 borderRadius: "3px",
@@ -1566,19 +1566,21 @@ export default function CateringMenu() {
                 letterSpacing: "2px",
                 textTransform: "uppercase",
                 textDecoration: "none",
-                border: "2px solid var(--red)",
+                border: "2px solid #551A3A",
                 cursor: "none",
                 transition: "all 0.3s",
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLAnchorElement;
                 el.style.background = "transparent";
-                el.style.color = "var(--red)";
+                el.style.color = "white";
+                el.style.borderColor = "white";
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget as HTMLAnchorElement;
-                el.style.background = "var(--red)";
+                el.style.background = "#551A3A";
                 el.style.color = "white";
+                el.style.borderColor = "#551A3A";
               }}
             >
               Email Us
@@ -1588,9 +1590,9 @@ export default function CateringMenu() {
           <div style={{ display: "flex", gap: "24px", flexWrap: "wrap", justifyContent: "center" }}>
             <a
               href="tel:7732261596"
-              style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "14px", color: "rgba(250,246,238,0.5)", textDecoration: "none", transition: "color 0.3s" }}
-              onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "var(--off-white)")}
-              onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "rgba(250,246,238,0.5)")}
+              style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "14px", color: "rgba(255,255,255,0.85)", textDecoration: "none", transition: "color 0.3s" }}
+              onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "white")}
+              onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.85)")}
             >
               <Phone size={14} strokeWidth={1.5} /> (773) 226-1596
             </a>
@@ -1598,17 +1600,17 @@ export default function CateringMenu() {
               href="https://maps.google.com/?q=135+N+Kedzie+Chicago+IL+60612"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "14px", color: "rgba(250,246,238,0.5)", textDecoration: "none", transition: "color 0.3s" }}
-              onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "var(--off-white)")}
-              onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "rgba(250,246,238,0.5)")}
+              style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "14px", color: "rgba(255,255,255,0.85)", textDecoration: "none", transition: "color 0.3s" }}
+              onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "white")}
+              onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.85)")}
             >
               <MapPin size={14} strokeWidth={1.5} /> 135 N. Kedzie, Chicago, IL 60612
             </a>
             <a
               href="mailto:info@taylorstacoschicago.com"
-              style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "14px", color: "rgba(250,246,238,0.5)", textDecoration: "none", transition: "color 0.3s" }}
-              onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "var(--off-white)")}
-              onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "rgba(250,246,238,0.5)")}
+              style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "14px", color: "rgba(255,255,255,0.85)", textDecoration: "none", transition: "color 0.3s" }}
+              onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "white")}
+              onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.85)")}
             >
               <Clock size={14} strokeWidth={1.5} /> info@taylorstacoschicago.com
             </a>
