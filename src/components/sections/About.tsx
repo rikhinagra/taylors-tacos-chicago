@@ -94,15 +94,6 @@ export default function About() {
 
           {/* ── Right: Content ────────────────────────────── */}
           <div className="pt-8 lg:pt-0 pl-0 lg:pl-3">
-            <motion.span
-              variants={fadeUp(0.1)}
-              initial="hidden"
-              animate={inView ? "show" : "hidden"}
-              className="section-label"
-            >
-              Our Story
-            </motion.span>
-
             <motion.h2
               variants={fadeUp(0.2)}
               initial="hidden"
