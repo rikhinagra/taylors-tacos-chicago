@@ -13,7 +13,7 @@ export default function CharacterSection() {
     <section
       className="relative overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, #3d1228 0%, #3d1228 50%, var(--deep-red) 100%)",
+        background: "linear-gradient(90deg, #E41D75 0%, #E52D5D 50%, #EA3B48 100%)",
         minHeight: "400px",
         display: "flex",
         alignItems: "center",
