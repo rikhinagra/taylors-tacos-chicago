@@ -65,7 +65,7 @@ export default function Footer() {
           <p
             style={{
               fontSize: "15px",
-              color: "rgba(250,246,238,0.4)",
+              color: "rgba(250,246,238,0.78)",
               lineHeight: 1.75,
               maxWidth: "240px",
               fontWeight: 300,
@@ -89,12 +89,12 @@ export default function Footer() {
                 style={{
                   width: "34px",
                   height: "34px",
-                  border: "1px solid rgba(255,255,255,0.1)",
+                  border: "1px solid rgba(255,255,255,0.25)",
                   borderRadius: "3px",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "rgba(250,246,238,0.4)",
+                  color: "rgba(250,246,238,0.78)",
                   textDecoration: "none",
                   transition: "all 0.3s",
                 }}
@@ -106,8 +106,8 @@ export default function Footer() {
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget as HTMLElement;
-                  el.style.borderColor = "rgba(255,255,255,0.1)";
-                  el.style.color = "rgba(250,246,238,0.4)";
+                  el.style.borderColor = "rgba(255,255,255,0.25)";
+                  el.style.color = "rgba(250,246,238,0.78)";
                   el.style.background = "transparent";
                 }}
               >
@@ -143,7 +143,7 @@ export default function Footer() {
                 <button
                   onClick={() => handleLink(link.href)}
                   style={{
-                    color: "rgba(250,246,238,0.42)",
+                    color: "rgba(250,246,238,0.78)",
                     fontSize: "14px",
                     background: "none",
                     border: "none",
@@ -153,7 +153,7 @@ export default function Footer() {
                     transition: "color 0.3s",
                   }}
                   onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--off-white)")}
-                  onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(250,246,238,0.42)")}
+                  onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(250,246,238,0.78)")}
                 >
                   {link.label}
                 </button>
@@ -188,7 +188,7 @@ export default function Footer() {
                 <button
                   onClick={() => handleLink(link.href)}
                   style={{
-                    color: "rgba(250,246,238,0.42)",
+                    color: "rgba(250,246,238,0.78)",
                     fontSize: "14px",
                     background: "none",
                     border: "none",
@@ -198,7 +198,7 @@ export default function Footer() {
                     transition: "color 0.3s",
                   }}
                   onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--off-white)")}
-                  onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(250,246,238,0.42)")}
+                  onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(250,246,238,0.78)")}
                 >
                   {link.label}
                 </button>
@@ -234,7 +234,7 @@ export default function Footer() {
                   href={item.href}
                   {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   style={{
-                    color: "rgba(250,246,238,0.42)",
+                    color: "rgba(250,246,238,0.78)",
                     fontSize: "13px",
                     textDecoration: "none",
                     transition: "color 0.3s",
@@ -242,7 +242,7 @@ export default function Footer() {
                     whiteSpace: "nowrap",
                   }}
                   onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--off-white)")}
-                  onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(250,246,238,0.42)")}
+                  onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(250,246,238,0.78)")}
                 >
                   {item.label}
                 </a>
@@ -255,7 +255,7 @@ export default function Footer() {
       {/* Footer bottom */}
       <div
         style={{
-          borderTop: "1px solid rgba(255,255,255,0.06)",
+          borderTop: "1px solid rgba(255,255,255,0.15)",
           paddingTop: "26px",
           display: "flex",
           alignItems: "center",
@@ -264,15 +264,15 @@ export default function Footer() {
           gap: "14px",
         }}
       >
-        <p style={{ fontSize: "12px", color: "rgba(250,246,238,0.3)" }}>
+        <p style={{ fontSize: "12px", color: "rgba(250,246,238,0.6)" }}>
           © {new Date().getFullYear()} Taylor&apos;s Tacos Chicago · Powered by{" "}
           <a
             href="https://www.sachhsoft.com/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "rgba(250,246,238,0.5)", textDecoration: "none" }}
+            style={{ color: "rgba(250,246,238,0.8)", textDecoration: "none" }}
             onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--yellow)")}
-            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(250,246,238,0.5)")}
+            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(250,246,238,0.8)")}
           >
             SACHHSOFT
           </a>
