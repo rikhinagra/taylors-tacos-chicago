@@ -98,13 +98,13 @@ export default function TacoTuesdayPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             style={{
               display: "block",
-              fontSize: "12px",
-              letterSpacing: "7px",
+              fontSize: "15px",
+              letterSpacing: "6px",
               textTransform: "uppercase",
               color: "var(--yellow)",
               fontWeight: 700,
               marginBottom: "20px",
-              textShadow: "0 2px 12px rgba(0,0,0,0.9)",
+              textShadow: "0 2px 16px rgba(0,0,0,0.95)",
             }}
           >
             Every Tuesday · 135 N. Kedzie · Chicago
