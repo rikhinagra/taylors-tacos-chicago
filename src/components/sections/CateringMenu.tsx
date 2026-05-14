@@ -1324,7 +1324,7 @@ export default function CateringMenu() {
         ref={zolaRef}
         style={{
           position: "relative",
-          background: "#551A3A",
+          background: "#0E0A08",
           padding: "clamp(52px, 7vw, 96px) clamp(20px, 4vw, 52px)",
           textAlign: "center",
           overflow: "hidden",
@@ -1336,7 +1336,7 @@ export default function CateringMenu() {
           alt="Taylor's Tacos Chicago wedding catering"
           fill
           className="object-cover"
-          style={{ opacity: 0.12 }}
+          style={{ opacity: 0.55 }}
         />
 
         {/* Gradient overlay */}
@@ -1344,7 +1344,7 @@ export default function CateringMenu() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(to bottom, rgba(85,26,58,0.85) 0%, rgba(85,26,58,0.3) 50%, rgba(85,26,58,0.85) 100%)",
+            background: "linear-gradient(to bottom, rgba(14,10,8,0.75) 0%, rgba(14,10,8,0.45) 50%, rgba(14,10,8,0.75) 100%)",
           }}
         />
 
