@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import Hamburger from "hamburger-react";
 
 const navLinks = [
   { label: "Our Story",    href: "#about" },
@@ -205,58 +206,15 @@ export default function Navbar() {
             </div>
           </button>
 
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-            style={{
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              padding: "8px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "0",
-              width: "36px",
-              height: "36px",
-            }}
-          >
-            {/* Top bar */}
-            <span style={{
-              display: "block",
-              width: "22px",
-              height: "2px",
-              background: "white",
-              borderRadius: "2px",
-              transition: "transform 0.3s ease, opacity 0.3s ease",
-              transformOrigin: "center",
-              transform: menuOpen ? "translateY(7px) rotate(45deg)" : "translateY(0) rotate(0deg)",
-            }} />
-            {/* Middle bar */}
-            <span style={{
-              display: "block",
-              width: "22px",
-              height: "2px",
-              background: "white",
-              borderRadius: "2px",
-              margin: "5px 0",
-              transition: "opacity 0.2s ease, transform 0.3s ease",
-              opacity: menuOpen ? 0 : 1,
-              transform: menuOpen ? "scaleX(0)" : "scaleX(1)",
-            }} />
-            {/* Bottom bar */}
-            <span style={{
-              display: "block",
-              width: "22px",
-              height: "2px",
-              background: "white",
-              borderRadius: "2px",
-              transition: "transform 0.3s ease, opacity 0.3s ease",
-              transformOrigin: "center",
-              transform: menuOpen ? "translateY(-7px) rotate(-45deg)" : "translateY(0) rotate(0deg)",
-            }} />
-          </button>
+          <Hamburger
+            toggled={menuOpen}
+            toggle={setMenuOpen}
+            size={22}
+            color="white"
+            distance="sm"
+            label="Toggle menu"
+            rounded
+          />
         </div>
       </motion.header>
 
