@@ -90,7 +90,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      style={{ background: "var(--sand)", color: "var(--black)", padding: "clamp(60px, 8vw, 112px) clamp(20px, 4vw, 52px)" }}
+      style={{ background: "#551A3A", padding: "clamp(60px, 8vw, 112px) clamp(20px, 4vw, 52px)" }}
     >
       <div
         ref={ref}
@@ -117,7 +117,7 @@ export default function Contact() {
             transition={{ delay: 0.1 }}
             style={{
               fontSize: "clamp(36px,5vw,62px)", fontWeight: 900, lineHeight: 1.04,
-              color: "var(--black)", fontFamily: "Hannik, sans-serif",
+              color: "var(--off-white)", fontFamily: "Hannik, sans-serif",
             }}
           >
             Book Your<br />
@@ -128,7 +128,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2 }}
-            style={{ fontSize: "17px", lineHeight: 1.85, color: "rgba(14,10,8,0.8)", marginTop: "18px" }}
+            style={{ fontSize: "17px", lineHeight: 1.85, color: "rgba(250,246,238,0.85)", marginTop: "18px" }}
           >
             Ready to bring the #1 tacos in Chicago to your event? Fill out the
             form and we&apos;ll be in touch within 24 hours with a custom quote.
@@ -158,10 +158,10 @@ export default function Contact() {
                 </div>
                 <div>
                   <strong style={{ display: "block", fontSize: "14px", letterSpacing: "2px",
-                    textTransform: "uppercase", color: "rgba(14,10,8,0.7)", fontWeight: 700, marginBottom: "2px" }}>
+                    textTransform: "uppercase", color: "rgba(250,246,238,0.65)", fontWeight: 700, marginBottom: "2px" }}>
                     {item.label}
                   </strong>
-                  <span style={{ fontSize: "16px", fontWeight: 600, color: "var(--black)" }}>
+                  <span style={{ fontSize: "16px", fontWeight: 600, color: "var(--off-white)" }}>
                     {item.val}
                   </span>
                 </div>
