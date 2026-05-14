@@ -13,7 +13,7 @@ export default function TacoTuesdayBand() {
       id="taco-tuesday"
       ref={ref}
       style={{
-        background: "#0A0705",
+        background: "#551A3A",
         padding: "clamp(52px, 7vw, 96px) clamp(20px, 4vw, 52px)",
         position: "relative",
         overflow: "hidden",
@@ -84,7 +84,7 @@ export default function TacoTuesdayBand() {
             transition={{ duration: 0.5, delay: 0.2 }}
             style={{
               fontSize: "clamp(15px, 1.6vw, 17px)",
-              color: "rgba(250,246,238,0.55)",
+              color: "rgba(250,246,238,0.85)",
               lineHeight: 1.75,
               fontWeight: 300,
               maxWidth: "420px",

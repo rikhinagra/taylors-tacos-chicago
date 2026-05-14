@@ -25,7 +25,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      style={{ background: "var(--black)", paddingTop: "0", paddingBottom: "0" }}
+      style={{ background: "#551A3A", paddingTop: "0", paddingBottom: "0" }}
     >
       {/* Section header */}
       <div
@@ -115,7 +115,7 @@ export default function Gallery() {
                   left: 0,
                   right: 0,
                   padding: "28px 12px 14px",
-                  background: "linear-gradient(to top, rgba(14,10,8,0.88), transparent)",
+                  background: "linear-gradient(to top, rgba(14,10,8,0.65), transparent)",
                   color: "white",
                   fontSize: "11px",
                   fontWeight: 700,

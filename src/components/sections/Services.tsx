@@ -56,7 +56,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      style={{ background: "#120C07", padding: "clamp(60px, 8vw, 112px) clamp(20px, 4vw, 52px)" }}
+      style={{ background: "#551A3A", padding: "clamp(60px, 8vw, 112px) clamp(20px, 4vw, 52px)" }}
     >
       <div style={{ maxWidth: "1280px", margin: "0 auto" }} ref={ref}>
 
@@ -88,15 +88,15 @@ export default function Services() {
               transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
               className="service-card relative overflow-hidden transition-all duration-400 hover:-translate-y-1 cursor-none"
               style={{
-                background: "rgba(255,255,255,0.025)",
+                background: "rgba(0,0,0,0.28)",
                 padding: "clamp(24px, 3vw, 40px) clamp(20px, 2.5vw, 34px)",
-                border: "1px solid rgba(255,255,255,0.06)",
+                border: "1px solid rgba(255,255,255,0.15)",
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.background = "rgba(228,29,117,0.09)";
+                (e.currentTarget as HTMLElement).style.background = "rgba(228,29,117,0.15)";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.025)";
+                (e.currentTarget as HTMLElement).style.background = "rgba(0,0,0,0.28)";
               }}
             >
               {/* Star accent top right */}
@@ -125,7 +125,7 @@ export default function Services() {
                 style={{
                   fontSize: "16px",
                   lineHeight: 1.8,
-                  color: "rgba(250,246,238,0.55)",
+                  color: "rgba(250,246,238,0.85)",
                   fontWeight: 300,
                   marginBottom: "20px",
                 }}

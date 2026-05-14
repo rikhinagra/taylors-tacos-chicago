@@ -56,7 +56,7 @@ export default function Menu() {
   return (
     <section
       id="menu"
-      style={{ background: "var(--black)", padding: "clamp(60px, 8vw, 112px) clamp(20px, 4vw, 52px)" }}
+      style={{ background: "#551A3A", padding: "clamp(60px, 8vw, 112px) clamp(20px, 4vw, 52px)" }}
     >
       <div style={{ maxWidth: "1280px", margin: "0 auto" }} ref={ref}>
 
@@ -156,7 +156,7 @@ export default function Menu() {
               <div
                 className="absolute inset-0"
                 style={{
-                  background: "linear-gradient(to top, rgba(14,10,8,0.93) 0%, transparent 65%)",
+                  background: "linear-gradient(to top, rgba(14,10,8,0.78) 0%, transparent 65%)",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "flex-end",
