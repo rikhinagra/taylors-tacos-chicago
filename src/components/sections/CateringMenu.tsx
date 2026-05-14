@@ -588,7 +588,7 @@ export default function CateringMenu() {
           fill
           priority
           className="object-cover"
-          style={{ opacity: 0.28 }}
+          style={{ opacity: 0.55 }}
         />
 
         {/* Gradient overlay */}
@@ -596,7 +596,7 @@ export default function CateringMenu() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(to bottom, rgba(14,10,8,0.6) 0%, rgba(14,10,8,0.3) 50%, rgba(14,10,8,0.85) 100%)",
+            background: "linear-gradient(to bottom, rgba(14,10,8,0.4) 0%, rgba(14,10,8,0.2) 50%, rgba(14,10,8,0.55) 100%)",
           }}
         />
 
@@ -645,10 +645,11 @@ export default function CateringMenu() {
             transition={{ duration: 0.7, delay: 0.3 }}
             style={{
               fontSize: "clamp(15px, 2.2vw, 18px)",
-              color: "rgba(250,246,238,0.6)",
+              color: "rgba(250,246,238,0.92)",
               lineHeight: 1.7,
               maxWidth: "480px",
               margin: "0 auto",
+              textShadow: "0 2px 12px rgba(0,0,0,0.8)",
             }}
           >
             Staffed events, delivery, pick-up, and everything in between.
