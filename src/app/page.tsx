@@ -4,7 +4,6 @@ import Footer               from "@/components/ui/Footer";
 import FloatingBookButton   from "@/components/ui/FloatingBookButton";
 import Hero             from "@/components/sections/Hero";
 import Marquee          from "@/components/sections/Marquee";
-import CTABand          from "@/components/sections/CTABand";
 import Services         from "@/components/sections/Services";
 import TacoTuesdayBand  from "@/components/sections/TacoTuesdayBand";
 import Menu             from "@/components/sections/Menu";
@@ -21,7 +20,6 @@ export default function Home() {
       <main className="flex flex-col">
         <Hero />
         <Marquee />
-        <CTABand />
         <CharacterSection />
         <Services />
         <TacoTuesdayBand />

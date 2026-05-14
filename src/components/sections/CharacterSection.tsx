@@ -63,11 +63,10 @@ export default function CharacterSection() {
               fontFamily: "Hannik, sans-serif",
             }}
           >
-            Chicago&apos;s Most{" "}
+            Bring Tacos to Your{" "}
             <span style={{ color: "var(--green)" }}>
-              Iconic Taco
-            </span>{" "}
-            Brand
+              Event
+            </span>
           </h2>
           <p
             style={{
@@ -79,8 +78,9 @@ export default function CharacterSection() {
               maxWidth: "520px",
             }}
           >
-            Built on bold flavors, real community, and the kind of tacos that
-            make people talk. From LA streets to Chicago neighborhoods,
+            From food truck rollouts and staffed catering to corporate lunches,
+            weddings, schools, and nonprofits. We love feeding the people who
+            feed the people. Built on bold flavors and real community,
             Taylor&apos;s Tacos brings the soul to every event.
           </p>
           <button
