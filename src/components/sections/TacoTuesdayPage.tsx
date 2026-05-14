@@ -74,7 +74,7 @@ export default function TacoTuesdayPage() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(160deg, rgba(14,10,8,0.88) 0%, rgba(14,10,8,0.72) 60%, rgba(85,26,58,0.15) 100%)",
+                "linear-gradient(160deg, rgba(14,10,8,0.45) 0%, rgba(14,10,8,0.25) 60%, rgba(85,26,58,0.05) 100%)",
             }}
           />
         </div>
@@ -137,7 +137,7 @@ export default function TacoTuesdayPage() {
             transition={{ duration: 0.7, delay: 0.5 }}
             style={{
               fontSize: "clamp(15px, 1.8vw, 18px)",
-              color: "rgba(250,246,238,0.75)",
+              color: "rgba(250,246,238,0.92)",
               lineHeight: 1.75,
               fontWeight: 300,
               letterSpacing: "1px",
@@ -188,7 +188,7 @@ export default function TacoTuesdayPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               style={{
                 fontSize: "clamp(15px, 1.6vw, 17px)",
-                color: "rgba(250,246,238,0.5)",
+                color: "rgba(250,246,238,0.82)",
                 lineHeight: 1.75,
                 fontWeight: 300,
                 maxWidth: "480px",
@@ -268,7 +268,7 @@ export default function TacoTuesdayPage() {
                     fontSize: "13px",
                     letterSpacing: "3px",
                     textTransform: "uppercase",
-                    color: "rgba(250,246,238,0.4)",
+                    color: "rgba(250,246,238,0.92)",
                     fontWeight: 700,
                   }}
                 >
@@ -279,7 +279,7 @@ export default function TacoTuesdayPage() {
                 <p
                   style={{
                     fontSize: "15px",
-                    color: "rgba(250,246,238,0.6)",
+                    color: "rgba(250,246,238,0.85)",
                     lineHeight: 1.75,
                     fontWeight: 300,
                     flex: 1,
@@ -363,7 +363,7 @@ export default function TacoTuesdayPage() {
                       fontSize: "11px",
                       letterSpacing: "3px",
                       textTransform: "uppercase",
-                      color: "rgba(250,246,238,0.35)",
+                      color: "rgba(250,246,238,0.65)",
                       fontWeight: 700,
                       marginBottom: "4px",
                     }}
@@ -373,7 +373,7 @@ export default function TacoTuesdayPage() {
                   <p
                     style={{
                       fontSize: "14px",
-                      color: "rgba(250,246,238,0.72)",
+                      color: "rgba(250,246,238,0.92)",
                       fontWeight: 400,
                     }}
                   >
