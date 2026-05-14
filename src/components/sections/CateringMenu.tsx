@@ -524,14 +524,14 @@ function BookButton({ label, href }: { label: string; href: string }) {
         letterSpacing: "2px",
         textTransform: "uppercase",
         textDecoration: "none",
-        border: "2px solid var(--red)",
+        border: "2px solid white",
         cursor: "none",
         transition: "all 0.3s",
       }}
       onMouseEnter={(e) => {
         const el = e.currentTarget as HTMLAnchorElement;
         el.style.background = "transparent";
-        el.style.color = "var(--red)";
+        el.style.color = "white";
       }}
       onMouseLeave={(e) => {
         const el = e.currentTarget as HTMLAnchorElement;
@@ -778,7 +778,7 @@ export default function CateringMenu() {
         ref={menuRef}
         style={{
           background: "#551A3A",
-          padding: "clamp(52px, 7vw, 96px) clamp(20px, 4vw, 52px)",
+          padding: "clamp(52px, 7vw, 96px) clamp(20px, 4vw, 52px) clamp(24px, 3vw, 40px)",
         }}
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
@@ -1562,11 +1562,11 @@ export default function CateringMenu() {
                 borderRadius: "3px",
                 fontFamily: "Hannik, sans-serif",
                 fontWeight: 700,
-                fontSize: "14px",
+                fontSize: "17px",
                 letterSpacing: "2px",
                 textTransform: "uppercase",
                 textDecoration: "none",
-                border: "2px solid #551A3A",
+                border: "2px solid white",
                 cursor: "none",
                 transition: "all 0.3s",
               }}
@@ -1574,13 +1574,11 @@ export default function CateringMenu() {
                 const el = e.currentTarget as HTMLAnchorElement;
                 el.style.background = "transparent";
                 el.style.color = "white";
-                el.style.borderColor = "white";
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget as HTMLAnchorElement;
                 el.style.background = "#551A3A";
                 el.style.color = "white";
-                el.style.borderColor = "#551A3A";
               }}
             >
               Email Us
