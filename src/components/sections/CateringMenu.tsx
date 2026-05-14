@@ -262,7 +262,7 @@ function TacoGrid({ tacos, specialty = false }: {
         <div
           key={t.name}
           style={{
-            background: specialty ? "rgba(175,152,202,0.1)" : "rgba(255,255,255,0.09)",
+            background: specialty ? "rgba(175,152,202,0.1)" : "rgba(0,0,0,0.28)",
             border: `1px solid ${specialty ? "rgba(175,152,202,0.3)" : "rgba(255,255,255,0.15)"}`,
             borderRadius: "4px",
             padding: "14px 16px",
@@ -333,7 +333,7 @@ function NotTacosGrid({ items }: {
           key={item.name}
           style={{
             background: "rgba(251,175,28,0.1)",
-            border: "1px solid rgba(251,175,28,0.3)",
+            border: "1px solid rgba(255,255,255,0.15)",
             borderRadius: "4px",
             padding: "16px",
           }}
@@ -391,7 +391,7 @@ function ExtrasGrid({ items }: { items: { name: string; desc: string; badge?: st
         <div
           key={item.name}
           style={{
-            background: "rgba(255,255,255,0.09)",
+            background: "rgba(0,0,0,0.28)",
             border: "1px solid rgba(255,255,255,0.15)",
             borderRadius: "4px",
             padding: "12px 14px",
@@ -436,7 +436,7 @@ function AccordionItem({
         border: "1px solid rgba(255,255,255,0.18)",
         borderRadius: "4px",
         overflow: "hidden",
-        background: open ? "rgba(228,29,117,0.1)" : "rgba(255,255,255,0.06)",
+        background: open ? "rgba(228,29,117,0.1)" : "rgba(0,0,0,0.22)",
         transition: "background 0.3s",
       }}
     >
@@ -711,7 +711,7 @@ export default function CateringMenu() {
                 animate={stepsInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.1 + i * 0.12 }}
                 style={{
-                  background: "rgba(255,255,255,0.09)",
+                  background: "rgba(0,0,0,0.28)",
                   border: "1px solid rgba(255,255,255,0.15)",
                   borderRadius: "4px",
                   padding: "clamp(24px, 3vw, 36px)",
@@ -728,7 +728,7 @@ export default function CateringMenu() {
                     fontFamily: "Hannik, sans-serif",
                     fontWeight: 900,
                     fontSize: "80px",
-                    color: "rgba(251,175,28,0.06)",
+                    color: "rgba(0,0,0,0.22)",
                     lineHeight: 1,
                     userSelect: "none",
                   }}
@@ -793,7 +793,7 @@ export default function CateringMenu() {
             <div
               style={{
                 display: "inline-flex",
-                background: "rgba(255,255,255,0.1)",
+                background: "rgba(0,0,0,0.28)",
                 border: "1px solid rgba(255,255,255,0.2)",
                 borderRadius: "6px",
                 padding: "6px",
@@ -868,7 +868,7 @@ export default function CateringMenu() {
                       key={svc.title}
                       className="service-card"
                       style={{
-                        background: "rgba(255,255,255,0.09)",
+                        background: "rgba(0,0,0,0.28)",
                         border: "1px solid rgba(255,255,255,0.15)",
                         padding: "clamp(20px, 2.5vw, 32px)",
                         position: "relative",
@@ -876,7 +876,7 @@ export default function CateringMenu() {
                         transition: "background 0.3s",
                       }}
                       onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "rgba(228,29,117,0.09)")}
-                      onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.09)")}
+                      onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "rgba(0,0,0,0.28)")}
                     >
                       <span style={{ position: "absolute", top: "12px", right: "16px", color: "var(--yellow)", fontSize: "10px", opacity: 0.25 }}>✦</span>
                       <div style={{ color: "var(--yellow)", marginBottom: "14px" }}>{svc.icon}</div>
@@ -966,7 +966,7 @@ export default function CateringMenu() {
                         style={{
                           fontSize: "12px",
                           color: "rgba(250,246,238,0.6)",
-                          background: "rgba(255,255,255,0.1)",
+                          background: "rgba(0,0,0,0.28)",
                           border: "1px solid rgba(255,255,255,0.18)",
                           borderRadius: "2px",
                           padding: "4px 10px",
@@ -1031,7 +1031,7 @@ export default function CateringMenu() {
                       "Ruby Fine Hibiscus Tea · $3.50",
                       "Sparkling Water · $3.50",
                     ].map((d) => (
-                      <span key={d} style={{ fontSize: "13px", color: "rgba(250,246,238,0.6)", background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "2px", padding: "4px 12px" }}>
+                      <span key={d} style={{ fontSize: "13px", color: "rgba(250,246,238,0.6)", background: "rgba(0,0,0,0.28)", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "2px", padding: "4px 12px" }}>
                         {d}
                       </span>
                     ))}
@@ -1071,7 +1071,7 @@ export default function CateringMenu() {
                     { icon: <Star size={20} strokeWidth={1.5} />, title: "Mixology Services", desc: "Licensed and insured bartenders prep, serve, and clean up the bar station (alcohol not included). $75–$125/hr. 4-hour minimum." },
                     { icon: <Sparkles size={20} strokeWidth={1.5} />, title: "Bar Services", desc: "Taylor's Tacos works with multiple bar partners that we are happy to connect you with!" },
                   ].map((svc) => (
-                    <div key={svc.title} style={{ background: "rgba(255,255,255,0.09)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px", padding: "18px" }}>
+                    <div key={svc.title} style={{ background: "rgba(0,0,0,0.28)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px", padding: "18px" }}>
                       <div style={{ color: "var(--yellow)", marginBottom: "10px" }}>{svc.icon}</div>
                       <h4 style={{ fontFamily: "Hannik, sans-serif", fontWeight: 700, fontSize: "15px", color: "var(--off-white)", marginBottom: "6px" }}>{svc.title}</h4>
                       <p style={{ fontSize: "13px", color: "var(--muted)", lineHeight: 1.7 }}>{svc.desc}</p>
@@ -1101,7 +1101,7 @@ export default function CateringMenu() {
                     <div
                       key={svc.title}
                       style={{
-                        background: "rgba(255,255,255,0.09)",
+                        background: "rgba(0,0,0,0.28)",
                         border: "1px solid rgba(255,255,255,0.15)",
                         borderRadius: "4px",
                         padding: "clamp(18px, 2.5vw, 28px)",
@@ -1123,7 +1123,7 @@ export default function CateringMenu() {
                       {svc.tiers && (
                         <div style={{ marginTop: "14px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6px" }}>
                           {svc.tiers.map((tier) => (
-                            <div key={tier.label} style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "3px", padding: "8px 10px" }}>
+                            <div key={tier.label} style={{ background: "rgba(0,0,0,0.28)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "3px", padding: "8px 10px" }}>
                               <div style={{ fontFamily: "Hannik, sans-serif", fontWeight: 900, fontSize: "15px", color: "var(--yellow)" }}>{tier.price}</div>
                               <div style={{ fontSize: "11px", color: "var(--muted)", marginTop: "2px" }}>{tier.label} · {tier.serves} guests</div>
                               <div style={{ fontSize: "10px", color: "rgba(188,220,154,0.7)", marginTop: "2px" }}>{tier.tacos}</div>
@@ -1162,7 +1162,7 @@ export default function CateringMenu() {
                   </p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "8px" }}>
                     {toppingsIncluded.map((t) => (
-                      <span key={t.name} style={{ fontSize: "12px", color: "rgba(250,246,238,0.6)", background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "2px", padding: "4px 10px" }}>
+                      <span key={t.name} style={{ fontSize: "12px", color: "rgba(250,246,238,0.6)", background: "rgba(0,0,0,0.28)", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "2px", padding: "4px 10px" }}>
                         {t.name}
                         {t.note && <span style={{ color: "var(--muted)", marginLeft: "4px", fontSize: "10px" }}>({t.note})</span>}
                       </span>
@@ -1220,7 +1220,7 @@ export default function CateringMenu() {
                   </p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
                     {["Bottled Water · $2", "Ruby Fine Hibiscus Tea · $3.50", "Sparkling Water · $3.50"].map((d) => (
-                      <span key={d} style={{ fontSize: "13px", color: "rgba(250,246,238,0.6)", background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "2px", padding: "4px 12px" }}>
+                      <span key={d} style={{ fontSize: "13px", color: "rgba(250,246,238,0.6)", background: "rgba(0,0,0,0.28)", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "2px", padding: "4px 12px" }}>
                         {d}
                       </span>
                     ))}
@@ -1254,7 +1254,7 @@ export default function CateringMenu() {
                     <div
                       key={opt.title}
                       style={{
-                        background: "rgba(255,255,255,0.09)",
+                        background: "rgba(0,0,0,0.28)",
                         border: "1px solid rgba(255,255,255,0.15)",
                         borderRadius: "4px",
                         padding: "20px",
@@ -1523,7 +1523,7 @@ export default function CateringMenu() {
             userSelect: "none",
           }}
         >
-          <span style={{ fontFamily: "Hannik, sans-serif", fontSize: "clamp(120px, 24vw, 280px)", fontWeight: 900, color: "rgba(255,255,255,0.1)", lineHeight: 1 }}>
+          <span style={{ fontFamily: "Hannik, sans-serif", fontSize: "clamp(120px, 24vw, 280px)", fontWeight: 900, color: "rgba(0,0,0,0.28)", lineHeight: 1 }}>
             ?
           </span>
         </div>
