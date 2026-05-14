@@ -262,8 +262,8 @@ function TacoGrid({ tacos, specialty = false }: {
         <div
           key={t.name}
           style={{
-            background: specialty ? "rgba(85,26,58,0.18)" : "rgba(255,255,255,0.04)",
-            border: `1px solid ${specialty ? "rgba(85,26,58,0.5)" : "rgba(255,255,255,0.07)"}`,
+            background: specialty ? "rgba(175,152,202,0.1)" : "rgba(255,255,255,0.09)",
+            border: `1px solid ${specialty ? "rgba(175,152,202,0.3)" : "rgba(255,255,255,0.15)"}`,
             borderRadius: "4px",
             padding: "14px 16px",
             position: "relative",
@@ -332,8 +332,8 @@ function NotTacosGrid({ items }: {
         <div
           key={item.name}
           style={{
-            background: "rgba(251,175,28,0.05)",
-            border: "1px solid rgba(251,175,28,0.15)",
+            background: "rgba(251,175,28,0.1)",
+            border: "1px solid rgba(251,175,28,0.3)",
             borderRadius: "4px",
             padding: "16px",
           }}
@@ -364,8 +364,8 @@ function SidesGrid({ items }: { items: { name: string; badge: string; desc: stri
         <div
           key={item.name}
           style={{
-            background: "rgba(255,255,255,0.03)",
-            border: "1px solid rgba(255,255,255,0.07)",
+            background: "rgba(255,255,255,0.18)",
+            border: "1px solid rgba(255,255,255,0.15)",
             borderRadius: "4px",
             padding: "14px 16px",
           }}
@@ -391,8 +391,8 @@ function ExtrasGrid({ items }: { items: { name: string; desc: string; badge?: st
         <div
           key={item.name}
           style={{
-            background: "rgba(255,255,255,0.025)",
-            border: "1px solid rgba(255,255,255,0.06)",
+            background: "rgba(255,255,255,0.09)",
+            border: "1px solid rgba(255,255,255,0.15)",
             borderRadius: "4px",
             padding: "12px 14px",
           }}
@@ -413,7 +413,7 @@ function Divider() {
     <div
       style={{
         height: "1px",
-        background: "rgba(255,255,255,0.07)",
+        background: "rgba(255,255,255,0.15)",
         margin: "36px 0",
       }}
     />
@@ -433,10 +433,10 @@ function AccordionItem({
   return (
     <div
       style={{
-        border: "1px solid rgba(255,255,255,0.08)",
+        border: "1px solid rgba(255,255,255,0.18)",
         borderRadius: "4px",
         overflow: "hidden",
-        background: open ? "rgba(228,29,117,0.06)" : "rgba(255,255,255,0.02)",
+        background: open ? "rgba(228,29,117,0.1)" : "rgba(255,255,255,0.06)",
         transition: "background 0.3s",
       }}
     >
@@ -577,7 +577,7 @@ export default function CateringMenu() {
           alignItems: "center",
           justifyContent: "center",
           overflow: "hidden",
-          background: "var(--black)",
+          background: "#551A3A",
           paddingTop: "80px",
         }}
       >
@@ -664,7 +664,7 @@ export default function CateringMenu() {
       <section
         ref={stepsRef}
         style={{
-          background: "#120C07",
+          background: "#551A3A",
           padding: "clamp(52px, 7vw, 96px) clamp(20px, 4vw, 52px)",
         }}
       >
@@ -711,8 +711,8 @@ export default function CateringMenu() {
                 animate={stepsInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.1 + i * 0.12 }}
                 style={{
-                  background: "rgba(255,255,255,0.025)",
-                  border: "1px solid rgba(255,255,255,0.06)",
+                  background: "rgba(255,255,255,0.09)",
+                  border: "1px solid rgba(255,255,255,0.15)",
                   borderRadius: "4px",
                   padding: "clamp(24px, 3vw, 36px)",
                   position: "relative",
@@ -777,7 +777,7 @@ export default function CateringMenu() {
       <section
         ref={menuRef}
         style={{
-          background: "var(--black)",
+          background: "#551A3A",
           padding: "clamp(52px, 7vw, 96px) clamp(20px, 4vw, 52px)",
         }}
       >
@@ -793,8 +793,8 @@ export default function CateringMenu() {
             <div
               style={{
                 display: "inline-flex",
-                background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(255,255,255,0.1)",
+                background: "rgba(255,255,255,0.1)",
+                border: "1px solid rgba(255,255,255,0.2)",
                 borderRadius: "6px",
                 padding: "6px",
                 position: "relative",
@@ -868,15 +868,15 @@ export default function CateringMenu() {
                       key={svc.title}
                       className="service-card"
                       style={{
-                        background: "rgba(255,255,255,0.025)",
-                        border: "1px solid rgba(255,255,255,0.06)",
+                        background: "rgba(255,255,255,0.09)",
+                        border: "1px solid rgba(255,255,255,0.15)",
                         padding: "clamp(20px, 2.5vw, 32px)",
                         position: "relative",
                         overflow: "hidden",
                         transition: "background 0.3s",
                       }}
                       onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "rgba(228,29,117,0.09)")}
-                      onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.025)")}
+                      onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.09)")}
                     >
                       <span style={{ position: "absolute", top: "12px", right: "16px", color: "var(--yellow)", fontSize: "10px", opacity: 0.25 }}>✦</span>
                       <div style={{ color: "var(--yellow)", marginBottom: "14px" }}>{svc.icon}</div>
@@ -955,7 +955,7 @@ export default function CateringMenu() {
                 <TacoGrid tacos={staffedSpecialtyTacos} specialty />
 
                 {/* Toppings */}
-                <div style={{ marginTop: "24px", padding: "16px 20px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "4px" }}>
+                <div style={{ marginTop: "24px", padding: "16px 20px", background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px" }}>
                   <p style={{ fontSize: "12px", letterSpacing: "2px", textTransform: "uppercase", color: "var(--yellow)", fontWeight: 700, marginBottom: "10px" }}>
                     Toppings Included
                   </p>
@@ -966,8 +966,8 @@ export default function CateringMenu() {
                         style={{
                           fontSize: "12px",
                           color: "rgba(250,246,238,0.6)",
-                          background: "rgba(255,255,255,0.04)",
-                          border: "1px solid rgba(255,255,255,0.08)",
+                          background: "rgba(255,255,255,0.1)",
+                          border: "1px solid rgba(255,255,255,0.18)",
                           borderRadius: "2px",
                           padding: "4px 10px",
                         }}
@@ -1010,7 +1010,7 @@ export default function CateringMenu() {
                     { name: "HORCHATA Ice Cream Sandos", price: "$10.50 each", desc: "A Bartleby's × Taylor's Tacos collab. Cinnamon rice milk ice cream between two decadent blondies. 10 sando minimum." },
                     { name: "Lindsay Italian Ice", price: "$4 each", desc: "Great vegan option! Minimum 24. Flavors: Mango, Lemon, Watermelon, or Strawberry." },
                   ].map((d) => (
-                    <div key={d.name} style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "4px", padding: "16px" }}>
+                    <div key={d.name} style={{ background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px", padding: "16px" }}>
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "6px" }}>
                         <span style={{ fontFamily: "Hannik, sans-serif", fontWeight: 700, fontSize: "14px", color: "var(--off-white)" }}>{d.name}</span>
                         <span style={{ fontFamily: "Hannik, sans-serif", fontWeight: 900, fontSize: "14px", color: "var(--yellow)", whiteSpace: "nowrap", marginLeft: "8px" }}>{d.price}</span>
@@ -1021,7 +1021,7 @@ export default function CateringMenu() {
                 </div>
 
                 {/* Drinks */}
-                <div style={{ marginTop: "20px", padding: "16px 20px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "4px" }}>
+                <div style={{ marginTop: "20px", padding: "16px 20px", background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px" }}>
                   <p style={{ fontSize: "12px", letterSpacing: "2px", textTransform: "uppercase", color: "var(--yellow)", fontWeight: 700, marginBottom: "10px" }}>
                     Drinks (minimum 24)
                   </p>
@@ -1031,7 +1031,7 @@ export default function CateringMenu() {
                       "Ruby Fine Hibiscus Tea · $3.50",
                       "Sparkling Water · $3.50",
                     ].map((d) => (
-                      <span key={d} style={{ fontSize: "13px", color: "rgba(250,246,238,0.6)", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "2px", padding: "4px 12px" }}>
+                      <span key={d} style={{ fontSize: "13px", color: "rgba(250,246,238,0.6)", background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "2px", padding: "4px 12px" }}>
                         {d}
                       </span>
                     ))}
@@ -1071,7 +1071,7 @@ export default function CateringMenu() {
                     { icon: <Star size={20} strokeWidth={1.5} />, title: "Mixology Services", desc: "Licensed and insured bartenders prep, serve, and clean up the bar station (alcohol not included). $75–$125/hr. 4-hour minimum." },
                     { icon: <Sparkles size={20} strokeWidth={1.5} />, title: "Bar Services", desc: "Taylor's Tacos works with multiple bar partners that we are happy to connect you with!" },
                   ].map((svc) => (
-                    <div key={svc.title} style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "4px", padding: "18px" }}>
+                    <div key={svc.title} style={{ background: "rgba(255,255,255,0.09)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px", padding: "18px" }}>
                       <div style={{ color: "var(--yellow)", marginBottom: "10px" }}>{svc.icon}</div>
                       <h4 style={{ fontFamily: "Hannik, sans-serif", fontWeight: 700, fontSize: "15px", color: "var(--off-white)", marginBottom: "6px" }}>{svc.title}</h4>
                       <p style={{ fontSize: "13px", color: "var(--muted)", lineHeight: 1.7 }}>{svc.desc}</p>
@@ -1101,8 +1101,8 @@ export default function CateringMenu() {
                     <div
                       key={svc.title}
                       style={{
-                        background: "rgba(255,255,255,0.025)",
-                        border: "1px solid rgba(255,255,255,0.07)",
+                        background: "rgba(255,255,255,0.09)",
+                        border: "1px solid rgba(255,255,255,0.15)",
                         borderRadius: "4px",
                         padding: "clamp(18px, 2.5vw, 28px)",
                       }}
@@ -1123,7 +1123,7 @@ export default function CateringMenu() {
                       {svc.tiers && (
                         <div style={{ marginTop: "14px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6px" }}>
                           {svc.tiers.map((tier) => (
-                            <div key={tier.label} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "3px", padding: "8px 10px" }}>
+                            <div key={tier.label} style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "3px", padding: "8px 10px" }}>
                               <div style={{ fontFamily: "Hannik, sans-serif", fontWeight: 900, fontSize: "15px", color: "var(--yellow)" }}>{tier.price}</div>
                               <div style={{ fontSize: "11px", color: "var(--muted)", marginTop: "2px" }}>{tier.label} · {tier.serves} guests</div>
                               <div style={{ fontSize: "10px", color: "rgba(188,220,154,0.7)", marginTop: "2px" }}>{tier.tacos}</div>
@@ -1156,13 +1156,13 @@ export default function CateringMenu() {
                 <TacoGrid tacos={deliverySpecialtyTacos} specialty />
 
                 {/* Toppings */}
-                <div style={{ marginTop: "24px", padding: "16px 20px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "4px" }}>
+                <div style={{ marginTop: "24px", padding: "16px 20px", background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px" }}>
                   <p style={{ fontSize: "12px", letterSpacing: "2px", textTransform: "uppercase", color: "var(--yellow)", fontWeight: 700, marginBottom: "10px" }}>
                     Toppings Included
                   </p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "8px" }}>
                     {toppingsIncluded.map((t) => (
-                      <span key={t.name} style={{ fontSize: "12px", color: "rgba(250,246,238,0.6)", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "2px", padding: "4px 10px" }}>
+                      <span key={t.name} style={{ fontSize: "12px", color: "rgba(250,246,238,0.6)", background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "2px", padding: "4px 10px" }}>
                         {t.name}
                         {t.note && <span style={{ color: "var(--muted)", marginLeft: "4px", fontSize: "10px" }}>({t.note})</span>}
                       </span>
@@ -1203,7 +1203,7 @@ export default function CateringMenu() {
                     { name: "Churro Minis", price: "$1 each", desc: "Fried dough filled with chocolate and covered with cinna-sugar!" },
                     { name: "Lindsay's Italian Ice", price: "$4 each", desc: "24 minimum, need at least 72hr notice. Mango, Watermelon, or Lemon." },
                   ].map((d) => (
-                    <div key={d.name} style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "4px", padding: "16px" }}>
+                    <div key={d.name} style={{ background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px", padding: "16px" }}>
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "6px" }}>
                         <span style={{ fontFamily: "Hannik, sans-serif", fontWeight: 700, fontSize: "14px", color: "var(--off-white)" }}>{d.name}</span>
                         <span style={{ fontFamily: "Hannik, sans-serif", fontWeight: 900, fontSize: "14px", color: "var(--yellow)", marginLeft: "8px" }}>{d.price}</span>
@@ -1214,13 +1214,13 @@ export default function CateringMenu() {
                 </div>
 
                 {/* Drinks */}
-                <div style={{ marginTop: "16px", padding: "16px 20px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "4px" }}>
+                <div style={{ marginTop: "16px", padding: "16px 20px", background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px" }}>
                   <p style={{ fontSize: "12px", letterSpacing: "2px", textTransform: "uppercase", color: "var(--yellow)", fontWeight: 700, marginBottom: "10px" }}>
                     Drinks (minimum 24)
                   </p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
                     {["Bottled Water · $2", "Ruby Fine Hibiscus Tea · $3.50", "Sparkling Water · $3.50"].map((d) => (
-                      <span key={d} style={{ fontSize: "13px", color: "rgba(250,246,238,0.6)", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "2px", padding: "4px 12px" }}>
+                      <span key={d} style={{ fontSize: "13px", color: "rgba(250,246,238,0.6)", background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "2px", padding: "4px 12px" }}>
                         {d}
                       </span>
                     ))}
@@ -1237,7 +1237,7 @@ export default function CateringMenu() {
                     { item: "Chafing Rack + Pan Insert + Sterno Heater", price: "$20" },
                     { item: "Plate + Napkin + Cutlery", price: "$1/pp" },
                   ].map((s) => (
-                    <div key={s.item} style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "4px", padding: "14px" }}>
+                    <div key={s.item} style={{ background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "4px", padding: "14px" }}>
                       <div style={{ fontFamily: "Hannik, sans-serif", fontWeight: 900, fontSize: "18px", color: "var(--yellow)", marginBottom: "4px" }}>{s.price}</div>
                       <div style={{ fontSize: "13px", color: "var(--off-white)", lineHeight: 1.5 }}>{s.item}</div>
                       {s.note && <div style={{ fontSize: "11px", color: "var(--muted)", marginTop: "2px" }}>{s.note}</div>}
@@ -1254,8 +1254,8 @@ export default function CateringMenu() {
                     <div
                       key={opt.title}
                       style={{
-                        background: "rgba(255,255,255,0.025)",
-                        border: "1px solid rgba(255,255,255,0.07)",
+                        background: "rgba(255,255,255,0.09)",
+                        border: "1px solid rgba(255,255,255,0.15)",
                         borderRadius: "4px",
                         padding: "20px",
                       }}
@@ -1284,7 +1284,7 @@ export default function CateringMenu() {
       <section
         ref={rulesRef}
         style={{
-          background: "#120C07",
+          background: "#551A3A",
           padding: "clamp(52px, 7vw, 96px) clamp(20px, 4vw, 52px)",
         }}
       >
@@ -1324,7 +1324,7 @@ export default function CateringMenu() {
         ref={zolaRef}
         style={{
           position: "relative",
-          background: "var(--black)",
+          background: "#551A3A",
           padding: "clamp(52px, 7vw, 96px) clamp(20px, 4vw, 52px)",
           textAlign: "center",
           overflow: "hidden",
@@ -1344,7 +1344,7 @@ export default function CateringMenu() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(to bottom, var(--black) 0%, rgba(85,26,58,0.35) 50%, var(--black) 100%)",
+            background: "linear-gradient(to bottom, rgba(85,26,58,0.85) 0%, rgba(85,26,58,0.3) 50%, rgba(85,26,58,0.85) 100%)",
           }}
         />
 
@@ -1504,7 +1504,7 @@ export default function CateringMenu() {
       {/* ── CONTACT CTA ──────────────────────────────────────── */}
       <section
         style={{
-          background: "#120C07",
+          background: "#551A3A",
           padding: "clamp(52px, 7vw, 80px) clamp(20px, 4vw, 52px)",
           textAlign: "center",
           position: "relative",
@@ -1523,7 +1523,7 @@ export default function CateringMenu() {
             userSelect: "none",
           }}
         >
-          <span style={{ fontFamily: "Hannik, sans-serif", fontSize: "clamp(120px, 24vw, 280px)", fontWeight: 900, color: "rgba(255,255,255,0.04)", lineHeight: 1 }}>
+          <span style={{ fontFamily: "Hannik, sans-serif", fontSize: "clamp(120px, 24vw, 280px)", fontWeight: 900, color: "rgba(255,255,255,0.1)", lineHeight: 1 }}>
             ?
           </span>
         </div>
