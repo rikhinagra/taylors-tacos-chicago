@@ -10,7 +10,7 @@ export default function CTABand() {
     <section
       className="relative overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, var(--deep-purple), var(--deep-red) 60%, var(--deep-purple))",
+        background: "linear-gradient(90deg, #E41D75 0%, #E52D5D 50%, #EA3B48 100%)",
         padding: "clamp(40px, 6vw, 64px) clamp(20px, 4vw, 52px)",
       }}
     >
@@ -55,7 +55,7 @@ export default function CTABand() {
             }}
           >
             Bring Tacos<br />
-            to Your <em style={{ color: "var(--yellow)", fontStyle: "normal" }}>Event</em>
+            to Your <em style={{ color: "#BCDC9A", fontStyle: "normal" }}>Event</em>
           </h2>
           <p
             style={{
