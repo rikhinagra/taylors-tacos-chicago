@@ -16,7 +16,7 @@ export default function About() {
   return (
     <section
       id="about"
-      style={{ background: "var(--black)", padding: "clamp(60px, 8vw, 112px) clamp(20px, 4vw, 52px)" }}
+      style={{ background: "#551A3A", padding: "clamp(60px, 8vw, 112px) clamp(20px, 4vw, 52px)" }}
     >
       <div style={{ maxWidth: "1280px", margin: "0 auto" }} ref={ref}>
 
