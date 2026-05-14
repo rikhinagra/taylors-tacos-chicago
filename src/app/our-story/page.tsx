@@ -46,7 +46,7 @@ export default function OurStoryPage() {
         >
           <p
             style={{
-              fontSize: "12px",
+              fontSize: "15px",
               letterSpacing: "5px",
               textTransform: "uppercase",
               color: "#BCDC9A",

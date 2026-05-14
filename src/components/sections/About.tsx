@@ -117,12 +117,12 @@ export default function About() {
               initial="hidden"
               animate={inView ? "show" : "hidden"}
             >
-              <p style={{ fontSize: "18px", lineHeight: 2.0, color: "rgba(250,246,238,0.7)", marginBottom: "28px", fontWeight: 300 }}>
+              <p style={{ fontSize: "18px", lineHeight: 2.0, color: "rgba(250,246,238,0.9)", marginBottom: "28px", fontWeight: 300 }}>
                 Taylor&apos;s Tacos was born from a love of authentic Mexican street
                 food and Chicago&apos;s unstoppable spirit. We brought LA&apos;s bold
                 taco culture north and fused it with the heart and hustle of the Chi.
               </p>
-              <p style={{ fontSize: "18px", lineHeight: 2.0, color: "rgba(250,246,238,0.7)", fontWeight: 300 }}>
+              <p style={{ fontSize: "18px", lineHeight: 2.0, color: "rgba(250,246,238,0.9)", fontWeight: 300 }}>
                 Planted at 135 N. Kedzie, we&apos;re not just a taco shop. We&apos;re
                 a full-service catering company that shows up for your community,
                 your corporate team, your wedding day and everything in between.
@@ -137,7 +137,7 @@ export default function About() {
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(3, 1fr)",
-                borderTop: "1px solid rgba(250,246,238,0.1)",
+                borderTop: "1px solid rgba(250,246,238,0.2)",
                 marginTop: "36px",
                 paddingTop: "36px",
                 gap: "clamp(12px, 4vw, 48px)",
@@ -164,7 +164,7 @@ export default function About() {
                       fontSize: "14px",
                       letterSpacing: "2px",
                       textTransform: "uppercase",
-                      color: "rgba(250,246,238,0.4)",
+                      color: "rgba(250,246,238,0.72)",
                       marginTop: "6px",
                     }}
                   >
