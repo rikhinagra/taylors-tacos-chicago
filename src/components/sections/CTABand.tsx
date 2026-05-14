@@ -31,17 +31,8 @@ export default function CTABand() {
         BOOK
       </span>
 
-      {/* Bottom dotted stripe */}
       <div
-        className="absolute bottom-0 left-0 right-0"
-        style={{
-          height: "5px",
-          background: "repeating-linear-gradient(90deg, var(--yellow) 0, var(--yellow) 14px, transparent 14px, transparent 22px)",
-        }}
-      />
-
-      <div
-        className="relative z-10 flex items-center justify-between gap-12 flex-wrap"
+        className="relative z-10 flex items-center gap-12 flex-wrap"
         style={{ maxWidth: "1280px", margin: "0 auto" }}
       >
         <div>
@@ -60,7 +51,7 @@ export default function CTABand() {
           <p
             style={{
               fontSize: "17px",
-              color: "rgba(255,255,255,0.78)",
+              color: "rgba(255,255,255,0.92)",
               marginTop: "12px",
               maxWidth: "min(440px, 100%)",
               lineHeight: 1.75,
@@ -70,36 +61,6 @@ export default function CTABand() {
             schools, nonprofits. We love feeding the people who feed the people.
           </p>
         </div>
-
-        <button
-          onClick={() => scrollTo("#contact")}
-          className="flex items-center gap-3 transition-all duration-300 hover:-translate-y-1 flex-shrink-0"
-          style={{
-            background: "#551A3A",
-            color: "white",
-            padding: "14px 40px",
-            fontSize: "18px",
-            fontWeight: 800,
-            letterSpacing: "2px",
-            textTransform: "uppercase",
-            borderRadius: "3px",
-            whiteSpace: "nowrap",
-            border: "2px solid white",
-            transition: "all 0.3s ease",
-          }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLElement).style.background = "#3d1025";
-            (e.currentTarget as HTMLElement).style.color = "white";
-            (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 30px rgba(0,0,0,0.25)";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLElement).style.background = "#551A3A";
-            (e.currentTarget as HTMLElement).style.color = "white";
-            (e.currentTarget as HTMLElement).style.boxShadow = "none";
-          }}
-        >
-          Get a Quote
-        </button>
       </div>
     </section>
   );

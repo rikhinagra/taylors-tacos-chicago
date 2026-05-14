@@ -73,7 +73,7 @@ export default function CharacterSection() {
             style={{
               fontSize: "18px",
               lineHeight: 1.8,
-              color: "rgba(255,255,255,0.78)",
+              color: "rgba(255,255,255,0.92)",
               fontWeight: 300,
               marginBottom: "24px",
               maxWidth: "520px",
