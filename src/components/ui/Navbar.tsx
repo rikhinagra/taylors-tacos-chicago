@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { X } from "lucide-react";
 
 const navLinks = [
   { label: "Our Story",    href: "#about" },
@@ -211,15 +211,51 @@ export default function Navbar() {
             style={{
               background: "none",
               border: "none",
-              color: "white",
               cursor: "pointer",
               padding: "8px",
               display: "flex",
+              flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
+              gap: "0",
+              width: "36px",
+              height: "36px",
             }}
           >
-            {menuOpen ? <X size={26} /> : <Menu size={26} />}
+            {/* Top bar */}
+            <span style={{
+              display: "block",
+              width: "22px",
+              height: "2px",
+              background: "white",
+              borderRadius: "2px",
+              transition: "transform 0.3s ease, opacity 0.3s ease",
+              transformOrigin: "center",
+              transform: menuOpen ? "translateY(7px) rotate(45deg)" : "translateY(0) rotate(0deg)",
+            }} />
+            {/* Middle bar */}
+            <span style={{
+              display: "block",
+              width: "22px",
+              height: "2px",
+              background: "white",
+              borderRadius: "2px",
+              margin: "5px 0",
+              transition: "opacity 0.2s ease, transform 0.3s ease",
+              opacity: menuOpen ? 0 : 1,
+              transform: menuOpen ? "scaleX(0)" : "scaleX(1)",
+            }} />
+            {/* Bottom bar */}
+            <span style={{
+              display: "block",
+              width: "22px",
+              height: "2px",
+              background: "white",
+              borderRadius: "2px",
+              transition: "transform 0.3s ease, opacity 0.3s ease",
+              transformOrigin: "center",
+              transform: menuOpen ? "translateY(-7px) rotate(-45deg)" : "translateY(0) rotate(0deg)",
+            }} />
           </button>
         </div>
       </motion.header>
