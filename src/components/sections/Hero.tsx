@@ -156,7 +156,7 @@ export default function Hero() {
           margin: "0 auto",
         }}
       >
-        {/* Eyebrow */}
+        {/* Eyebrow — commented out, restore when client confirms
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -173,8 +173,9 @@ export default function Hero() {
         >
           Chicago&apos;s Soul &nbsp;·&nbsp; LA&apos;s Flavor &nbsp;·&nbsp; 135 N. Kedzie
         </motion.p>
+        */}
 
-        {/* Main Logo */}
+        {/* Main Logo — commented out, restore when client confirms
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -193,8 +194,9 @@ export default function Hero() {
             priority
           />
         </motion.div>
+        */}
 
-        {/* Sub-tagline */}
+        {/* Sub-tagline — commented out, restore when client confirms
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -211,6 +213,7 @@ export default function Hero() {
         >
           #1 Taco Catering in the Chi
         </motion.p>
+        */}
 
         {/* CTA Buttons — commented out, restore when client confirms
         <motion.div
