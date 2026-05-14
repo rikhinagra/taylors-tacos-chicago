@@ -188,13 +188,13 @@ export default function Navbar() {
         {/* ── Mobile: Brand + Hamburger row ── */}
         <div
           className="flex md:hidden items-center justify-between"
-          style={{ padding: "14px clamp(20px, 5vw, 32px)" }}
+          style={{ padding: "8px clamp(16px, 5vw, 32px)" }}
         >
           <button
             onClick={handleLogoClick}
             style={{ background: "none", border: "none", cursor: "none", padding: 0 }}
           >
-            <div className="relative" style={{ width: "180px", height: "64px" }}>
+            <div className="relative" style={{ width: "150px", height: "48px" }}>
               <Image
                 src="/images/logo/taylors-tacos-chicago-logo-horizontal.webp"
                 alt="Taylor's Tacos Chicago"

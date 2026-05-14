@@ -115,26 +115,7 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* ── Spinning deco ring ───────────────────────────────────────────────── */}
-      <div
-        className="absolute z-10 rounded-full pointer-events-none"
-        style={{
-          width: "min(620px, 85vw)",
-          height: "min(620px, 85vw)",
-          border: "1px solid rgba(251,175,28,0.12)",
-          top: "50%", left: "50%",
-          animation: "spinSlow 45s linear infinite",
-          boxShadow: "inset 0 0 0 24px transparent",
-        }}
-      >
-        <div
-          className="absolute rounded-full"
-          style={{
-            inset: "24px",
-            border: "1px dashed rgba(188,220,154,0.08)",
-          }}
-        />
-      </div>
+      {/* ── Spinning deco ring — removed ── */}
 
       {/* ── Hero Content ─────────────────────────────────────────────────────── */}
       {/* NOTE: Character mascot removed — video placeholder. Will be restored with real video. */}
