@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { UtensilsCrossed } from "lucide-react";
+// import { UtensilsCrossed } from "lucide-react"; // commented out with CTA buttons
 
 const bannerImages = [
   {
@@ -212,7 +212,7 @@ export default function Hero() {
           #1 Taco Catering in the Chi
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/* CTA Buttons — commented out, restore when client confirms
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -265,6 +265,7 @@ export default function Hero() {
             View Menu →
           </a>
         </motion.div>
+        */}
       </div>
 
       {/* ── Scroll indicator ─────────────────────────────────────────────────── */}
