@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
-import Hamburger from "hamburger-react";
 
 const navLinks = [
   { label: "Our Story",    href: "#about" },
@@ -206,15 +205,55 @@ export default function Navbar() {
             </div>
           </button>
 
-          <Hamburger
-            toggled={menuOpen}
-            toggle={setMenuOpen}
-            size={22}
-            color="white"
-            distance="sm"
-            label="Toggle menu"
-            rounded
-          />
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              padding: "6px 8px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              justifyContent: "center",
+              gap: "5px",
+            }}
+          >
+            {/* Long bar */}
+            <span style={{
+              display: "block",
+              height: "2.5px",
+              background: "white",
+              borderRadius: "3px",
+              transition: "width 0.3s ease, transform 0.35s ease, opacity 0.25s ease",
+              transformOrigin: "center",
+              width: menuOpen ? "22px" : "22px",
+              transform: menuOpen ? "translateY(7.5px) rotate(45deg)" : "none",
+            }} />
+            {/* Medium bar */}
+            <span style={{
+              display: "block",
+              height: "2.5px",
+              background: "white",
+              borderRadius: "3px",
+              transition: "width 0.3s ease, opacity 0.25s ease, transform 0.35s ease",
+              width: menuOpen ? "22px" : "14px",
+              opacity: menuOpen ? 0 : 1,
+              transform: menuOpen ? "scaleX(0)" : "none",
+            }} />
+            {/* Short bar */}
+            <span style={{
+              display: "block",
+              height: "2.5px",
+              background: "white",
+              borderRadius: "3px",
+              transition: "width 0.3s ease, transform 0.35s ease, opacity 0.25s ease",
+              transformOrigin: "center",
+              width: menuOpen ? "22px" : "8px",
+              transform: menuOpen ? "translateY(-7.5px) rotate(-45deg)" : "none",
+            }} />
+          </button>
         </div>
       </motion.header>
 
