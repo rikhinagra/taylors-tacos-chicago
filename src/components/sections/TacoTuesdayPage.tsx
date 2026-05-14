@@ -13,8 +13,8 @@ const platforms = [
     cta: "Order on Grubhub",
     href: "https://www.grubhub.com/restaurant/taylors-tacos---the-hatchery-135-n-kedzie-ave-chicago/2409345",
     accent: "var(--red)",
-    accentBg: "rgba(187,36,35,0.08)",
-    accentBorder: "rgba(187,36,35,0.2)",
+    accentBg: "rgba(187,36,35,0.22)",
+    accentBorder: "rgba(187,36,35,0.5)",
   },
   {
     name: "UberEats",
@@ -23,8 +23,8 @@ const platforms = [
     cta: "Order on UberEats",
     href: "https://www.ubereats.com/store/taylors-tacos/uMAKNe3_WY-kX75Bsb0APw?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjE2NDIlMjBTJTIwQWxiYW55JTIwQXZlJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyaGVyZSUzQWFmJTNBc3RyZWV0c2VjdGlvbiUzQUtkMG11TlZxcnFhTFRGVTZ3bVBzOEElM0FDZ2NJQkNDVWk4VkxFQUVhQkRFMk5ESSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJoZXJlX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDEuODU3NzklMkMlMjJsb25naXR1ZGUlMjIlM0EtODcuNzAzMTMlN0Q%3D&ps=1&surfaceName=",
     accent: "var(--green)",
-    accentBg: "rgba(188,220,154,0.07)",
-    accentBorder: "rgba(188,220,154,0.18)",
+    accentBg: "rgba(188,220,154,0.22)",
+    accentBorder: "rgba(188,220,154,0.5)",
   },
   {
     name: "Cash Drop",
@@ -33,8 +33,8 @@ const platforms = [
     cta: "Order on Cash Drop",
     href: "https://cashdrop.com/taylorstacoschicago",
     accent: "var(--yellow)",
-    accentBg: "rgba(251,175,28,0.07)",
-    accentBorder: "rgba(251,175,28,0.2)",
+    accentBg: "rgba(251,175,28,0.22)",
+    accentBorder: "rgba(251,175,28,0.5)",
   },
 ];
 
