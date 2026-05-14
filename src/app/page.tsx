@@ -4,7 +4,6 @@ import Footer               from "@/components/ui/Footer";
 import FloatingBookButton   from "@/components/ui/FloatingBookButton";
 import Hero             from "@/components/sections/Hero";
 import Marquee          from "@/components/sections/Marquee";
-import About            from "@/components/sections/About";
 import CTABand          from "@/components/sections/CTABand";
 import Services         from "@/components/sections/Services";
 import TacoTuesdayBand  from "@/components/sections/TacoTuesdayBand";
@@ -23,7 +22,6 @@ export default function Home() {
         <Hero />
         <Marquee />
         <CTABand />
-        <About />
         <CharacterSection />
         <Services />
         <TacoTuesdayBand />
