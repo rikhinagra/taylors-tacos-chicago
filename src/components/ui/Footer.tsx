@@ -37,7 +37,7 @@ export default function Footer() {
   };
 
   return (
-    <footer style={{ background: "#050302", padding: "clamp(40px, 6vw, 72px) clamp(20px, 4vw, 52px) 32px" }}>
+    <footer style={{ background: "#551A3A", padding: "clamp(40px, 6vw, 72px) clamp(20px, 4vw, 52px) 32px" }}>
 
       {/* Brand stripe */}
       <div

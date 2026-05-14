@@ -51,7 +51,7 @@ export default function TacoTuesdayPage() {
       <section
         style={{
           position: "relative",
-          background: "var(--black)",
+          background: "#551A3A",
           minHeight: "clamp(380px, 55vw, 560px)",
           display: "flex",
           alignItems: "center",
@@ -156,7 +156,7 @@ export default function TacoTuesdayPage() {
       {/* ── Order Online Platforms ────────────────────────────────────── */}
       <section
         style={{
-          background: "#120C07",
+          background: "#551A3A",
           padding: "clamp(60px, 8vw, 112px) clamp(20px, 4vw, 52px)",
         }}
         ref={platformsRef}
@@ -332,7 +332,7 @@ export default function TacoTuesdayPage() {
       <section
         ref={infoRef}
         style={{
-          background: "var(--black)",
+          background: "#551A3A",
           padding: "clamp(40px, 6vw, 72px) clamp(20px, 4vw, 52px)",
           borderTop: "1px solid rgba(255,255,255,0.05)",
         }}
