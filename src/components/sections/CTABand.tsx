@@ -75,8 +75,8 @@ export default function CTABand() {
           onClick={() => scrollTo("#contact")}
           className="flex items-center gap-3 transition-all duration-300 hover:-translate-y-1 flex-shrink-0"
           style={{
-            background: "var(--yellow)",
-            color: "var(--black)",
+            background: "#551A3A",
+            color: "white",
             padding: "14px 40px",
             fontSize: "18px",
             fontWeight: 800,
@@ -84,14 +84,18 @@ export default function CTABand() {
             textTransform: "uppercase",
             borderRadius: "3px",
             whiteSpace: "nowrap",
+            border: "2px solid white",
+            transition: "all 0.3s ease",
           }}
           onMouseEnter={(e) => {
-            (e.currentTarget as HTMLElement).style.boxShadow = "0 16px 40px rgba(251,175,28,0.35)";
-            (e.currentTarget as HTMLElement).style.background = "var(--yellow)";
+            (e.currentTarget as HTMLElement).style.background = "#3d1025";
+            (e.currentTarget as HTMLElement).style.color = "white";
+            (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 30px rgba(0,0,0,0.25)";
           }}
           onMouseLeave={(e) => {
+            (e.currentTarget as HTMLElement).style.background = "#551A3A";
+            (e.currentTarget as HTMLElement).style.color = "white";
             (e.currentTarget as HTMLElement).style.boxShadow = "none";
-            (e.currentTarget as HTMLElement).style.background = "var(--yellow)";
           }}
         >
           Get a Quote
