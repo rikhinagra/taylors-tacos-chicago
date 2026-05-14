@@ -93,7 +93,7 @@ export default function Services() {
                 border: "1px solid rgba(255,255,255,0.06)",
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.background = "rgba(187,36,35,0.09)";
+                (e.currentTarget as HTMLElement).style.background = "rgba(228,29,117,0.09)";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.025)";

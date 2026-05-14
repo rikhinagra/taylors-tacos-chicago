@@ -102,7 +102,7 @@ export default function Footer() {
                   const el = e.currentTarget as HTMLElement;
                   el.style.borderColor = "var(--red)";
                   el.style.color = "var(--red)";
-                  el.style.background = "rgba(187,36,35,0.1)";
+                  el.style.background = "rgba(228,29,117,0.1)";
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget as HTMLElement;

@@ -436,7 +436,7 @@ function AccordionItem({
         border: "1px solid rgba(255,255,255,0.08)",
         borderRadius: "4px",
         overflow: "hidden",
-        background: open ? "rgba(187,36,35,0.06)" : "rgba(255,255,255,0.02)",
+        background: open ? "rgba(228,29,117,0.06)" : "rgba(255,255,255,0.02)",
         transition: "background 0.3s",
       }}
     >
@@ -875,7 +875,7 @@ export default function CateringMenu() {
                         overflow: "hidden",
                         transition: "background 0.3s",
                       }}
-                      onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "rgba(187,36,35,0.09)")}
+                      onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "rgba(228,29,117,0.09)")}
                       onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.025)")}
                     >
                       <span style={{ position: "absolute", top: "12px", right: "16px", color: "var(--yellow)", fontSize: "10px", opacity: 0.25 }}>✦</span>
@@ -911,8 +911,8 @@ export default function CateringMenu() {
                     <div
                       key={opt.label}
                       style={{
-                        background: "rgba(187,36,35,0.08)",
-                        border: "1px solid rgba(187,36,35,0.25)",
+                        background: "rgba(228,29,117,0.08)",
+                        border: "1px solid rgba(228,29,117,0.25)",
                         borderRadius: "4px",
                         padding: "20px",
                         textAlign: "center",
@@ -1043,8 +1043,8 @@ export default function CateringMenu() {
                 {/* Production Fee */}
                 <div
                   style={{
-                    background: "rgba(187,36,35,0.07)",
-                    border: "1px solid rgba(187,36,35,0.2)",
+                    background: "rgba(228,29,117,0.07)",
+                    border: "1px solid rgba(228,29,117,0.2)",
                     borderRadius: "4px",
                     padding: "clamp(20px, 3vw, 32px)",
                     marginBottom: "32px",
@@ -1115,7 +1115,7 @@ export default function CateringMenu() {
                           {svc.price}
                         </span>
                       </div>
-                      <div style={{ display: "inline-block", fontSize: "10px", letterSpacing: "1.5px", textTransform: "uppercase", color: "var(--red)", border: "1px solid rgba(187,36,35,0.35)", borderRadius: "2px", padding: "2px 8px", marginBottom: "10px" }}>
+                      <div style={{ display: "inline-block", fontSize: "10px", letterSpacing: "1.5px", textTransform: "uppercase", color: "var(--red)", border: "1px solid rgba(228,29,117,0.35)", borderRadius: "2px", padding: "2px 8px", marginBottom: "10px" }}>
                         {svc.highlight}
                       </div>
                       <p style={{ fontSize: "13px", color: "var(--muted)", lineHeight: 1.75 }}>{svc.desc}</p>

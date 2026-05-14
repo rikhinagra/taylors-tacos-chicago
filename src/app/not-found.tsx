@@ -42,7 +42,7 @@ export default function NotFound() {
           color: "var(--red)",
           lineHeight: 1,
           margin: "0 0 8px",
-          textShadow: "0 4px 32px rgba(187,36,35,0.4)",
+          textShadow: "0 4px 32px rgba(228,29,117,0.4)",
           letterSpacing: "-2px",
         }}
       >

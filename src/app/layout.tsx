@@ -8,7 +8,7 @@ import StructuredData from "@/components/ui/StructuredData";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const viewport: Viewport = {
-  themeColor: "#BB2423",
+  themeColor: "#E41D75",
   width: "device-width",
   initialScale: 1,
 };

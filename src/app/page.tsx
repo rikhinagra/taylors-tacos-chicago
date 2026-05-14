@@ -1,4 +1,5 @@
 import TacoCursor           from "@/components/ui/TacoCursor";
+import PinkBanner           from "@/components/ui/PinkBanner";
 import Navbar               from "@/components/ui/Navbar";
 import Footer               from "@/components/ui/Footer";
 import FloatingBookButton   from "@/components/ui/FloatingBookButton";
@@ -18,6 +19,7 @@ export default function Home() {
     <>
       <TacoCursor />
       <FloatingBookButton />
+      <PinkBanner />
       <Navbar />
       <main className="flex flex-col">
         <Hero />
