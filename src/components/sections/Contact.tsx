@@ -103,10 +103,7 @@ export default function Contact() {
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            style={{
-              fontSize: "14px", letterSpacing: "6px", textTransform: "uppercase",
-              color: "var(--red)", fontWeight: 700, display: "block", marginBottom: "14px",
-            }}
+            className="section-label"
           >
             Let&apos;s Work Together
           </motion.span>
@@ -115,13 +112,10 @@ export default function Contact() {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.1 }}
-            style={{
-              fontSize: "clamp(36px,5vw,62px)", fontWeight: 900, lineHeight: 1.04,
-              color: "var(--off-white)", fontFamily: "Hannik, sans-serif",
-            }}
+            className="section-title"
           >
             Book Your<br />
-            <em style={{ color: "var(--red)", fontStyle: "italic" }}>Catering</em>
+            <em>Catering</em>
           </motion.h2>
 
           <motion.p
