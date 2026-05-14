@@ -108,12 +108,13 @@ export default function Hero() {
       {/* ── Brand stripe ribbon (top) ────────────────────────────────────────── */}
       <div className="brand-stripe absolute top-0 left-0 right-0 z-30 pointer-events-none" />
 
-      {/* ── Papel Picado flags ───────────────────────────────────────────────── */}
+      {/* ── Papel Picado flags — commented out, restore when client confirms
       <div className="absolute left-0 right-0 z-20 flex justify-around pointer-events-none" style={{ top: "10px" }}>
         {papelFlags.map((_, i) => (
           <div key={i} className="papel-flag" />
         ))}
       </div>
+      */}
 
       {/* ── Spinning deco ring — removed ── */}
 
