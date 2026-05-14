@@ -77,8 +77,8 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ background: "var(--black)" }}
+      className="relative flex items-center justify-center overflow-hidden"
+      style={{ background: "var(--black)", height: "calc(100vh - var(--navbar-height, 0px))" }}
     >
       {/* ── Background Slideshow (replaces video until real video is ready) ── */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -102,14 +102,7 @@ export default function Hero() {
           </motion.div>
         </AnimatePresence>
 
-        {/* LIGHTENED OVERLAY */}
-        <div
-          className="absolute inset-0 z-10"
-          style={{
-            background:
-              "linear-gradient(160deg, rgba(14,10,8,0.35) 0%, rgba(14,10,8,0.15) 50%, rgba(85,26,58,0.05) 100%)",
-          }}
-        />
+        {/* LIGHTENED OVERLAY — removed, photos now show at full brightness */}
       </div>
 
       {/* ── Brand stripe ribbon (top) ────────────────────────────────────────── */}

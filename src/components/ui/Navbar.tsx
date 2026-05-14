@@ -52,6 +52,22 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
+  // Set --navbar-height CSS variable so Hero can subtract it from 100vh
+  useEffect(() => {
+    const header = document.querySelector("header");
+    const update = () => {
+      if (header) {
+        document.documentElement.style.setProperty(
+          "--navbar-height",
+          `${header.offsetHeight}px`
+        );
+      }
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
   return (
     <>
       <motion.header
