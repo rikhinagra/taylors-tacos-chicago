@@ -25,7 +25,7 @@ export default function FloatingBookButton() {
       className="floating-book-pos"
       style={{
         position: "fixed",
-        background: "var(--red)",
+        background: "#BB2423",
         color: "white",
         padding: "10px 18px",
         borderRadius: "3px",
@@ -39,19 +39,19 @@ export default function FloatingBookButton() {
         display: "flex",
         alignItems: "center",
         gap: "8px",
-        boxShadow: "0 8px 28px rgba(228,29,117,0.55)",
+        boxShadow: "0 8px 28px rgba(187,36,35,0.55)",
         fontFamily: "Hannik, sans-serif",
         animation: "floatBounce 2.5s ease-in-out infinite",
       }}
       onMouseEnter={(e) => {
         (e.currentTarget as HTMLElement).style.animationPlayState = "paused";
-        (e.currentTarget as HTMLElement).style.boxShadow = "0 16px 40px rgba(228,29,117,0.7)";
-        (e.currentTarget as HTMLElement).style.background = "var(--deep-red)";
+        (e.currentTarget as HTMLElement).style.boxShadow = "0 16px 40px rgba(187,36,35,0.7)";
+        (e.currentTarget as HTMLElement).style.background = "#7D1817";
       }}
       onMouseLeave={(e) => {
         (e.currentTarget as HTMLElement).style.animationPlayState = "running";
-        (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 28px rgba(228,29,117,0.55)";
-        (e.currentTarget as HTMLElement).style.background = "var(--red)";
+        (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 28px rgba(187,36,35,0.55)";
+        (e.currentTarget as HTMLElement).style.background = "#BB2423";
       }}
     >
       <UtensilsCrossed size={14} strokeWidth={2} /> Book Catering
