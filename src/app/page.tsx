@@ -20,8 +20,8 @@ export default function Home() {
       <main className="flex flex-col">
         <Hero />
         <Marquee />
-        <CharacterSection />
         <Services />
+        <CharacterSection />
         <Gallery />
         <Menu />
         <Contact />
