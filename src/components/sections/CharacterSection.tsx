@@ -95,7 +95,7 @@ export default function CharacterSection() {
               letterSpacing: "2px",
               textTransform: "uppercase",
               borderRadius: "3px",
-              border: "none",
+              border: "2px solid white",
               cursor: "none",
             }}
           >

@@ -103,7 +103,7 @@ export default function Menu() {
               color: "white",
               fontWeight: 700,
               background: "var(--red)",
-              border: "2px solid var(--red)",
+              border: "2px solid white",
               cursor: "none",
               padding: "10px 20px",
               borderRadius: "3px",

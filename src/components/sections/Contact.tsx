@@ -291,7 +291,7 @@ export default function Contact() {
                 disabled={loading}
                 style={{
                   width: "100%", background: "var(--red)", color: "white",
-                  border: "none", padding: "13px", fontSize: "18px", fontWeight: 700,
+                  border: "2px solid white", padding: "13px", fontSize: "18px", fontWeight: 700,
                   letterSpacing: "2.5px", textTransform: "uppercase", borderRadius: "3px",
                   cursor: "none", fontFamily: "Hannik, sans-serif", marginTop: "6px",
                   opacity: loading ? 0.7 : 1, transition: "all 0.3s",

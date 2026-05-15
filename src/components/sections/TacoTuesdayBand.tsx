@@ -111,7 +111,7 @@ export default function TacoTuesdayBand() {
               background: "var(--yellow)",
               color: "#0E0A08",
               padding: "14px 32px",
-              fontSize: "13px",
+              fontSize: "17px",
               fontWeight: 800,
               letterSpacing: "2.5px",
               textTransform: "uppercase",
@@ -119,6 +119,7 @@ export default function TacoTuesdayBand() {
               textDecoration: "none",
               cursor: "none",
               transition: "all 0.3s",
+              border: "2px solid white",
               boxShadow: "0 8px 28px rgba(251,175,28,0.28)",
               fontFamily: "Hannik, sans-serif",
             }}
