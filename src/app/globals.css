@@ -43,6 +43,13 @@ body {
   cursor: none;
 }
 
+/* ── Hide / neutralise the scrollbar ────────────────────── */
+html {
+  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;       /* IE / Edge legacy */
+}
+html::-webkit-scrollbar { display: none; } /* Chrome / Safari / Opera */
+
 /* ── Custom Taco Cursor ──────────────────────────────────── */
 /* NOTE: Styles are applied inline in TacoCursor.tsx to match reference exactly */
 
