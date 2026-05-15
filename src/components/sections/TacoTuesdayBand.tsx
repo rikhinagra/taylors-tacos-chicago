@@ -14,7 +14,7 @@ export default function TacoTuesdayBand() {
       ref={ref}
       style={{
         background: "#7D1817",
-        padding: "clamp(52px, 7vw, 96px) clamp(20px, 4vw, 52px)",
+        padding: "clamp(36px, 5vw, 64px) clamp(20px, 4vw, 52px)",
         position: "relative",
         overflow: "hidden",
       }}

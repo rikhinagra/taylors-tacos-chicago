@@ -29,7 +29,7 @@ export default function CharacterSection() {
 
       <div
         className="relative z-10 grid grid-cols-1 md:grid-cols-[280px_1fr] gap-16 items-center w-full"
-        style={{ maxWidth: "1280px", margin: "0 auto", padding: "clamp(28px, 4vw, 52px)" }}
+        style={{ maxWidth: "1280px", margin: "0 auto", padding: "clamp(20px, 3vw, 40px)" }}
       >
         {/* Floating character */}
         <motion.div

@@ -22,10 +22,10 @@ export default function Home() {
         <Marquee />
         <CharacterSection />
         <Services />
-        <TacoTuesdayBand />
         <Gallery />
         <Menu />
         <Contact />
+        <TacoTuesdayBand />
       </main>
       <Footer />
     </>

@@ -31,7 +31,7 @@ export default function Gallery() {
       <div
         ref={ref}
         style={{
-          padding: "clamp(40px, 6vw, 80px) clamp(20px, 4vw, 52px) clamp(24px, 4vw, 48px)",
+          padding: "clamp(28px, 4vw, 56px) clamp(20px, 4vw, 52px) clamp(16px, 2vw, 32px)",
           maxWidth: "1280px",
           margin: "0 auto",
         }}
