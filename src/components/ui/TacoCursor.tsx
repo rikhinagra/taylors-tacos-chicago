@@ -57,7 +57,7 @@ export default function TacoCursor() {
         alt=""
         style={{
           position: "fixed",
-          width: "56px",
+          width: "112px",
           height: "auto",
           pointerEvents: "none",
           zIndex: 99999,
