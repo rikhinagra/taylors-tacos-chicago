@@ -108,13 +108,12 @@ export default function Hero() {
       {/* ── Brand stripe ribbon (top) ────────────────────────────────────────── */}
       <div className="brand-stripe absolute top-0 left-0 right-0 z-30 pointer-events-none" />
 
-      {/* ── Papel Picado flags — commented out, restore when client confirms
+      {/* ── Papel Picado flags ── */}
       <div className="absolute left-0 right-0 z-20 flex justify-around pointer-events-none" style={{ top: "10px" }}>
         {papelFlags.map((_, i) => (
           <div key={i} className="papel-flag" />
         ))}
       </div>
-      */}
 
       {/* ── Spinning deco ring — removed ── */}
 
@@ -125,10 +124,13 @@ export default function Hero() {
           position: "relative",
           zIndex: 40,
           textAlign: "center",
-          padding: "0 clamp(20px, 5vw, 32px)",
+          padding: "clamp(28px, 4vw, 48px) clamp(32px, 6vw, 64px)",
           maxWidth: "820px",
           width: "100%",
           margin: "0 auto",
+          background: "rgba(0,0,0,0.35)",
+          borderRadius: "8px",
+          backdropFilter: "blur(2px)",
         }}
       >
         {/* Eyebrow — commented out, restore when client confirms
@@ -164,7 +166,7 @@ export default function Hero() {
             width={580}
             height={220}
             className="w-full h-auto"
-            style={{ filter: "drop-shadow(0 4px 24px rgba(0,0,0,0.7))" }}
+            style={{ filter: "drop-shadow(0 4px 32px rgba(0,0,0,0.95)) drop-shadow(0 2px 8px rgba(0,0,0,1))" }}
             priority
           />
         </motion.div>
@@ -175,12 +177,12 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.7 }}
           style={{
             fontSize: "clamp(13px, 1.6vw, 17px)",
-            color: "rgba(250,246,238,1)",
-            fontWeight: 400,
-            letterSpacing: "3px",
+            color: "white",
+            fontWeight: 700,
+            letterSpacing: "5px",
             textTransform: "uppercase",
-            marginBottom: "48px",
-            textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,1)",
+            marginBottom: "0px",
+            textShadow: "0 2px 16px rgba(0,0,0,1), 0 1px 4px rgba(0,0,0,1)",
           }}
         >
           #1 Taco Catering in the Chi
