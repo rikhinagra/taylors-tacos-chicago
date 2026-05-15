@@ -110,7 +110,7 @@ export default function TacoTuesdayBand() {
               gap: "10px",
               background: "var(--yellow)",
               color: "#0E0A08",
-              padding: "14px 32px",
+              padding: "10px 22px",
               fontSize: "17px",
               fontWeight: 800,
               letterSpacing: "2.5px",

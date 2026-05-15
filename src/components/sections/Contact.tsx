@@ -143,7 +143,7 @@ export default function Contact() {
               <div key={item.label} style={{ display: "flex", alignItems: "center", gap: "14px" }}>
                 <div
                   style={{
-                    width: "46px", height: "46px", background: "var(--red)", borderRadius: "3px",
+                    width: "46px", height: "46px", background: "#BB2423", borderRadius: "3px",
                     display: "flex", alignItems: "center", justifyContent: "center",
                     color: "white", flexShrink: 0,
                   }}
@@ -290,7 +290,7 @@ export default function Contact() {
                 type="submit"
                 disabled={loading}
                 style={{
-                  width: "100%", background: "var(--red)", color: "white",
+                  width: "100%", background: "#BB2423", color: "white",
                   border: "2px solid white", padding: "13px", fontSize: "18px", fontWeight: 700,
                   letterSpacing: "2.5px", textTransform: "uppercase", borderRadius: "3px",
                   cursor: "none", fontFamily: "Hannik, sans-serif", marginTop: "6px",
@@ -298,12 +298,12 @@ export default function Contact() {
                 }}
                 onMouseEnter={(e) => {
                   if (!loading) {
-                    (e.currentTarget as HTMLElement).style.background = "var(--deep-red)";
+                    (e.currentTarget as HTMLElement).style.background = "#7D1817";
                     (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)";
                   }
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.background = "var(--red)";
+                  (e.currentTarget as HTMLElement).style.background = "#BB2423";
                   (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
                 }}
               >
