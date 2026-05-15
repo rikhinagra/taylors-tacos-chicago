@@ -127,10 +127,8 @@ export default function Navbar() {
                 onClick={() => handleNavClick(link.href)}
                 className="relative group transition-all duration-300"
                 style={{
-                  color: (
-                    (pathname === "/taco-tuesday" && link.label === "Taco Tuesday") ||
-                    (pathname === "/catering-menu" && link.label === "Book Catering")
-                  ) ? "var(--yellow)" : "#551A3A",
+                  color: (link.href.startsWith("/") && pathname === link.href)
+                    ? "var(--yellow)" : "#551A3A",
                   fontSize: "clamp(15px, 1.7vw, 22px)",
                   fontWeight: 800,
                   letterSpacing: "2.5px",
@@ -144,9 +142,7 @@ export default function Navbar() {
                   (e.currentTarget as HTMLElement).style.color = "white";
                 }}
                 onMouseLeave={(e) => {
-                  const isActive =
-                    (pathname === "/taco-tuesday" && link.label === "Taco Tuesday") ||
-                    (pathname === "/catering-menu" && link.label === "Book Catering");
+                  const isActive = link.href.startsWith("/") && pathname === link.href;
                   (e.currentTarget as HTMLElement).style.color = isActive ? "var(--yellow)" : "#551A3A";
                 }}
               >
@@ -328,14 +324,17 @@ export default function Navbar() {
                       textTransform: "uppercase",
                       fontSize: "14px",
                       letterSpacing: "2px",
-                      color: "white",
+                      color: (link.href.startsWith("/") && pathname === link.href) ? "var(--yellow)" : "white",
                       background: "none",
                       border: "none",
                       cursor: "pointer",
                       transition: "color 0.2s",
                     }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = "var(--yellow)")}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
+                    onMouseLeave={(e) => {
+                      const isActive = link.href.startsWith("/") && pathname === link.href;
+                      e.currentTarget.style.color = isActive ? "var(--yellow)" : "white";
+                    }}
                   >
                     {link.label}
                   </motion.button>
