@@ -153,7 +153,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="relative mx-auto mb-6"
+          className="relative mx-auto mb-10"
           style={{ width: "min(580px, 75vw)", height: "auto" }}
         >
           <h1 className="sr-only">Taylor&apos;s Tacos Chicago — Taco Catering &amp; Food Truck in Chicago</h1>
