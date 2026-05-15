@@ -102,7 +102,7 @@ export default function Menu() {
               textTransform: "uppercase",
               color: "white",
               fontWeight: 700,
-              background: "var(--red)",
+              background: "#BB2423",
               border: "2px solid white",
               cursor: "none",
               padding: "10px 20px",
@@ -111,11 +111,11 @@ export default function Menu() {
               textDecoration: "none",
             } as React.CSSProperties}
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.background = "transparent";
-              (e.currentTarget as HTMLElement).style.color = "var(--red)";
+              (e.currentTarget as HTMLElement).style.background = "#7D1817";
+              (e.currentTarget as HTMLElement).style.color = "white";
             }}
             onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.background = "var(--red)";
+              (e.currentTarget as HTMLElement).style.background = "#BB2423";
               (e.currentTarget as HTMLElement).style.color = "white";
             }}
           >
