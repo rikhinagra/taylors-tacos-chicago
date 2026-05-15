@@ -124,13 +124,10 @@ export default function Hero() {
           position: "relative",
           zIndex: 40,
           textAlign: "center",
-          padding: "clamp(28px, 4vw, 48px) clamp(32px, 6vw, 64px)",
+          padding: "0 clamp(20px, 5vw, 32px)",
           maxWidth: "820px",
           width: "100%",
           margin: "0 auto",
-          background: "rgba(0,0,0,0.35)",
-          borderRadius: "8px",
-          backdropFilter: "blur(2px)",
         }}
       >
         {/* Eyebrow — commented out, restore when client confirms
@@ -166,7 +163,7 @@ export default function Hero() {
             width={580}
             height={220}
             className="w-full h-auto"
-            style={{ filter: "drop-shadow(0 4px 32px rgba(0,0,0,0.95)) drop-shadow(0 2px 8px rgba(0,0,0,1))" }}
+            style={{ filter: "drop-shadow(0 4px 24px rgba(0,0,0,0.7))" }}
             priority
           />
         </motion.div>
@@ -176,13 +173,13 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.7 }}
           style={{
-            fontSize: "clamp(13px, 1.6vw, 17px)",
-            color: "white",
+            fontSize: "clamp(15px, 1.8vw, 20px)",
+            color: "var(--yellow)",
             fontWeight: 700,
             letterSpacing: "5px",
             textTransform: "uppercase",
             marginBottom: "0px",
-            textShadow: "0 2px 16px rgba(0,0,0,1), 0 1px 4px rgba(0,0,0,1)",
+            textShadow: "0 2px 8px rgba(0,0,0,0.9)",
           }}
         >
           #1 Taco Catering in the Chi
