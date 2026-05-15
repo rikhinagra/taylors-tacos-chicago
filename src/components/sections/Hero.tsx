@@ -150,7 +150,6 @@ export default function Hero() {
         </motion.p>
         */}
 
-        {/* Main Logo — commented out, restore when client confirms
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -169,9 +168,7 @@ export default function Hero() {
             priority
           />
         </motion.div>
-        */}
 
-        {/* Sub-tagline — commented out, restore when client confirms
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -188,7 +185,6 @@ export default function Hero() {
         >
           #1 Taco Catering in the Chi
         </motion.p>
-        */}
 
         {/* CTA Buttons — commented out, restore when client confirms
         <motion.div
