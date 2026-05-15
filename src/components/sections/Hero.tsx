@@ -153,8 +153,8 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="relative mx-auto mb-10"
-          style={{ width: "min(580px, 75vw)", height: "auto" }}
+          className="relative mx-auto"
+          style={{ width: "min(580px, 75vw)", height: "auto", marginBottom: "20px" }}
         >
           <h1 className="sr-only">Taylor&apos;s Tacos Chicago — Taco Catering &amp; Food Truck in Chicago</h1>
           <Image
@@ -178,6 +178,7 @@ export default function Hero() {
             fontWeight: 700,
             letterSpacing: "5px",
             textTransform: "uppercase",
+            marginTop: "0px",
             marginBottom: "0px",
             textShadow: "0 2px 8px rgba(0,0,0,0.9)",
           }}
