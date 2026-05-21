@@ -119,12 +119,12 @@ export default function BookingChoice() {
             <h3 style={{
               fontFamily: "Hannik, sans-serif",
               fontWeight: 900,
-              fontSize: "clamp(26px, 3.5vw, 38px)",
+              fontSize: "clamp(18px, 2.8vw, 32px)",
               color: "var(--off-white)",
               lineHeight: 1.1,
               marginBottom: "16px",
             }}>
-              Staffed Events<br />&amp; Food Truck
+              Staffed Events &amp; Food Truck
             </h3>
 
             {/* Description */}
@@ -225,12 +225,12 @@ export default function BookingChoice() {
             <h3 style={{
               fontFamily: "Hannik, sans-serif",
               fontWeight: 900,
-              fontSize: "clamp(26px, 3.5vw, 38px)",
+              fontSize: "clamp(18px, 2.8vw, 32px)",
               color: "var(--off-white)",
               lineHeight: 1.1,
               marginBottom: "16px",
             }}>
-              Delivery<br />&amp; Pickup
+              Delivery &amp; Pickup
             </h3>
 
             {/* Description */}
