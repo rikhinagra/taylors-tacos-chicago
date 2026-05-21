@@ -10,6 +10,7 @@ import Menu             from "@/components/sections/Menu";
 import Gallery          from "@/components/sections/Gallery";
 import CharacterSection from "@/components/sections/CharacterSection";
 import Contact          from "@/components/sections/Contact";
+import BookingChoice    from "@/components/sections/BookingChoice";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Navbar />
       <main className="flex flex-col">
         <Hero />
+        <BookingChoice />
         <Marquee />
         <Services />
         <CharacterSection />

@@ -4,36 +4,44 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Truck, Users, Package, Building2, Heart, UtensilsCrossed } from "lucide-react";
 
+const STAFFED_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSeqLtvamIT4hFwqVhBUJ3aKYoVeexx41gwGWYdXVrxBR3hXFQ/viewform";
+const DELIVERY_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSeQZssjIGpR7CAB4M65e2DPGpZuPmzke5rtzmCgVG_MhuIl7g/viewform";
+
 const services = [
   {
     icon: <Truck size={32} strokeWidth={1.5} />,
     title: "Food Truck Booking",
     desc: "Roll up our truck to your block party, festival, office, or private event. Full service, full fiesta.",
     link: "Book the truck →",
+    href: STAFFED_FORM,
   },
   {
     icon: <Users size={32} strokeWidth={1.5} />,
     title: "Staffed Catering",
     desc: "Full setup, professional crew, fresh tortillas on-site. We handle everything so you enjoy every bite.",
     link: "Book staffed event →",
+    href: STAFFED_FORM,
   },
   {
     icon: <Package size={32} strokeWidth={1.5} />,
     title: "Delivery & Pickup",
     desc: "Hot, fresh tacos delivered right to your door. Minimum orders for groups of all sizes available.",
     link: "Get a quote →",
+    href: DELIVERY_FORM,
   },
   {
     icon: <Building2 size={32} strokeWidth={1.5} />,
     title: "Corporate Events",
     desc: "Team lunches, client dinners, company milestones. We make your people feel like VIPs with tacos.",
     link: "Corporate catering →",
+    href: STAFFED_FORM,
   },
   {
     icon: <Heart size={32} strokeWidth={1.5} />,
     title: "Weddings",
     desc: "A taco bar your guests will be raving about for years. Make your big day unforgettable.",
     link: "Wedding catering →",
+    href: STAFFED_FORM,
   },
   {
     icon: <UtensilsCrossed size={32} strokeWidth={1.5} />,
@@ -44,10 +52,6 @@ const services = [
   },
 ];
 
-const scrollTo = (id: string) => {
-  const el = document.querySelector(id);
-  if (el) el.scrollIntoView({ behavior: "smooth" });
-};
 
 export default function Services() {
   const ref = useRef(null);
@@ -81,8 +85,11 @@ export default function Services() {
         {/* Cards grid — 3 cols × 2 rows */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px] mt-14">
           {services.map((svc, i) => (
-            <motion.div
+            <motion.a
               key={svc.title}
+              href={svc.href}
+              target={svc.href.startsWith("http") ? "_blank" : undefined}
+              rel={svc.href.startsWith("http") ? "noopener noreferrer" : undefined}
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
@@ -91,6 +98,8 @@ export default function Services() {
                 background: "rgba(0,0,0,0.28)",
                 padding: "clamp(24px, 3vw, 40px) clamp(20px, 2.5vw, 34px)",
                 border: "1px solid rgba(255,255,255,0.15)",
+                textDecoration: "none",
+                display: "block",
               }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLElement).style.background = "rgba(228,29,117,0.15)";
@@ -133,43 +142,21 @@ export default function Services() {
                 {svc.desc}
               </p>
 
-              {svc.href ? (
-                <a
-                  href={svc.href}
-                  className="flex items-center gap-2 transition-all duration-300"
-                  style={{
-                    fontSize: "16px",
-                    letterSpacing: "3px",
-                    textTransform: "uppercase",
-                    color: "var(--yellow)",
-                    fontWeight: 700,
-                    textDecoration: "none",
-                    cursor: "none",
-                    padding: 0,
-                  }}
-                >
-                  {svc.link}
-                </a>
-              ) : (
-                <button
-                  onClick={() => scrollTo("#contact")}
-                  className="flex items-center gap-2 transition-all duration-300"
-                  style={{
-                    fontSize: "16px",
-                    letterSpacing: "3px",
-                    textTransform: "uppercase",
-                    color: "var(--yellow)",
-                    fontWeight: 700,
-                    background: "none",
-                    border: "none",
-                    cursor: "none",
-                    padding: 0,
-                  }}
-                >
-                  {svc.link}
-                </button>
-              )}
-            </motion.div>
+              <span
+                className="flex items-center gap-2 transition-all duration-300"
+                style={{
+                  fontSize: "16px",
+                  letterSpacing: "3px",
+                  textTransform: "uppercase",
+                  color: "var(--yellow)",
+                  fontWeight: 700,
+                  textDecoration: "none",
+                  padding: 0,
+                }}
+              >
+                {svc.link}
+              </span>
+            </motion.a>
           ))}
         </div>
       </div>

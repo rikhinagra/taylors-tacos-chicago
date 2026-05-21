@@ -13,9 +13,9 @@ export default function FloatingBookButton() {
 
   const handleClick = () => {
     if (pathname === "/") {
-      scrollTo("#contact");
+      scrollTo("#booking-choice");
     } else {
-      window.location.href = "/#contact";
+      window.location.href = "/#booking-choice";
     }
   };
 

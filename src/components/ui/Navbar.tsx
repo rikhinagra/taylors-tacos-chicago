@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Catering",     href: "#services" },
   { label: "Menu",         href: "/catering-menu" },
   { label: "Taco Tuesday", href: "/taco-tuesday" },
-  { label: "Book Now",     href: "#contact" },
+  { label: "Book Now",     href: "#booking-choice" },
 ];
 
 const PINK_GRADIENT = "linear-gradient(90deg, #E41D75 0%, #E52D5D 50%, #EA3B48 100%)";
