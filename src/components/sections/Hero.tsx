@@ -54,6 +54,10 @@ const bannerImages = [
     src: "/images/brand/taylors-tacos-chicago-mascot-mural-pink-car-artwork.webp",
     alt: "Taylor's Tacos Chicago brand mural featuring mascot and pink car street artwork",
   },
+  {
+    src: "/images/banners/taylors-tacos-lifestyle-with-topo-chico.webp",
+    alt: "Taylor's Tacos Chicago tacos served in baskets alongside Topo Chico mineral water — fresh taco catering in Chicago",
+  },
 ];
 
 const papelFlags = Array.from({ length: 16 });

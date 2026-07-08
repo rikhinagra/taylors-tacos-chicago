@@ -18,7 +18,7 @@ const services = [
   {
     icon: <Users size={32} strokeWidth={1.5} />,
     title: "Staffed Catering",
-    desc: "Full setup, professional crew, fresh tortillas on-site. We handle everything so you enjoy every bite.",
+    desc: "A live-action catering experience. Our crew sets up, cooks, and serves fresh tortillas on-site. Not a buffet. We're there, working the event with you.",
     link: "Book staffed event →",
     href: STAFFED_FORM,
   },

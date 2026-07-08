@@ -8,11 +8,12 @@ const photos = [
   { src: "/images/banners/taylors-tacos-chicago-menu-board-chicken-beef-shrimp.webp",       label: "Menu Board",     alt: "Taylor's Tacos Chicago menu board featuring chicken, beef, and shrimp taco options" },
   { src: "/images/behind-the-scenes/taylors-tacos-chicago-chef-plating-cream-sauce.webp",   label: "Fresh Prep",     alt: "Taylor's Tacos Chicago chef plating fresh tacos with cream sauce" },
   { src: "/images/behind-the-scenes/taylors-tacos-chicago-staff-preparing-orders.webp",     label: "Behind The Bar", alt: "Taylor's Tacos Chicago staff preparing taco orders behind the service bar" },
-  { src: "/images/events/taylors-tacos-chicago-friendsgiving-special-catering.webp",        label: "Friendsgiving",  alt: "Taylor's Tacos Chicago catering a Friendsgiving special event" },
-  { src: "/images/events/taylors-tacos-chicago-velvet-taco-tuesday-special.webp",           label: "Taco Tuesday",   alt: "Taylor's Tacos Chicago Taco Tuesday velvet special event setup" },
   { src: "/images/events/taylors-tacos-chicago-catering-buffet-guests-serving.webp",        label: "Come Hungry",    alt: "Guests serving themselves at a Taylor's Tacos Chicago catering buffet" },
   { src: "/images/events/taylors-tacos-chicago-catering-buffet-rice-lime-setup.webp",       label: "The Spread",     alt: "Taylor's Tacos Chicago full catering spread with rice, lime, and fresh toppings" },
   { src: "/images/events/taylors-tacos-chicago-pride-event-street-food-bowl.webp",          label: "Pride Fest",     alt: "Taylor's Tacos Chicago serving street food bowls at Chicago Pride Fest" },
+  { src: "/images/events/taylors-tacos-overhead-two-tacos-tray.webp",                       label: "The Duo",        alt: "Taylor's Tacos Chicago overhead view of two signature tacos on a branded tray surrounded by fresh avocado, lime and cilantro" },
+  { src: "/images/events/taylors-tacos-pouring-signature-creamy-sauce.webp",                label: "Secret Sauce",   alt: "Taylor's Tacos Chicago signature creamy chipotle sauce being poured over a freshly made taco — live catering Chicago" },
+  { src: "/images/events/taylors-tacos-catering-tray-tortilla-chips.webp",                  label: "Tay's Chips",    alt: "Taylor's Tacos Chicago large catering tray of seasoned tortilla chips for group orders and corporate catering events" },
 ];
 
 // Duplicate array for seamless infinite loop

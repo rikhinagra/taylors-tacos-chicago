@@ -10,7 +10,6 @@ const menuCards = [
     name: "Street Tacos",
     alt: "Taylor's Tacos Chicago street tacos served in newspaper wrap",
     img: "/images/food/taylors-tacos-chicago-trio-tacos-newspaper-wrap.webp",
-    span2: true,
   },
   {
     tag: "Classic",
@@ -41,6 +40,18 @@ const menuCards = [
     name: "Asparagus Taco",
     alt: "Taylor's Tacos Chicago asparagus taco with pickled onions — vegetarian option",
     img: "/images/food/taylors-tacos-chicago-asparagus-taco-pickled-onion.webp",
+  },
+  {
+    tag: "Signature",
+    name: "Savory Steak Taco",
+    alt: "Taylor's Tacos Chicago savory steak taco with fresh avocado, cilantro, creamy sauce and shredded cheese on a corn tortilla",
+    img: "/images/food/taylors-tacos-steak-taco-fresh-ingredients.webp",
+  },
+  {
+    tag: "Fan Favorite",
+    name: "Juicy Chicken Taco",
+    alt: "Taylor's Tacos Chicago juicy shredded chicken taco topped with crispy onions, signature creamy sauce, cilantro and cotija cheese",
+    img: "/images/food/taylors-tacos-shredded-chicken-close-up.webp",
   },
 ];
 
@@ -133,14 +144,13 @@ export default function Menu() {
           {menuCards.map((card) => (
             <div
               key={card.name}
-              className={`menu-card group ${card.span2 ? "menu-card-span2" : ""}`}
+              className="menu-card group"
               style={{
                 position: "relative",
                 borderRadius: "6px",
                 overflow: "hidden",
                 cursor: "none",
                 aspectRatio: "3/4",
-                gridRow: card.span2 ? "span 2" : "span 1",
               }}
             >
               {/* Image — scales on card hover via group */}
