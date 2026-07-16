@@ -5,42 +5,42 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 
 const menuCards = [
-  {
-    tag: "Our Signature",
-    name: "Street Tacos",
-    alt: "Taylor's Tacos Chicago street tacos served in newspaper wrap",
-    img: "/images/food/taylors-tacos-chicago-trio-tacos-newspaper-wrap.webp",
-  },
-  {
-    tag: "Classic",
-    name: "Carne Asada",
-    alt: "Taylor's Tacos Chicago carne asada taco with colorful fresh toppings",
-    img: "/images/food/taylors-tacos-chicago-taco-banner-colorful-toppings.webp",
-  },
-  {
-    tag: "Fan Favorite",
-    name: "Birria Tacos",
-    alt: "Taylor's Tacos Chicago birria tacos in basket with house hot sauce",
-    img: "/images/food/taylors-tacos-chicago-birria-tacos-basket-hot-sauce.webp",
-  },
-  {
-    tag: "Fan Favorite",
-    name: "Birria Taco",
-    alt: "Taylor's Tacos Chicago birria taco topped with cotija cheese",
-    img: "/images/food/taylors-tacos-chicago-birria-taco-cotija-cheese.webp",
-  },
-  {
-    tag: "Catering Special",
-    name: "Catering Tray",
-    alt: "Taylor's Tacos Chicago catering tray with purple cabbage and fresh toppings",
-    img: "/images/food/taylors-tacos-chicago-catering-tray-purple-cabbage.webp",
-  },
-  {
-    tag: "Must Try",
-    name: "Asparagus Taco",
-    alt: "Taylor's Tacos Chicago asparagus taco with pickled onions — vegetarian option",
-    img: "/images/food/taylors-tacos-chicago-asparagus-taco-pickled-onion.webp",
-  },
+  // {
+  //   tag: "Our Signature",
+  //   name: "Street Tacos",
+  //   alt: "Taylor's Tacos Chicago street tacos served in newspaper wrap",
+  //   img: "/images/food/taylors-tacos-chicago-trio-tacos-newspaper-wrap.webp",
+  // },
+  // {
+  //   tag: "Classic",
+  //   name: "Carne Asada",
+  //   alt: "Taylor's Tacos Chicago carne asada taco with colorful fresh toppings",
+  //   img: "/images/food/taylors-tacos-chicago-taco-banner-colorful-toppings.webp",
+  // },
+  // {
+  //   tag: "Fan Favorite",
+  //   name: "Birria Tacos",
+  //   alt: "Taylor's Tacos Chicago birria tacos in basket with house hot sauce",
+  //   img: "/images/food/taylors-tacos-chicago-birria-tacos-basket-hot-sauce.webp",
+  // },
+  // {
+  //   tag: "Fan Favorite",
+  //   name: "Birria Taco",
+  //   alt: "Taylor's Tacos Chicago birria taco topped with cotija cheese",
+  //   img: "/images/food/taylors-tacos-chicago-birria-taco-cotija-cheese.webp",
+  // },
+  // {
+  //   tag: "Catering Special",
+  //   name: "Catering Tray",
+  //   alt: "Taylor's Tacos Chicago catering tray with purple cabbage and fresh toppings",
+  //   img: "/images/food/taylors-tacos-chicago-catering-tray-purple-cabbage.webp",
+  // },
+  // {
+  //   tag: "Must Try",
+  //   name: "Asparagus Taco",
+  //   alt: "Taylor's Tacos Chicago asparagus taco with pickled onions — vegetarian option",
+  //   img: "/images/food/taylors-tacos-chicago-asparagus-taco-pickled-onion.webp",
+  // },
   {
     tag: "Signature",
     name: "Savory Steak Taco",
@@ -52,6 +52,18 @@ const menuCards = [
     name: "Juicy Chicken Taco",
     alt: "Taylor's Tacos Chicago juicy shredded chicken taco topped with crispy onions, signature creamy sauce, cilantro and cotija cheese",
     img: "/images/food/taylors-tacos-shredded-chicken-close-up.webp",
+  },
+  {
+    tag: "Fresh Made",
+    name: "The Duo",
+    alt: "Taylor's Tacos Chicago overhead view of two signature tacos on a branded tray surrounded by fresh avocado, lime and cilantro",
+    img: "/images/events/taylors-tacos-overhead-two-tacos-tray.webp",
+  },
+  {
+    tag: "House Special",
+    name: "Secret Sauce",
+    alt: "Taylor's Tacos Chicago signature creamy chipotle sauce being poured over a freshly made taco — live catering Chicago",
+    img: "/images/events/taylors-tacos-pouring-signature-creamy-sauce.webp",
   },
 ];
 
@@ -202,51 +214,6 @@ export default function Menu() {
           ))}
         </motion.div>
 
-        {/* ── DESKTOP ONLY: 2 featured food photos centered in 4-col grid ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.35 }}
-          style={{ marginTop: "clamp(8px, 1vw, 12px)" }}
-        >
-        <div className="grid grid-cols-2 lg:grid-cols-4" style={{ gap: "clamp(8px, 1vw, 12px)" }}>
-          {/* Blank col 1 — desktop only */}
-          <div className="hidden lg:block" />
-
-          {/* Overhead two tacos */}
-          <div className="menu-card group" style={{ position: "relative", borderRadius: "6px", overflow: "hidden", cursor: "none", aspectRatio: "3/4" }}>
-            <Image
-              src="/images/events/taylors-tacos-overhead-two-tacos-tray.webp"
-              alt="Taylor's Tacos Chicago overhead view of two signature tacos on a branded tray surrounded by fresh avocado, lime and cilantro"
-              fill
-              sizes="25vw"
-              className="object-cover transition-transform duration-[600ms] ease-in-out group-hover:scale-110"
-            />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(14,10,8,0.78) 0%, transparent 65%)", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "22px" }}>
-              <span style={{ fontSize: "14px", letterSpacing: "4px", textTransform: "uppercase", color: "var(--yellow)", fontWeight: 700, marginBottom: "6px", display: "block" }}>Fresh Made</span>
-              <h3 style={{ fontSize: "22px", fontWeight: 800, color: "white", lineHeight: 1.1, fontFamily: "Hannik, sans-serif" }}>The Duo</h3>
-            </div>
-          </div>
-
-          {/* Pouring creamy sauce */}
-          <div className="menu-card group" style={{ position: "relative", borderRadius: "6px", overflow: "hidden", cursor: "none", aspectRatio: "3/4" }}>
-            <Image
-              src="/images/events/taylors-tacos-pouring-signature-creamy-sauce.webp"
-              alt="Taylor's Tacos Chicago signature creamy chipotle sauce being poured over a freshly made taco — live catering Chicago"
-              fill
-              sizes="25vw"
-              className="object-cover transition-transform duration-[600ms] ease-in-out group-hover:scale-110"
-            />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(14,10,8,0.78) 0%, transparent 65%)", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "22px" }}>
-              <span style={{ fontSize: "14px", letterSpacing: "4px", textTransform: "uppercase", color: "var(--yellow)", fontWeight: 700, marginBottom: "6px", display: "block" }}>House Special</span>
-              <h3 style={{ fontSize: "22px", fontWeight: 800, color: "white", lineHeight: 1.1, fontFamily: "Hannik, sans-serif" }}>Secret Sauce</h3>
-            </div>
-          </div>
-
-          {/* Blank col 4 — desktop only */}
-          <div className="hidden lg:block" />
-        </div>
-        </motion.div>
 
       </div>
     </section>
