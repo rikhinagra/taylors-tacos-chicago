@@ -29,7 +29,7 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     firstName: "", lastName: "", phone: "", email: "",
-    eventType: "", guestCount: "", date: "", location: "", message: "",
+    eventType: "", guestCount: "", date: "", location: "", deliveryTime: "", message: "",
   });
 
   const handle = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -273,6 +273,14 @@ export default function Contact() {
                     value={form.location} onChange={handle}
                     style={inputStyle} onFocus={focusStyle} onBlur={blurStyle} />
                 </div>
+              </div>
+
+              {/* Desired Delivery Time */}
+              <div className="mb-3">
+                <label style={labelStyle}>Desired Delivery / Pick-Up Time</label>
+                <input type="text" name="deliveryTime" placeholder="e.g. 2:00 PM, around noon, flexible..."
+                  value={form.deliveryTime} onChange={handle}
+                  style={inputStyle} onFocus={focusStyle} onBlur={blurStyle} />
               </div>
 
               {/* Tell Us About Your Event */}
