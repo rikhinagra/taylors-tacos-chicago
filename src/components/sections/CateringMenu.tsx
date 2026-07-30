@@ -64,8 +64,8 @@ const staffedNotTacos = [
 const staffedSides = [
   { name: "GUAC + chips", badge: "vegan · gf", desc: "Creamy avocado mixed with red pepper, onion, jalapeño, and seasoning, served with Tay's Tortilla Chips" },
   { name: "eloTAY CORN + street mix", badge: "gf · vegetarian", desc: "Corn off the cob served with tajin and chili powder + mayo/butter/cotija mix on the side" },
-  { name: "nice Rice", badge: "vegan", desc: "Garlic cilantro seasoned white rice. Simple, satisfying, and very popular!" },
-  { name: "seasoned Beans", badge: "vegan · gf", desc: "Pinto beans seasoned to perfection! Your aunty's beans." },
+  // { name: "nice Rice", badge: "vegan", desc: "Garlic cilantro seasoned white rice. Simple, satisfying, and very popular!" },
+  // { name: "seasoned Beans", badge: "vegan · gf", desc: "Pinto beans seasoned to perfection! Your aunty's beans." },
   { name: "sw soul salad + tortilla strips + ranch dressing", badge: "vegetarian", desc: "Mixed greens, tomato, cucumber, red onion, and corn + tortilla strips and ranch dressing. Agave lime vin +$5" },
   { name: "QUESO + Chips", badge: "gf", desc: "White cheese blend mixed with red + hatch peppers served with Tay's Tortilla Chips" },
   { name: "Pico Fresca Salad", badge: "June – August ONLY · Mkt. Price", desc: "Cucumber and tomato salad with red onion, cilantro, and jalapeño tossed in a house-made agave lime vinaigrette" },
@@ -133,8 +133,8 @@ const deliveryNotTacos = [
 const deliverySides = [
   { name: "GUAC + chips", badge: "vegan · gf", desc: "Creamy avocado spread with red pepper + onion served with Tay's Tortilla Chips" },
   { name: "eloTAY CORN + street mix", badge: "vegetarian · gf", desc: "Corn off the cob with tajin and chili powder + mayo/butter/cotija mix on the side" },
-  { name: "nice Rice", badge: "vegan", desc: "Garlic cilantro seasoned white rice" },
-  { name: "seasoned Beans", badge: "vegan · gf", desc: "Pinto beans seasoned to perfection! Crowd fave." },
+  // { name: "nice Rice", badge: "vegan", desc: "Garlic cilantro seasoned white rice" },
+  // { name: "seasoned Beans", badge: "vegan · gf", desc: "Pinto beans seasoned to perfection! Crowd fave." },
   { name: "sw soul salad", badge: "vegetarian", desc: "Mixed greens, tomato, cucumber, red onion, and corn + tortilla strips + ranch dressing" },
   { name: "QUESO + chips", badge: "vegetarian · gf", desc: "White cheese and pepper blend served with Tay's Tortilla Chips" },
 ];
