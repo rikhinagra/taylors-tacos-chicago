@@ -136,7 +136,7 @@ export default function Contact() {
             style={{ marginTop: "40px", display: "flex", flexDirection: "column", gap: "18px" }}
           >
             {[
-              { icon: <MapPin size={20} strokeWidth={1.5} />,  label: "Location",     val: "135 N. Kedzie, Chicago, IL" },
+              { icon: <MapPin size={20} strokeWidth={1.5} />,  label: "Location",     val: (<><span style={{ display: "block" }}>The Hatchery</span><span style={{ display: "block", fontSize: "14px", fontWeight: 400, color: "rgba(250,246,238,0.65)", marginTop: "2px" }}>135 N. Kedzie, Chicago, IL</span></>) },
               { icon: <Phone size={20} strokeWidth={1.5} />,   label: "Call or Text", val: "(773) 226-1596" },
               { icon: <Mail size={20} strokeWidth={1.5} />,    label: "Email",        val: "info@taylorstacoschicago.com" },
             ].map((item) => (

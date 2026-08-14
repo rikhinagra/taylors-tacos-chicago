@@ -226,6 +226,7 @@ export default function Footer() {
             {[
               { label: "(773) 226-1596", href: "tel:7732261596" },
               { label: "info@taylorstacoschicago.com", href: "mailto:info@taylorstacoschicago.com" },
+              { label: "The Hatchery", href: "https://maps.google.com/?q=135+N+Kedzie+Chicago+IL+60612", external: true },
               { label: "135 N. Kedzie", href: "https://maps.google.com/?q=135+N+Kedzie+Chicago+IL+60612", external: true },
               { label: "Chicago, IL 60612", href: "https://maps.google.com/?q=135+N+Kedzie+Chicago+IL+60612", external: true },
             ].map((item) => (

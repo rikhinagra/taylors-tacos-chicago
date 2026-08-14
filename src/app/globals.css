@@ -279,6 +279,22 @@ html::-webkit-scrollbar { display: none; } /* Chrome / Safari / Opera */
     right: 30px !important;
   }
 
+  /* ── Mobile (phones): push up above iPhone home indicator */
+  @media (max-width: 768px) {
+    .floating-book-pos {
+      bottom: max(56px, calc(24px + env(safe-area-inset-bottom, 34px))) !important;
+      right: 28px !important;
+    }
+  }
+
+  /* ── Tablet (iPad, iPad Pro, Surface — up to 1280px) */
+  @media (min-width: 769px) and (max-width: 1280px) {
+    .floating-book-pos {
+      bottom: max(48px, calc(20px + env(safe-area-inset-bottom, 28px))) !important;
+      right: 28px !important;
+    }
+  }
+
   /* ── Taco cursor — hide on mobile & tablet (touch screens) */
   @media (max-width: 1023px) {
     #taco-cursor, #cursor-trail { display: none !important; }
