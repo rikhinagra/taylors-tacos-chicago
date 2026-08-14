@@ -90,8 +90,8 @@ export default function TacoTuesdayBand() {
               maxWidth: "420px",
             }}
           >
-            Chicago&apos;s most beloved weekly ritual. Order fresh tacos online
-            every Tuesday on Grubhub, UberEats, or Cash Drop.
+            Chicago&apos;s most beloved weekly ritual. Every Tuesday, 11am–3pm.
+            Order fresh tacos online on Grubhub or UberEats, or call in and pick up direct.
           </motion.p>
         </div>
 

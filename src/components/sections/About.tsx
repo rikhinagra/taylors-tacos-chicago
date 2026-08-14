@@ -109,14 +109,13 @@ export default function About() {
               animate={inView ? "show" : "hidden"}
             >
               <p style={{ fontSize: "18px", lineHeight: 2.0, color: "rgba(250,246,238,0.9)", marginBottom: "28px", fontWeight: 300 }}>
-                Taylor&apos;s Tacos was born from a love of authentic Mexican street
-                food and Chicago&apos;s unstoppable spirit. We brought LA&apos;s bold
-                taco culture north and fused it with the heart and hustle of the Chi.
+                Taylor&apos;s Tacos began with a love for great food and a desire to create spaces where everyone feels welcome. Born and raised on Chicago&apos;s West Side, founder and CEO Taylor Mason discovered street tacos while attending Pepperdine University in California. After returning home, she began hosting events for Chicago&apos;s LGBTQ+ community, but something was missing: the food. Inspired to blend the spirit of Los Angeles street tacos with bold Chicago flavor, Taylor created the first Taylor&apos;s taco in 2014.
+              </p>
+              <p style={{ fontSize: "18px", lineHeight: 2.0, color: "rgba(250,246,238,0.9)", marginBottom: "28px", fontWeight: 300 }}>
+                Taylor met her wife, Maya, in 2016. With a background in dance, fashion, hospitality, and food, Maya brought a creative culinary perspective shaped by her parents, as she spent her childhood learning about fresh ingredients in her mother&apos;s garden. Together, Taylor and Maya officially launched Taylor&apos;s Tacos Chicago in 2018.
               </p>
               <p style={{ fontSize: "18px", lineHeight: 2.0, color: "rgba(250,246,238,0.9)", fontWeight: 300 }}>
-                Planted at 135 N. Kedzie, we&apos;re not just a taco shop. We&apos;re
-                a full-service catering company that shows up for your community,
-                your corporate team, your wedding day and everything in between.
+                Ten years and more than half a million tacos later, Taylor&apos;s Tacos continues to build communiTAY one taco at a time. Headquartered at The Hatchery Chicago, the company offers pickup and delivery, staffed catering experiences, and a food truck ready to bring the parTAY wherever you are.
               </p>
             </motion.div>
 

@@ -1,66 +1,67 @@
 "use client";
 
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+// import { AnimatePresence } from "framer-motion";
 // import { UtensilsCrossed } from "lucide-react"; // commented out with CTA buttons
 
-const bannerImages = [
-  {
-    src: "/images/banners/taylors-tacos-chicago-catering-booking-banner.webp",
-    alt: "Taylor's Tacos Chicago — premium taco catering and food truck booking in Chicago",
-  },
-  {
-    src: "/images/banners/taylors-tacos-chicago-live-taco-prep-catering.webp",
-    alt: "Live taco preparation at a Taylor's Tacos Chicago catering event",
-  },
-  {
-    src: "/images/banners/taylors-tacos-chicago-customer-service-event.webp",
-    alt: "Taylor's Tacos Chicago team serving customers at a catered event",
-  },
-  {
-    src: "/images/banners/taylors-tacos-chicago-catering-team-service-station.webp",
-    alt: "Taylor's Tacos Chicago staffed catering team at a service station",
-  },
-  {
-    src: "/images/banners/taylors-tacos-chicago-catering-live-service-collage.webp",
-    alt: "Collage of Taylor's Tacos Chicago live catering service and food truck events",
-  },
-  {
-    src: "/images/events/taylors-tacos-chicago-event-crowd-celebration.webp",
-    alt: "Crowd celebrating at a Taylor's Tacos Chicago catered event in Chicago",
-  },
-  {
-    src: "/images/events/taylors-tacos-chicago-downtown-chicago-food-market-booth.webp",
-    alt: "Taylor's Tacos Chicago booth at a downtown Chicago food market",
-  },
-  {
-    src: "/images/events/taylors-tacos-chicago-taco-bar-serape-table-setup.webp",
-    alt: "Festive taco bar setup with serape table cloth at a Taylor's Tacos Chicago event",
-  },
-  {
-    src: "/images/behind-the-scenes/taylors-tacos-chicago-catering-team-ready-to-serve.webp",
-    alt: "Taylor's Tacos Chicago catering team ready to serve at an event",
-  },
-  {
-    src: "/images/behind-the-scenes/taylors-tacos-chicago-store-location-founder.webp",
-    alt: "Taylor's Tacos Chicago store location at 135 N. Kedzie with founder",
-  },
-  {
-    src: "/images/behind-the-scenes/taylors-tacos-chicago-owner-taylor-mason-restaurant.webp",
-    alt: "Taylor Mason, owner and founder of Taylor's Tacos Chicago, inside the restaurant",
-  },
-  {
-    src: "/images/brand/taylors-tacos-chicago-mascot-mural-pink-car-artwork.webp",
-    alt: "Taylor's Tacos Chicago brand mural featuring mascot and pink car street artwork",
-  },
-  {
-    src: "/images/banners/taylors-tacos-lifestyle-with-topo-chico.webp",
-    alt: "Taylor's Tacos Chicago tacos served in baskets alongside Topo Chico mineral water — fresh taco catering in Chicago",
-  },
-];
+// const bannerImages = [
+//   {
+//     src: "/images/banners/taylors-tacos-chicago-catering-booking-banner.webp",
+//     alt: "Taylor's Tacos Chicago — premium taco catering and food truck booking in Chicago",
+//   },
+//   {
+//     src: "/images/banners/taylors-tacos-chicago-live-taco-prep-catering.webp",
+//     alt: "Live taco preparation at a Taylor's Tacos Chicago catering event",
+//   },
+//   {
+//     src: "/images/banners/taylors-tacos-chicago-customer-service-event.webp",
+//     alt: "Taylor's Tacos Chicago team serving customers at a catered event",
+//   },
+//   {
+//     src: "/images/banners/taylors-tacos-chicago-catering-team-service-station.webp",
+//     alt: "Taylor's Tacos Chicago staffed catering team at a service station",
+//   },
+//   {
+//     src: "/images/banners/taylors-tacos-chicago-catering-live-service-collage.webp",
+//     alt: "Collage of Taylor's Tacos Chicago live catering service and food truck events",
+//   },
+//   {
+//     src: "/images/events/taylors-tacos-chicago-event-crowd-celebration.webp",
+//     alt: "Crowd celebrating at a Taylor's Tacos Chicago catered event in Chicago",
+//   },
+//   {
+//     src: "/images/events/taylors-tacos-chicago-downtown-chicago-food-market-booth.webp",
+//     alt: "Taylor's Tacos Chicago booth at a downtown Chicago food market",
+//   },
+//   {
+//     src: "/images/events/taylors-tacos-chicago-taco-bar-serape-table-setup.webp",
+//     alt: "Festive taco bar setup with serape table cloth at a Taylor's Tacos Chicago event",
+//   },
+//   {
+//     src: "/images/behind-the-scenes/taylors-tacos-chicago-catering-team-ready-to-serve.webp",
+//     alt: "Taylor's Tacos Chicago catering team ready to serve at an event",
+//   },
+//   {
+//     src: "/images/behind-the-scenes/taylors-tacos-chicago-store-location-founder.webp",
+//     alt: "Taylor's Tacos Chicago store location at 135 N. Kedzie with founder",
+//   },
+//   {
+//     src: "/images/behind-the-scenes/taylors-tacos-chicago-owner-taylor-mason-restaurant.webp",
+//     alt: "Taylor Mason, owner and founder of Taylor's Tacos Chicago, inside the restaurant",
+//   },
+//   {
+//     src: "/images/brand/taylors-tacos-chicago-mascot-mural-pink-car-artwork.webp",
+//     alt: "Taylor's Tacos Chicago brand mural featuring mascot and pink car street artwork",
+//   },
+//   {
+//     src: "/images/banners/taylors-tacos-lifestyle-with-topo-chico.webp",
+//     alt: "Taylor's Tacos Chicago tacos served in baskets alongside Topo Chico mineral water — fresh taco catering in Chicago",
+//   },
+// ];
 
-const papelFlags = Array.from({ length: 16 });
+// const papelFlags = Array.from({ length: 16 });
 
 const scrollTo = (id: string) => {
   const el = document.querySelector(id);
@@ -68,15 +69,15 @@ const scrollTo = (id: string) => {
 };
 
 export default function Hero() {
-  const [current, setCurrent] = useState(0);
+  // const [current, setCurrent] = useState(0);
 
   // Auto-advance slideshow like a looping video
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % bannerImages.length);
-    }, 3500);
-    return () => clearInterval(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setCurrent((prev) => (prev + 1) % bannerImages.length);
+  //   }, 3500);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   return (
     <section
@@ -84,8 +85,20 @@ export default function Hero() {
       className="relative flex items-center justify-center overflow-hidden"
       style={{ background: "var(--black)", height: "calc(100vh - var(--navbar-height, 0px))" }}
     >
-      {/* ── Background Slideshow (replaces video until real video is ready) ── */}
+      {/* ── Background Image (single static — replaces slideshow per Tyler feedback) ── */}
       <div className="absolute inset-0 z-0 overflow-hidden">
+        <Image
+          src="/images/banners/taylor-tacos-gourmet-tacos.webp"
+          alt="Taylor's Tacos Chicago — gourmet street tacos with fresh cilantro, lime and colorful toppings"
+          fill
+          className="object-cover object-center"
+          priority
+          quality={85}
+        />
+      </div>
+
+      {/* ── Background Slideshow — commented out per Tyler feedback (Aug 13, 2026) ── */}
+      {/* <div className="absolute inset-0 z-0 overflow-hidden">
         <AnimatePresence mode="sync">
           <motion.div
             key={current}
@@ -105,19 +118,17 @@ export default function Hero() {
             />
           </motion.div>
         </AnimatePresence>
-
-        {/* LIGHTENED OVERLAY — removed, photos now show at full brightness */}
-      </div>
+      </div> */}
 
       {/* ── Brand stripe ribbon (top) ────────────────────────────────────────── */}
       <div className="brand-stripe absolute top-0 left-0 right-0 z-30 pointer-events-none" />
 
-      {/* ── Papel Picado flags ── */}
-      <div className="absolute left-0 right-0 z-20 flex justify-around pointer-events-none" style={{ top: "10px" }}>
+      {/* ── Papel Picado flags — commented out per Tyler feedback (Aug 13, 2026) ── */}
+      {/* <div className="absolute left-0 right-0 z-20 flex justify-around pointer-events-none" style={{ top: "10px" }}>
         {papelFlags.map((_, i) => (
           <div key={i} className="papel-flag" />
         ))}
-      </div>
+      </div> */}
 
       {/* ── Spinning deco ring — removed ── */}
 
@@ -153,42 +164,8 @@ export default function Hero() {
         </motion.p>
         */}
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="relative mx-auto"
-          style={{ width: "min(580px, 75vw)", height: "auto", marginBottom: "20px" }}
-        >
-          <h1 className="sr-only">Taylor&apos;s Tacos Chicago — Taco Catering &amp; Food Truck in Chicago</h1>
-          <Image
-            src="/images/logo/taylors-tacos-chicago-logo-stacked.webp"
-            alt="Taylor's Tacos Chicago — Official Logo"
-            width={580}
-            height={220}
-            className="w-full h-auto"
-            style={{ filter: "drop-shadow(0 4px 24px rgba(0,0,0,0.7))" }}
-            priority
-          />
-        </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.7 }}
-          style={{
-            fontSize: "clamp(15px, 1.8vw, 20px)",
-            color: "var(--yellow)",
-            fontWeight: 700,
-            letterSpacing: "5px",
-            textTransform: "uppercase",
-            marginTop: "0px",
-            marginBottom: "0px",
-            textShadow: "0 2px 8px rgba(0,0,0,0.9)",
-          }}
-        >
-          #1 Taco Catering in the Chi
-        </motion.p>
+        <h1 className="sr-only">Taylor&apos;s Tacos Chicago — Taco Catering &amp; Food Truck in Chicago</h1>
+        {/* Logo and tagline moved to Navbar */}
 
         {/* CTA Buttons — commented out, restore when client confirms
         <motion.div
@@ -259,7 +236,8 @@ export default function Hero() {
             fontSize: "9px",
             letterSpacing: "5px",
             textTransform: "uppercase",
-            color: "rgba(250,246,238,0.4)",
+            color: "rgba(250,246,238,0.9)",
+            textShadow: "0 1px 6px rgba(0,0,0,0.8)",
           }}
         >
           Scroll

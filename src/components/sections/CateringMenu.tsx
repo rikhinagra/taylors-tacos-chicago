@@ -40,7 +40,6 @@ const staffedServiceStyles = [
 const staffedSignatureTacos = [
   { name: "CHICKEN", desc: "Extra-juicy", badge: "gf" },
   { name: "STEAK", desc: "Savory", badge: null },
-  { name: "BEEF", desc: "Bangin'", badge: null },
   { name: "SHRIMP", desc: "Really, sexy", badge: "gf" },
   { name: "POTATO", desc: "Sweet poppin'", badge: "gf · v" },
 ];
@@ -73,11 +72,11 @@ const staffedSides = [
 ];
 
 const staffedExtras = [
+  { name: "Secret salsa", badge: null, desc: "Our famous salsa, need we say more?" },
+  { name: "Salsa verTAY", badge: null, desc: "She may have just gotten to the parTAY, but she's staying all night" },
   { name: "Sazon tomatoes", badge: "v", desc: "Diced tomatoes tossed in sazon seasoning" },
   { name: "Tangy onions", badge: "v", desc: "Salted white onion" },
   { name: "Jalapenos", badge: "v", desc: "Pickled nacho style" },
-  { name: "Secret salsa", badge: null, desc: "Our famous salsa, need we say more?" },
-  { name: "Salsa verTAY", badge: null, desc: "She may have just gotten to the parTAY, but she's staying all night" },
   { name: "Salsa Salsa", badge: null, desc: "Chunky red salsa to dip your chip. Not spicy, vegan-friendly." },
 ];
 
@@ -140,12 +139,12 @@ const deliverySides = [
 ];
 
 const deliveryExtras = [
+  { name: "More Secret salsa", desc: "It's famous for a reason!" },
   { name: "Salsa verTAY", desc: "The other famous salsa. Green and SPICY in the best way." },
   { name: "Salsa salsa", desc: "Our basic, NOT SPICY, vegan salsa" },
   { name: "Sazon tomatoes", desc: "Diced tomatoes tossed in sazon seasoning" },
   { name: "Tangy onions", desc: "Salted white onion" },
   { name: "Jalapenos", desc: "Pickled nacho style" },
-  { name: "More Secret salsa", desc: "It's famous for a reason!" },
 ];
 
 const deliveryOptions = [
@@ -702,7 +701,7 @@ export default function CateringMenu() {
               },
               {
                 num: "03",
-                title: "We Show Up",
+                title: "Get Connected",
                 desc: "A dedicated sales or event manager follows up to confirm details and lock in your date. Then we bring the tacos!",
               },
             ].map((step, i) => (
@@ -891,60 +890,17 @@ export default function CateringMenu() {
 
                 <Divider />
 
-                {/* Pricing */}
-                <SectionHeading label="Pricing" title={<>Taco <em>Options</em></>} />
-                <p style={{ color: "var(--muted)", fontSize: "14px", marginBottom: "20px", lineHeight: 1.6 }}>
-                  Includes at least 3 tacos per person. Add $1/pp if any specialty tacos are selected.
-                </p>
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
-                    gap: "10px",
-                    marginBottom: "32px",
-                  }}
-                >
-                  {[
-                    { label: "2 Taco Option", price: "$15", unit: "pp" },
-                    { label: "3 Taco Option", price: "$17", unit: "pp" },
-                    { label: "4 Taco Option", price: "$22", unit: "pp" },
-                  ].map((opt) => (
-                    <div
-                      key={opt.label}
-                      style={{
-                        background: "rgba(228,29,117,0.08)",
-                        border: "1px solid rgba(228,29,117,0.25)",
-                        borderRadius: "4px",
-                        padding: "20px",
-                        textAlign: "center",
-                      }}
-                    >
-                      <div
-                        style={{
-                          fontFamily: "Hannik, sans-serif",
-                          fontSize: "clamp(32px, 5vw, 48px)",
-                          fontWeight: 900,
-                          color: "var(--yellow)",
-                          lineHeight: 1,
-                        }}
-                      >
-                        {opt.price}
-                        <span style={{ fontSize: "14px", color: "var(--muted)", marginLeft: "4px" }}>
-                          {opt.unit}
-                        </span>
-                      </div>
-                      <div style={{ fontSize: "12px", letterSpacing: "2px", textTransform: "uppercase", color: "var(--muted)", marginTop: "8px" }}>
-                        {opt.label}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                {/* Taco Options */}
+                <SectionHeading label="Taco Options" title={<>Taco <em>Options</em></>} />
 
                 {/* Signature Tacos */}
                 <h3 style={{ fontFamily: "Hannik, sans-serif", fontWeight: 700, fontSize: "clamp(15px, 2vw, 18px)", color: "var(--yellow)", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "14px" }}>
                   Signature Tacos
                 </h3>
                 <TacoGrid tacos={staffedSignatureTacos} />
+                <p style={{ fontSize: "12px", color: "var(--muted)", marginTop: "10px", lineHeight: 1.6, fontStyle: "italic" }}>
+                  ✦ Sexy Crispy Shrimp, Soul Battered Fish, Bangin&apos; Beef, and Awesome AF Asparagus are live-service only.
+                </p>
 
                 <div style={{ margin: "20px 0" }} />
 
@@ -961,7 +917,7 @@ export default function CateringMenu() {
                     Toppings Included
                   </p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-                    {[...toppingsIncluded, { name: "Salsa VerTAY", note: "spicy" }].map((t) => (
+                    {toppingsIncluded.map((t) => (
                       <span
                         key={t.name}
                         style={{
@@ -1052,13 +1008,13 @@ export default function CateringMenu() {
                   }}
                 >
                   <div style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                    <CheckCircle size={22} color="var(--green)" strokeWidth={1.5} style={{ flexShrink: 0, marginTop: "2px" }} />
+                    <CheckCircle size={22} color="var(--yellow)" strokeWidth={1.5} style={{ flexShrink: 0, marginTop: "2px" }} />
                     <div>
                       <h3 style={{ fontFamily: "Hannik, sans-serif", fontWeight: 800, fontSize: "clamp(16px, 2vw, 20px)", color: "var(--off-white)", marginBottom: "8px" }}>
-                        Production Fee (Included)
+                        Production Fee
                       </h3>
                       <p style={{ fontSize: "14px", color: "var(--muted)", lineHeight: 1.8 }}>
-                        For each customized event, our team comes prepared with eco plates, napkins, cutlery, serving utensils, heating elements, menu/labels, at least two team members, and three hours of qualiTAY service including set-up and breakdown. Production costs vary by distance, guest count, service staff, and decorative items. Note: additional fee applies for events on Sundays or national bank holidays.
+                        A production fee is added to every staffed event on top of your taco pricing. It covers eco plates, napkins, cutlery, serving utensils, heating elements, menu/labels, at least two team members, and three hours of qualiTAY service including set-up and breakdown. Production costs vary by distance, guest count, service staff, and decorative items. Note: additional fee applies for events on Sundays or national bank holidays.
                       </p>
                     </div>
                   </div>
@@ -1603,7 +1559,7 @@ export default function CateringMenu() {
               onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "white")}
               onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.85)")}
             >
-              <MapPin size={14} strokeWidth={1.5} /> 135 N. Kedzie, Chicago, IL 60612
+              <MapPin size={14} strokeWidth={1.5} /> The Hatchery &nbsp;·&nbsp; 135 N. Kedzie, Chicago, IL 60612
             </a>
             <a
               href="mailto:info@taylorstacoschicago.com"

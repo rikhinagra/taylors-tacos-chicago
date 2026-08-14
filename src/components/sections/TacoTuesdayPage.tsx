@@ -27,11 +27,11 @@ const platforms = [
     accentBorder: "rgba(188,220,154,0.5)",
   },
   {
-    name: "Cash Drop",
+    name: "Call in & Pick Up",
     tagline: "Support local. Order direct.",
-    desc: "Order directly through Cash Drop, a Chicago-based platform. Support local and get your tacos delivered or picked up your way.",
-    cta: "Order on Cash Drop",
-    href: "https://cashdrop.com/taylorstacoschicago",
+    desc: "Call (773) 226-1596 to place your order and pick up fresh tacos at 135 N. Kedzie. Enter through the parking lot on Albany, Door #4.",
+    cta: "Call to Order",
+    href: "tel:7732261596",
     accent: "var(--yellow)",
     accentBg: "rgba(251,175,28,0.22)",
     accentBorder: "rgba(251,175,28,0.5)",
@@ -144,8 +144,8 @@ export default function TacoTuesdayPage() {
               textShadow: "0 2px 12px rgba(0,0,0,0.9)",
             }}
           >
-            Chicago&apos;s most beloved weekly ritual. Every Tuesday, in-store or
-            online. Pick your platform and order fresh tacos your way.
+            Chicago&apos;s most beloved weekly ritual. Every Tuesday, 11am–3pm,
+            in-store and online. Pick your platform and order fresh tacos your way.
           </motion.p>
         </div>
 
@@ -195,8 +195,8 @@ export default function TacoTuesdayPage() {
                 margin: "0 auto",
               }}
             >
-              Three ways to get your Tuesday tacos: delivery, pickup, or support
-              local with Cash Drop.
+              Three ways to get your Tuesday tacos: delivery, pickup, or call in
+              and pick up direct.
             </motion.p>
           </div>
 
@@ -298,7 +298,7 @@ export default function TacoTuesdayPage() {
                     alignItems: "center",
                     gap: "8px",
                     background: p.accent,
-                    color: p.name === "UberEats" || p.name === "Cash Drop" ? "#0E0A08" : "white",
+                    color: p.name === "UberEats" || p.name === "Call in & Pick Up" ? "#0E0A08" : "white",
                     padding: "12px 22px",
                     fontSize: "12px",
                     fontWeight: 800,
@@ -342,8 +342,8 @@ export default function TacoTuesdayPage() {
             style={{ gap: "clamp(24px, 5vw, 52px)", width: "100%", maxWidth: "1280px", margin: "0 auto" }}
           >
             {[
-              { icon: <MapPin size={18} strokeWidth={1.5} />, label: "Location", value: "135 N. Kedzie, Chicago, IL 60612" },
-              { icon: <Clock size={18} strokeWidth={1.5} />, label: "Taco Tuesday", value: "Every Tuesday, in-store and online" },
+              { icon: <MapPin size={18} strokeWidth={1.5} />, label: "Location", value: (<><span style={{ display: "block" }}>The Hatchery</span><span style={{ display: "block", fontSize: "13px", color: "rgba(250,246,238,0.65)", marginTop: "2px" }}>135 N. Kedzie, Chicago, IL 60612</span></>) },
+              { icon: <Clock size={18} strokeWidth={1.5} />, label: "Taco Tuesday", value: "Every Tuesday, 11am–3pm" },
               { icon: <UtensilsCrossed size={18} strokeWidth={1.5} />, label: "Dine In", value: "Walk in and enjoy at the restaurant" },
             ].map((item, i) => (
               <motion.div

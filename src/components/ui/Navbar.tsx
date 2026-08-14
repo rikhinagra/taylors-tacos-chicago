@@ -8,7 +8,7 @@ import { X } from "lucide-react";
 
 const navLinks = [
   { label: "Our Story",    href: "/our-story" },
-  { label: "Catering",     href: "#services" },
+  // { label: "Catering",     href: "#services" }, // hidden — Services section commented out
   { label: "Menu",         href: "/catering-menu" },
   { label: "Taco Tuesday", href: "/taco-tuesday" },
   { label: "Book Now",     href: "#booking-choice" },
@@ -71,9 +71,6 @@ export default function Navbar() {
   return (
     <>
       <motion.header
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
         style={{
           position: "relative",
           zIndex: 50,
@@ -82,7 +79,7 @@ export default function Navbar() {
           textAlign: "center",
         }}
       >
-        {/* ── Brand Name (big, bold, centered) — desktop/tablet only ── */}
+        {/* ── Brand Logo + Subtitle — desktop/tablet only ── */}
         <button
           onClick={handleLogoClick}
           className="hidden md:block"
@@ -91,23 +88,35 @@ export default function Navbar() {
             border: "none",
             cursor: "none",
             width: "100%",
-            padding: "20px clamp(20px, 4vw, 52px) 0",
+            padding: "16px clamp(20px, 4vw, 52px) 0",
           }}
         >
+          <div style={{ width: "clamp(100px, 13vw, 200px)", margin: "0 auto" }}>
+            <Image
+              src="/images/logo/taylors-tacos-chicago-logo-stacked.webp"
+              alt="Taylor's Tacos Chicago — Official Logo"
+              width={200}
+              height={76}
+              className="w-full h-auto"
+              style={{ filter: "drop-shadow(0 2px 10px rgba(0,0,0,0.25))" }}
+              priority
+            />
+          </div>
           <span
             style={{
               display: "block",
-              fontSize: "clamp(44px, 8.5vw, 115px)",
-              fontWeight: 900,
-              color: "white",
-              letterSpacing: "clamp(1px, 0.3vw, 5px)",
+              textAlign: "center",
+              fontSize: "clamp(8px, 0.85vw, 12px)",
+              fontWeight: 700,
+              color: "rgba(255,255,255,0.88)",
+              letterSpacing: "clamp(2px, 0.4vw, 5px)",
               textTransform: "uppercase",
-              lineHeight: 1,
               fontFamily: "Hannik, sans-serif",
-              textShadow: "0 2px 12px rgba(0,0,0,0.2)",
+              marginTop: "4px",
+              transform: "translateX(14px)",
             }}
           >
-            Taylor&apos;s Tacos Catering
+            A Taco Catering Company
           </span>
         </button>
 
@@ -176,7 +185,7 @@ export default function Navbar() {
             onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "white")}
             onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "white")}
           >
-            135 N. Kedzie Chicago, IL
+            The Hatchery &nbsp;·&nbsp; 135 N. Kedzie, Chicago, IL
           </a>
           <span style={{ margin: "0 14px", color: "white" }}>(773) - 226 - 1596</span>
         </div>
