@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import BlackFridayBar from "@/components/ui/BlackFridayBar";
 
 const navLinks = [
   { label: "Our Story",    href: "/our-story" },
@@ -79,6 +80,9 @@ export default function Navbar() {
           textAlign: "center",
         }}
       >
+        {/* ── Black Friday announcement bar (toggle in blackFridayConfig.ts) ── */}
+        <BlackFridayBar />
+
         {/* ── Brand Logo + Subtitle — desktop/tablet only ── */}
         <button
           onClick={handleLogoClick}
