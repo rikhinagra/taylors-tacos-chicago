@@ -12,6 +12,7 @@ import CharacterSection from "@/components/sections/CharacterSection";
 import Contact          from "@/components/sections/Contact";
 import BookingChoice    from "@/components/sections/BookingChoice";
 import HowCanWeServeYou from "@/components/sections/HowCanWeServeYou";
+import BlackFridayBanner from "@/components/sections/BlackFridayBanner";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <Hero />
         <Marquee />
         {/* <Services /> */}
+        <BlackFridayBanner />
         <BookingChoice />
         <CharacterSection />
         <HowCanWeServeYou />
